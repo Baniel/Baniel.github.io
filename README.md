@@ -1,23 +1,21 @@
-# Codinfox-Lanyon
+## HCZ Material theme
 
-This is a jekyll template based on [Lanyon](https://github.com/poole/lanyon). See a live demo [here](http://codinfox.github.io).
+This is a simple personal material theme, best suited for personal authors, programmars, bloggers. 
 
-**If you like this project, PLEASE give it a star.**
+### Demo
+* [http://aboutashu.com/hcz-jekyll-blog](http://aboutashu.com/hcz-jekyll-blog/)
 
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+#### Feature
 
-All the configurations are inside either `_config.yml` or `_config.scss`. The options are fairly straightforward. 
+* Sitemap and XML Feed
+* Projects and tags
+* Paginations in homepage
+* Posts under category
+* Related Posts
+* Highlight pre
+* Next & Previous Post
+* Disqus comment
 
-The theme supports: 
+#### Screenshot
 
-1. Theme colors: you can choose your favorite theme color
-2. Changable sidebar locations
-3. Integration of FontAwesome, MathJax, Disqus and Google Analytics
-4. and numerous improvements over original Lanyon
-
-
-## License
-
-Open sourced under the [MIT license](LICENSE.md).
-
-<3
+![Screenshot Home Page](https://raw.githubusercontent.com/ashutosh2k12/jekyllthemes/master/thumbnails/hcz-material.png  "Screenshot Home Page")
