@@ -8,3 +8,6 @@ main:
 
   - title: "Design Pattern"
     url: /DesignPattern/
+
+  - title: "Django"
+    url: /Django/

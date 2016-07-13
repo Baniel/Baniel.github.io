@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Daniel Tech Web"
+title                    : "Daniel Tech Blog"
 title_separator          : "-"
 name                     : "Daniel Zhang"
 description              : "I Love Python"
@@ -65,10 +65,10 @@ google_ad_slot           :
 author:
   name             : "Daniel Zhang"
   avatar           : "headicon.png"
-  bio              : "Backend Developer"
-  location         : "Somewhere"
+  bio              : "I am still learning..."
+  location         : "Melbourne"
   email            : "danielpark139@gmail.com"
-  uri              :
+  uri              : "http://danieltech.net/"
   bitbucket        :
   codepen          :
   dribbble         :
