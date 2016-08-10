@@ -11,3 +11,6 @@ main:
 
   - title: "Django"
     url: /Django/
+
+  - title: "System Design"
+    url: /SystemDesgin/
