@@ -9,7 +9,7 @@ author_profile: true
 
 
   <div class="grid__wrapper">
-  {% for post in site.categories.SystemDesgin %}
+  {% for post in site.categories.SystemDesign %}
     {% include archive-single.html type="grid" %}
   {% endfor %}
   </div>
