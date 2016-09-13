@@ -9,8 +9,10 @@ main:
   - title: "Design Pattern"
     url: /DesignPattern/
 
-  - title: "Django"
-    url: /Django/
+#  - title: "Django"
+#    url: /Django/
 
   - title: "System Design"
     url: /SystemDesign/
+
+  

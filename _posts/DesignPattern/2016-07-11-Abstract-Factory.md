@@ -1,9 +1,6 @@
 ---
 layout: single
-title: Abstract Factory
+title: 0.Daniel带你了解设计模式
 category: DesignPattern
 
 ---
-
-<h1> Abstract Facotry</h1>
-jdaijo;

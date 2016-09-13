@@ -1,0 +1,462 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>0.Daniel 带你了解系统设计 - Daniel Tech Blog</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Daniel Tech Blog">
+<meta property="og:title" content="0.Daniel 带你了解系统设计">
+
+
+
+
+  <meta property="og:description" content="0. Daniel 带你了解系统设计">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2016-09-13T00:00:00+10:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Daniel Zhang",
+      "url" : null,
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Daniel Tech Blog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">Daniel Tech Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/Algorithm/">Algorithm</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/DesignPattern/">Design Pattern</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/SystemDesign/">System Design</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="/images/headicon.png" class="author__avatar" alt="Daniel Zhang">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Daniel Zhang</h3>
+    <p class="author__bio">I am still learning...</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Melbourne</li>
+      
+      
+        <li><a href="http://danieltech.net/"><i class="fa fa-fw fa-chain" aria-hidden="true"></i> Website</a></li>
+      
+      
+        <li><a href="mailto:danielpark139@gmail.com"><i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/Baniel"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="0.Daniel 带你了解系统设计">
+    <meta itemprop="description" content="0. Daniel 带你了解系统设计">
+    <meta itemprop="datePublished" content="September 13, 2016">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">0.Daniel 带你了解系统设计
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <h1 id="daniel-">0. Daniel 带你了解系统设计</h1>
+
+<p>  两年的研究生学习，终于TMD的结束了==（为什么要TMD，这要问问我的好朋友Lawrence）==， 之后就是艰难的考雅思和找工作的阶段了。本人在Melbourne读的书，因此，也要在Melbourne这个大的IT环境下来找工作,在此，朕要推荐大家一个找工作的网站，<a href="https://angel.co/">Angel.co</a>,说句发自肺腑的话，这网站绝壁要比SB的Seek好太多了，Seek基本上都是石沉大海，要不就是需要PR(澳大利亚居民身份)。Angel.co上，基本上都是些创业公司在招人，因此对IT人员的技术要求很高，Seek上的都是大公司，反而对技术要求不是太高，并且还是比较亲近于本地的澳洲居民。</p>
+
+<p>   湿的说完了，咱说点干的。首先，澳洲的大部分公司，都是喜欢招那种上来就工作的，因此技术要好，学校里学的那些，Such as,“Java”，“MySql”,”Swift”&lt;、,”OLAP”….等等，只能说太浅了，而且知识陈旧，哎，都是眼泪，不TMD说了，现在的需求发生了361度的大转变。我这几天去的一家互联网众筹公司面试（<a href="https://pozible.com/">Pozible</a>老板好，员工还Nice），所用的技术栈是JavaScript，从前端到后端，前端框架<a href="https://facebook.github.io/react/">React</a>，后端框架是“流星”（<a href="https://facebook.github.io/react/">Meteor</a>），名字很酷吧，是不是想到《余罪》里小时候的张一山演的流星，数据库你猜用啥，对了，是NoSQL的MongoDB,而且对于前端的一些转换工具（），和打包工具，都要会，还要用到<a href="https://www.docker.com/">Docker</a>来做项目的部署。毕业后的你要是自己不自学着，估计看完这些当时就懵逼了（<a href="">Pozible测试题</a>）。所以，平时，给为兄弟姐妹还要多看看趋势，来分析一下现在行业所需要的技术，就现在来讲，我觉得JavaScript还是很不错的，找工作方面，前端后端都在招人.</p>
+
+<p>以下是一些学习资源，可以帮做你拓展眼界，提高能力，想吃就吃，身体倍棒：</p>
+
+<ul>
+  <li><a href="https://www.pluralsight.com/">PluralSight</a>：公司在悉尼，很多新的IT的学习资源，贾思特（我朋友给我起的外号，因为我说英语的时候总是“Just”长，“Just”短）教你一个方法，去微软官方注册一个账号，之后用微软的账号就能在这个网站上免费学习三个月的课程，随便看，看到吐血来都没事,<a href="https://fossbytes.com/getting-pluralsight-subscription-for-free-for-6-months/">绝世秘籍在此</a>。</li>
+</ul>
+
+<p><img src="https://fossbytes.com/wp-content/uploads/2016/02/pluralsight-for-free-1024x545.jpg" alt="image" /></p>
+
+<ul>
+  <li><a href="http://scanlibs.com/">Scanlibs</a> : 这网站绝壁要安利一下，很多收费的学习资源，各种片和书，这里都是免费的，这网站是一个俄罗斯小哥做的，不错，要不咋这两年TopCoder上俄罗斯小鲜肉一直在称霸第一呢。</li>
+</ul>
+
+<p><img src="https://thumbs.statvoo.com/scanlibs.com" alt="image" /></p>
+
+<ul>
+  <li><a href="http://www.imooc.com/">慕课网</a>： 国内的网站,很多的免费教学视频，其中还有论坛帖子，居家必备呀。</li>
+</ul>
+
+<p><img src="http://mrfangge.qiniudn.com/wp-content/uploads/2014/07/%E8%AF%BE%E7%A8%8B-1024x722.jpg" alt="image" /></p>
+
+<ul>
+  <li><a href="https://www.bittiger.io/">太阁</a>:  这个网站绝逼能帮助你提升你的视野，讲了很多技术，而且每周有大牛为你做技术分析，但有些要收费，但每周大牛带你飞，带你分析技术的都是免费的，而且有不同技术的微信群，里面大部分都是人都在美利坚，完全会把你的事业提升到一个高度。</li>
+</ul>
+
+<p><img src="https://liaoyuanavatar.imgix.net/upload/feed/image/155c6973fa8-574ef68f7e4258c32b14da05-a1c77a1020c21df4?fit=max&amp;w=960&amp;h=600" alt="image" /></p>
+
+<ul>
+  <li><a href="https://codetimecn.com/">代码时间</a>: 良心播客，播主每个月会请一个该领域的技术大神来聊技术，听起来就像郭德纲和范伟在一起讲相声一样，咋，伟哥就不能讲相声了，“猪撞树上了，你撞猪上了，追尾了吧”，这么脍炙人口的段子怎么能忘，记得那还是… 不扯犊子了。总之，这个播客很不错，在IPhone上的Poadcast也能订阅。</li>
+</ul>
+
+<p><img src="http://tva4.sinaimg.cn/crop.0.0.1022.1022.180/006p5fA6gw1f380qr10q3j30sg0sggnf.jpg" alt="image" /></p>
+
+<p>   之后的几期，我会带领大家分析一下各个公司的系统设计，像Uber，Twitter，Google的GFS(高富帅)… 用最简单直白的说话方式顺带点幽默的词汇来帮你了解工业界的开发，自己也能通过整理这个博客，来巩固一下System Design的知识，总之，你好，我也好，写写更健康。希望大家都能从博客里面学到知识哈。</p>
+
+<h3 id="danielgithubhttpsgithubcombaniel">还记得我吗，我叫Daniel跟我念一遍，什么，大声点听不见，我的算法，系统，<a href="https://github.com/Baniel">GitHub封面</a>，就算忘记，你不可能看不见。</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    ---该作品改编自冠希哥的《记得我吗》
+</code></pre>
+</div>
+
+<div style="max-width:640px; margin:0 auto 10px;">
+<div style="position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;">
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://youtu.be/GFqQCLZH75A" frameborder="0" allowfullscreen=""></iframe>
+</div>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/systemdesign" class="page__taxonomy-item" rel="tag">SystemDesign</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-09-13T00:00:00+10:00">September 13, 2016</time></p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=/systemdesign/SystemDesign0/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=/systemdesign/SystemDesign0/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=/systemdesign/SystemDesign0/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=/systemdesign/SystemDesign0/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="/algorithm/DanielAlgorithm0/" class="pagination--pager" title="0.Daniel 带你刷算法
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/algorithm/DanielAlgorithm0/" rel="permalink">0.Daniel 带你刷算法
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/designpattern/Abstract-Factory/" rel="permalink">0.Daniel带你了解设计模式
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/Baniel"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2016 Daniel Zhang. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+  </body>
+</html>
+
