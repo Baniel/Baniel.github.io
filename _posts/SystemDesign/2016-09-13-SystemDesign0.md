@@ -49,6 +49,7 @@ style="position: relative;
 width:100%;
 padding-bottom:56.25%;
 height:0;">
-<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"  src="https://youtu.be/GFqQCLZH75A" frameborder="0" allowfullscreen></iframe>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/GFqQCLZH75A" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
