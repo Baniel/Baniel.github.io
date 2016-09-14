@@ -8,7 +8,7 @@ category: Algorithm
 
 
 
- &emsp;&emsp;好的，下面来分享一位歌曲，是由印度尼西亚的Rapper演唱，小哥才16岁，英语说的很6：
+ &emsp;&emsp;好的，下面来分享一首歌曲，是由印度尼西亚的Rapper（Rich Chigga）演唱，小哥才16岁，英语说的很6：
 
 
 <div style="max-width:640px; margin:0 auto 10px;" >
