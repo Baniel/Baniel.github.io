@@ -25,7 +25,7 @@ category: SystemDesign
 
 ![image](http://mrfangge.qiniudn.com/wp-content/uploads/2014/07/%E8%AF%BE%E7%A8%8B-1024x722.jpg)
 
-* [太阁](https://www.bittiger.io/):  这个网站绝逼能帮助你提升你的视野，讲了很多技术，而且每周有大牛为你做技术分析，但有些要收费，但每周大牛带你飞，带你分析技术的都是免费的，而且有不同技术的微信群，里面大部分都是人都在美利坚，完全会把你的事业提升到一个高度。
+* [太阁](https://www.bittiger.io/):  这个网站绝逼能帮助你提升技术视野，讲了很多技术，而且每周有大牛为你做技术分析，但有些要收费，但每周大牛带你飞，带你分析技术的都是免费的，而且有不同技术的微信群，里面大部分都是人都在美利坚，完全会把你的技术眼界提升到一个高度。
 
 ![image](https://liaoyuanavatar.imgix.net/upload/feed/image/155c6973fa8-574ef68f7e4258c32b14da05-a1c77a1020c21df4?fit=max&w=960&h=600)
 
