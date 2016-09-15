@@ -38,7 +38,7 @@ category: SystemDesign
 
 ![image](http://img0.tech2ipo.com/upload/img/article/2013/06/1370316706774.png)
 
-*[Growth](http://growth.ren/): 一个有些的Web开发者学习指导网站，并且也有IPhone和Android的App。良心应有，不多说了，看图吧。
+*[Growth](http://growth.ren/): 一个有些的Web开发者学习指导网站，并且也有IPhone和Android的[Hybrid App](http://developer.telerik.com/featured/what-is-a-hybrid-mobile-app/),。良心应有，不多说了，看图吧。
 
 
 ![image](http://store-images.s-microsoft.com/image/apps.12635.13510798887063773.e34e796d-6452-48d5-834c-a54dcb9b8b0d.5fbeb58c-1dd4-45d5-987b-a3f4ef42d643)
