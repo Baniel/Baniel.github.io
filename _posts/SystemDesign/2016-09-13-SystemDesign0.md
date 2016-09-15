@@ -38,6 +38,11 @@ category: SystemDesign
 
 ![image](http://img0.tech2ipo.com/upload/img/article/2013/06/1370316706774.png)
 
+*[Growth](http://growth.ren/): 一个有些的Web开发者学习指导网站，并且也有IPhone和Android的App。良心应有，不多说了，看图吧。
+
+
+![image](http://store-images.s-microsoft.com/image/apps.12635.13510798887063773.e34e796d-6452-48d5-834c-a54dcb9b8b0d.5fbeb58c-1dd4-45d5-987b-a3f4ef42d643)
+
 
  &emsp;&emsp; 之后的几期，我会带领大家分析一下各个公司的系统设计，像Uber，Twitter，Google的GFS(高富帅)... 用最简单直白的说话方式顺带点幽默的词汇来帮你了解工业界的开发，自己也能通过整理这个博客，来巩固一下System Design的知识，总之，你好，我也好，写写更健康。希望大家都能从博客里面学到知识哈。
 
