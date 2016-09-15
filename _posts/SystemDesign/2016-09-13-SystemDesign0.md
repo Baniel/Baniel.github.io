@@ -4,9 +4,9 @@ title : 0.Daniel 带你了解系统设计
 category: SystemDesign
 ---
 
- &emsp;&emsp;两年的研究生学习，终于TMD的结束了==（为什么要TMD，这要问问我的好朋友Lawrence）==， 之后就是艰难的考雅思和找工作的阶段了。本人在Melbourne读的书，因此，也要在Melbourne这个大的IT环境下来找工作,在此，朕要推荐大家一个找工作的网站，[Angel.co](https://angel.co/),说句发自肺腑的话，这网站绝壁要比SB的Seek好太多了，Seek基本上都是石沉大海，要不就是需要PR(澳大利亚居民身份)。Angel.co上，基本上都是些创业公司在招人，因此对IT人员的技术要求很高，Seek上的都是大公司，反而对技术要求不是太高，并且还是比较亲近于本地的澳洲居民。
+&emsp;&emsp;两年的研究生学习，终于TMD的结束了==（为什么要TMD，这要问问我的好朋友Lawrence）==， 之后就是艰难的考雅思和找工作的阶段了。本人在Melbourne读的书，因此，也要在Melbourne这个大的IT环境下来找工作,在此，朕要推荐大家一个找工作的网站，[Angel.co](https://angel.co/),说句发自肺腑的话，这网站绝壁要比SB的Seek好太多了，Seek基本上都是石沉大海，要不就是需要PR(澳大利亚居民身份)。Angel.co上，基本上都是些创业公司在招人，因此对IT人员的技术要求很高，Seek上的都是大公司，反而对技术要求不是太高，并且还是比较亲近于本地的澳洲居民。
 
- &emsp;&emsp; 湿的说完了，咱说点干的。首先，澳洲的大部分公司，都是喜欢招那种上来就工作的，因此技术要好，学校里学的那些，Such as,“Java”，“MySql”,"Swift","OLAP"....等等，只能说太浅了，而且知识陈旧，哎，都是眼泪，不TMD说了，现在的需求发生了361度的大转变。我这几天去的一家互联网众筹公司面试（[Pozible](https://pozible.com/)老板Nice，员工也Nice），所用的技术栈是JavaScript，从前端到后端，前端框架[React](https://facebook.github.io/react/)，后端框架是“流星”（[Meteor](https://facebook.github.io/react/)），名字很酷吧，是不是想到《余罪》里小时候的张一山演的流星，数据库你猜用啥，对了，是NoSQL的MongoDB,而且对于前端的一些转换工具[Babel](https://babeljs.io/)，和打包工具[Webpack](https://webpack.github.io/)，都要会，还要用到[Docker](https://www.docker.com/)来做项目的部署。毕业后的你要是自己不自学着，估计看完这些当时就懵逼了（[Pozible测试题]()）。所以，平时，给为兄弟姐妹还要多看看趋势，来分析一下现在行业所需要的技术，就现在来讲，我觉得JavaScript还是很不错的，找工作方面，前端后端都在招人.
+&emsp;&emsp; 湿的说完了，咱说点干的。首先，澳洲的大部分公司，都是喜欢招那种上来就工作的，因此技术要好，学校里学的那些，Such as,“Java”，“MySql”,"Swift","OLAP"....等等，只能说太浅了，而且知识陈旧，哎，都是眼泪，不TMD说了，现在的需求发生了361度的大转变。我这几天去的一家互联网众筹公司面试（[Pozible](https://pozible.com/)老板Nice，员工也Nice），所用的技术栈是JavaScript，从前端到后端，前端框架[React](https://facebook.github.io/react/)，后端框架是“流星”（[Meteor](https://facebook.github.io/react/)），名字很酷吧，是不是想到《余罪》里小时候的张一山演的流星，数据库你猜用啥，对了，是NoSQL的MongoDB,而且对于前端的一些转换工具[Babel](https://babeljs.io/)，和打包工具[Webpack](https://webpack.github.io/)，都要会，还要用到[Docker](https://www.docker.com/)来做项目的部署。毕业后的你要是自己不自学着，估计看完这些当时就懵逼了（[Pozible测试题]()）。所以，平时，给为兄弟姐妹还要多看看趋势，来分析一下现在行业所需要的技术，就现在来讲，我觉得JavaScript还是很不错的，找工作方面，前端后端都在招人.
 
 以下是一些学习资源，可以帮做你拓展眼界，提高能力，想吃就吃，身体倍棒：
 
@@ -33,12 +33,19 @@ category: SystemDesign
 
 ![image](http://tva4.sinaimg.cn/crop.0.0.1022.1022.180/006p5fA6gw1f380qr10q3j30sg0sggnf.jpg)
 
- &emsp;&emsp; 之后的几期，我会带领大家分析一下各个公司的系统设计，像Uber，Twitter，Google的GFS(高富帅)... 用最简单直白的说话方式顺带点幽默的词汇来帮你了解工业界的开发，自己也能通过整理这个博客，来巩固一下System Design的知识，总之，你好，我也好，写写更健康。希望大家都能从博客里面学到知识哈。
+
+* [teahour.fm](http://teahour.fm/2015/08/16/vuejs-creator-evan-you.html): 又一个良心博客，同样会请到业界技术大牛来聊技吗。你知道Vue.js吗？什么，没听过，这可是中国人尤雨溪（尤小石）写的一个前端框架，现在已经被很多大公司所应用，这个博客把邀请了尤小石来聊一聊各个前端框架的优缺点，受益匪浅。其他大神的讲座，也会让你受益匪浅的。杠杠的！！！
+
+![image](http://img0.tech2ipo.com/upload/img/article/2013/06/1370316706774.png)
+
+
+&emsp;&emsp; 之后的几期，我会带领大家分析一下各个公司的系统设计，像Uber，Twitter，Google的GFS(高富帅)... 用最简单直白的说话方式顺带点幽默的词汇来帮你了解工业界的开发，自己也能通过整理这个博客，来巩固一下System Design的知识，总之，你好，我也好，写写更健康。希望大家都能从博客里面学到知识哈。
+
 
 
 ###  还记得我吗，我叫Daniel跟我念一遍，什么，大声点听不见，我的算法，系统，[GitHub封面](https://github.com/Baniel)，就算忘记，你不可能看不见。
 
-        ---该作品改编自冠希哥的《记得我吗》
+       ---该作品改编自冠希哥的《记得我吗》
 
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
