@@ -32,7 +32,7 @@ category: Algorithm
 
 
 
-After learning the linked list, let us enjoy the video --- "Driving with My Mum". Moretoki is driving a car with his mother. You can find the love between mother and son from this funny video.Evey mother wants to look ahead and see her son as a happy, healthy grown man.Can anything replace a mother's love and care?
+++**After learning the linked list, let us enjoy the video --- "Driving with My Mum". Moretoki is driving a car with his mother. You can find the love between mother and son from this funny video.Evey mother wants to look ahead and see her son as a happy, healthy grown man.Can anything replace a mother's love and care?**++
 
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
