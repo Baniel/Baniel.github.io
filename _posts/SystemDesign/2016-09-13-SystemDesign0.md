@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 0.Daniel 带你了解系统设计
+title : 0.Learn System Design With Daniel
 category: SystemDesign
 ---
 
