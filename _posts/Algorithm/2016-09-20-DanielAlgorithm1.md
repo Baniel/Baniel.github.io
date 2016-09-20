@@ -4,11 +4,6 @@ title : 1.Learn Algorithm with Daniel
 category: Algorithm
 ---
 
----
-layout : single
-title : 1.Learn Algorithm with Daniel
-category: Algorithm
----
 
 
 
