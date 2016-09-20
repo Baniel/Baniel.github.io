@@ -32,7 +32,10 @@ category: Algorithm
 
 
 
-++**After learning the linked list, let us enjoy the video --- "Driving with My Mum". Moretoki is driving a car with his mother. You can find the love between mother and son from this funny video.Evey mother wants to look ahead and see her son as a happy, healthy grown man.Can anything replace a mother's love and care?**++
+**After learning the linked list, let us enjoy the video --- "Driving with My Mum". Moretoki is driving a car with his mother. You can find the love between mother and son from this funny video.Evey mother wants to look ahead and see her son as a happy, healthy grown man.Can anything replace a mother's love and care?**
+
+
+
 
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
@@ -44,3 +47,5 @@ height:0;">
 <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/XMNlfYBzi8Q" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
+
+![image](http://sd.keepcalm-o-matic.co.uk/i-w600/stay-strong-because-i-love-you-mom.jpg)
