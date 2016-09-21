@@ -1,11 +1,10 @@
 ---
 layout : single
-title : 1.Learn Algorithm with Daniel 
+title : 1.Learn Algorithm with Daniel
 category: Algorithm
 ---
 # Linked List Theory
 
-> #### Failure is not fatal,but failure to change might be.
 
 1. Each node is composed of a data and a reference/link to the next node in the sequence.
 
@@ -42,12 +41,30 @@ Waste space | O(n) | 0
 * Use arrys if you need random access: it can be done very quickly, in O(1) constant time
 
 
-'code'
+ #  &emsp;&emsp; Advantages
 
-<pre><code>
-代码区块
+- Liked lists are dynamic data structures (arrays are not !!!).
 
-</code></pre>
+- It can allocate the needed memory in run-time.
+
+- Very efficient if we want to manipulate the first emelemts.
+
+- EASY IMPLEMENTATION
+
+- Can store items with different sizes: an array assumes every element tobe exactly the same.
+
+- It's easier for a linked list to grow organically. An array's size needs to be known ahead of time, or re-created when it needs to grow.
+
+
+# &emsp;&emsp; Disadvantages
+
+- Waste memory because of the references
+
+- Nodes in a linked list must be read in order from the beginning as linked lists have sequential access ( array iterms can be reached via indexes in O(1) time !!!)
+
+- Difficulties arise in linked lists when it comes to reverse traversing.Singly linked lists are extremely difficult to navigate backwards.
+
+- Solution: doubly linked lists -> easier to read, but memory is wasted in allocating space for a back pointer.
 
 
 
