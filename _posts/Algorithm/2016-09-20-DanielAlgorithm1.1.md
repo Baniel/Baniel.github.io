@@ -89,6 +89,6 @@ width:100%;
 padding-bottom:56.25%;
 height:0;">
 
-<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="<iframe width="854" height="480" src="https://youtu.be/XMNlfYBzi8Q?t=7" frameborder="0" allowfullscreen></iframe>" frameborder="0" allowfullscreen></iframe>
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/XMNlfYBzi8Q" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
