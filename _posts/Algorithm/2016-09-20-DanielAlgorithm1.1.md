@@ -6,6 +6,7 @@ category: Algorithm
 # Linked List Theory
 
 
+
 1. Each node is composed of a data and a reference/link to the next node in the sequence.
 
 ![image](http://www.equestionanswers.com/c/images/circular-linked-list.gif)
@@ -41,7 +42,7 @@ Waste space | O(n) | 0
 * Use arrys if you need random access: it can be done very quickly, in O(1) constant time
 
 
- #  &emsp;&emsp; Advantages
+> # &emsp;&emsp; Advantages
 
 - Liked lists are dynamic data structures (arrays are not !!!).
 
@@ -56,7 +57,7 @@ Waste space | O(n) | 0
 - It's easier for a linked list to grow organically. An array's size needs to be known ahead of time, or re-created when it needs to grow.
 
 
-# &emsp;&emsp; Disadvantages
+> # &emsp;&emsp; Disadvantages
 
 - Waste memory because of the references
 
