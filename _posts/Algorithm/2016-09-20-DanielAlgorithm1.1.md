@@ -33,7 +33,7 @@ category: Algorithm
 ---|---|---
 Indexing | O(n) | O(1)
 Insert at beginning | O(1) | O(n)
-Waste space | O(n) | 0
+Waste space | O(n) | 0 (Zero)
 
 * Use linked lists if you want to insert/remove elements at the beginning
 
@@ -67,7 +67,11 @@ Waste space | O(n) | 0
 
 - Solution: doubly linked lists -> easier to read, but memory is wasted in allocating space for a back pointer.
 
+> # Deleting from linked list
 
+- The same as for insertion
+- O(1) time complexity: if we insert items at the beginning
+- O(N) time complexity: for inserting items at the end of list
 
 
 
@@ -85,6 +89,6 @@ width:100%;
 padding-bottom:56.25%;
 height:0;">
 
-<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/XMNlfYBzi8Q" frameborder="0" allowfullscreen></iframe>
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="<iframe width="854" height="480" src="https://www.youtube.com/embed/tKbej7R8oU4" frameborder="0" allowfullscreen></iframe>" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>

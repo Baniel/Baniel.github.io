@@ -5,9 +5,8 @@ category: SystemDesign
 ---
 
 
-&emsp;&emsp;两年的研究生学习，终于TMD的结束了（==为什么要TMD，这要问问我的好朋友Lawrence==)， 之后就是艰难的考雅思和找工作的阶段了。本人在Melbourne读的书，因此，也要在Melbourne这个大的IT环境下来找工作,在此，朕要推荐大家一个找工作的网站，[Angel.co](https://angel.co/),说句发自肺腑的话，这网站绝壁要比SB的Seek好太多了，Seek基本上都是石沉大海，要不就是需要PR(澳大利亚居民身份)。Angel.co上，基本上都是些创业公司在招人，因此对IT人员的技术要求很高，Seek上的都是大公司，反而对技术要求不是太高，并且还是比较亲近于本地的澳洲居民。
+&emsp;&emsp;两年的研究生学习，终于TMD的结束了（为什么要TMD，这要问问我的好朋友Lawrence)，之后就是艰难的考雅思和找工作的阶段了。写这个博客，也是为了把平时所学的东西做一下归纳和总结，时常翻翻看看，增加对技术的熟练程度。
 
- &emsp;&emsp; 湿的说完了，咱说点干的。首先，澳洲的大部分公司，都是喜欢招那种上来就工作的，因此技术要好，学校里学的那些，Such as,“Java”，“MySql”,"Swift","OLAP"....等等，只能说太浅了，而且知识陈旧，哎，都是眼泪，不TMD说了，现在的需求发生了361度的大转变。我这几天去的一家互联网众筹公司面试（[Pozible](https://pozible.com/)老板Nice，员工也Nice），所用的技术栈是JavaScript，从前端到后端，前端框架[React](https://facebook.github.io/react/)，后端框架是“流星”（[Meteor](https://facebook.github.io/react/)），名字很酷吧，是不是想到《余罪》里小时候的张一山演的流星，数据库你猜用啥，对了，是NoSQL的MongoDB,而且对于前端的一些转换工具[Babel](https://babeljs.io/)，和打包工具[Webpack](https://webpack.github.io/)，都要会，还要用到[Docker](https://www.docker.com/)来做项目的部署。毕业后的你要是自己不自学着，估计看完这些当时就懵逼了（[Pozible测试题](https://github.com/DanielProjectJourney/PozibleDeveloperProject)）。所以，平时，给为兄弟姐妹还要多看看趋势，来分析一下现在行业所需要的技术，就现在来讲，我觉得JavaScript（==最好学学ES6，ES2015这样的语法，因为工业成产为了代码的高可维护性，要尽可能使代码易读，易于维护。之后用Babel转成纯的JavaScript。纯JavaScript，你在学校的Assignment写写还可以，工业界的生产你用纯JavaScript写，维护起来估计你要砸电脑了。==）还是很不错的，找工作方面，前端后端都在招人.
 
 以下是一些学习资源，可以帮做你拓展眼界，提高能力，想吃就吃，身体倍棒：
 
@@ -45,10 +44,8 @@ category: SystemDesign
 ![image](http://store-images.s-microsoft.com/image/apps.12635.13510798887063773.e34e796d-6452-48d5-834c-a54dcb9b8b0d.5fbeb58c-1dd4-45d5-987b-a3f4ef42d643)
 
 
- &emsp;&emsp; 之后的几期，我会带领大家分析一下各个公司的系统设计，像Uber，Twitter，Google的GFS(高富帅)... 用最简单直白的说话方式顺带点幽默的词汇来帮你了解工业界的开发，自己也能通过整理这个博客，来巩固一下System Design的知识，总之，你好，我也好，写写更健康。希望大家都能从博客里面学到知识哈。
-
- &emsp;&emsp; 最最重要的一点就是，程序员这个职业，需要踏踏实实的去实践去写代码（我的偶像John D. Carmack做的就很棒），要是做不到这一点，天天吹的天花乱坠，那我估计你这个程序员也当不了多长时间。总之，平时努力积累，多实践，多动手，少吹B，你也会成为大神的（但像Jeff Dean那样的还是需要环境和天赋）。还有，在你学习的道路上，总会有些SB说你学这个没有学那个没用（其实那些SB啥也不懂，以为自己很懂很牛B），可悲的是最后你听听从他的建议，导致和他一个Level（悲哀呀）。这时，就需要自己多看看资料，多听听行业大牛是怎么说的，多交流，看看那些是对自己有益的，这样你才会正向的去发展，去提高自己。
-
+ &emsp;&emsp; 之后的几期，我会谈一下工业里的技术趋势，有不对的地方还请大家提出，我也从中学习学习。最最重要的一点就是，程序员这个职业，需要踏踏实实的去实践去写代码,我的偶像John D. Carmack做的就很棒，
+现在人家都已经是CTO了。
 
 ###  还记得我吗，我叫Daniel跟我念一遍，什么，大声点听不见，我的算法，系统，[GitHub封面](https://github.com/Baniel)，就算忘记，你不可能看不见。
 
