@@ -1,9 +1,9 @@
 ---
 layout : single
-title : 1.Learn Algorithm with Daniel
+title : 1.Learn Algorithm with Daniel 
 category: Algorithm
 ---
-
+# Linked List Theory
 
 > #### Failure is not fatal,but failure to change might be.
 
@@ -44,7 +44,10 @@ Waste space | O(n) | 0
 
 'code'
 
-<pre><code>代码区块</code></pre>
+<pre><code>
+代码区块
+
+</code></pre>
 
 
 
