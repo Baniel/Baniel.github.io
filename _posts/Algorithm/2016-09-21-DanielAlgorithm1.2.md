@@ -9,23 +9,6 @@ category: Algorithm
 
 
 
-
-
-
----
-layout : single
-title : 2.Learn Algorithm with Daniel
-category: Algorithm
----
-
-# Linked List Code Implement.
-
-
-
-
-
-
-
 Is it very easy for you? If your answer is no, you don't be the worry.Just practice more.After more and more, you will get some idea about the "Liked List". Let us see the "[Topcoder](https://www.topcoder.com/) open " to make your blood to be boiling.
 
 <div style="max-width:640px; margin:0 auto 10px;" >
