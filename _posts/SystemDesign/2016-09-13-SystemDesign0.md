@@ -47,9 +47,7 @@ category: SystemDesign
  &emsp;&emsp; 之后的几期，我会谈一下工业里的技术趋势，有不对的地方还请大家提出，我也从中学习学习。最最重要的一点就是，程序员这个职业，需要踏踏实实的去实践去写代码,我的偶像John D. Carmack做的就很棒，
 现在人家都已经是CTO了。
 
-###  还记得我吗，我叫Daniel跟我念一遍，什么，大声点听不见，我的算法，系统，[GitHub封面](https://github.com/Baniel)，就算忘记，你不可能看不见。
 
-        ---该作品改编自冠希哥的《记得我吗》
 
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
