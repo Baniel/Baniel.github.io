@@ -42,7 +42,7 @@ Waste space | O(n) | 0
 * Use arrys if you need random access: it can be done very quickly, in O(1) constant time
 
 
-> # &emsp;&emsp; Advantages
+> # Advantages
 
 - Liked lists are dynamic data structures (arrays are not !!!).
 
@@ -57,7 +57,7 @@ Waste space | O(n) | 0
 - It's easier for a linked list to grow organically. An array's size needs to be known ahead of time, or re-created when it needs to grow.
 
 
-> # &emsp;&emsp; Disadvantages
+> # Disadvantages
 
 - Waste memory because of the references
 
