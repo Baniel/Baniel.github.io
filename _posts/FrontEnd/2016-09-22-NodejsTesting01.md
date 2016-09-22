@@ -9,7 +9,7 @@ category: FrontEnd
 
 ## Install [Mocha](https://mochajs.org/)
 
-> 0. Open the terminal
+> Step.0: Open the terminal
 
 ```
 cmd + space (You don't know "space",it's between two cmd, then input terminal)
@@ -17,20 +17,20 @@ cmd + space (You don't know "space",it's between two cmd, then input terminal)
 ![image](http://i4.piimg.com/567571/e4d2c5dcd74dddc0.png)
 
 
-> 1. Go to the desktop
+> Step.1: Go to the desktop
 
 ```
 -> cd ~/desktop
 ```
 
-> 2. create a fold named by "nodejs-test" and go to this folder
+> Step.2: create a fold named by "nodejs-test" and go to this folder
 
 ```
 -> mkdir nodejs-test
 -> cd nodejs-test
 ```
 
-> 3. Create the package.json by [NPM](https://nodejs.org/en/) (If your Mac has not installed NPM,you can install it by Node.js)
+> Step.3: Create the package.json by [NPM](https://nodejs.org/en/) (If your Mac has not installed NPM,you can install it by Node.js)
 
 ```
 -> npm init -y
@@ -39,7 +39,7 @@ cmd + space (You don't know "space",it's between two cmd, then input terminal)
 ![image](http://i2.buimg.com/567571/81ecf8ef0c2263ad.png)
 
 
->  4. Install Mocha
+>  Step.4: Install Mocha
 
 ```
 -> npm install mocha --global
@@ -47,7 +47,7 @@ cmd + space (You don't know "space",it's between two cmd, then input terminal)
 
 ![image](http://i2.buimg.com/567571/0f807ce20fbbd91e.png)
 
-> 5. You can input "mocha",ops, maybe something is wrong.
+> Step.5: You can input "mocha",ops, maybe something is wrong.
 
 ```
 -> mocha
@@ -56,7 +56,7 @@ cmd + space (You don't know "space",it's between two cmd, then input terminal)
 
 !!! You need creat a folder named by "test" for Mocha !!!Because, when you use mocha doing test, mocha will find the test file from the "test" folder.
 
-> 6. Create a folder named by test, then input mocha again.You can see 0 passing.(It means no test passing,because we input nothing.)
+> Step.6: Create a folder named by test, then input mocha again.You can see 0 passing.(It means no test passing,because we input nothing.)
 
 ```
 -> mkdir test
@@ -65,13 +65,13 @@ cmd + space (You don't know "space",it's between two cmd, then input terminal)
 ![image](http://i4.piimg.com/567571/76fb0444d0c128ac.png)
 
 
-> 7. Create a folder named by lib, we can create code file in this folder.
+> Step.7: Create a folder named by lib, we can create code file in this folder.
 
 ```
 -> mkdir lib
 ```
 
-> 8. Install mocha in your project.
+> Step.8: Install mocha in your project.
 
 ```
 -> npm install mocha --save-dev
@@ -84,7 +84,7 @@ Mocha |--globa | --save-dev
 Your Project | can use | can use
 Other Project| can use | can't use
 
-> 9. Open the project by [Atom](https://atom.io/)
+> Step.9: Open the project by [Atom](https://atom.io/)
 
 ```
 -> atom .
@@ -93,7 +93,7 @@ Other Project| can use | can't use
 Then you will see the IDE like this:
 ![image](http://i4.piimg.com/567571/2e32e2553fa15cd6.png)
 
-> 10. find the "package.json" file, change the No.7 line "test" into below:
+> Step.10: find the "package.json" file, change the No.7 line "test" into below:
 
 ```
 "test": "./node_modules/mocha/bin/mocha"
@@ -101,7 +101,7 @@ Then you will see the IDE like this:
 
 ![image](http://i4.piimg.com/567571/4b5b619f771bcf76.png)
 
-> 11. Now , you can input the "npm test" in the terminal. It's super convenient
+> Step.11: Now , you can input the "npm test" in the terminal. It's super convenient
 
 ```
 -> npm test
