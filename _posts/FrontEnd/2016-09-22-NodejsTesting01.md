@@ -12,8 +12,9 @@ category: FrontEnd
 > 0. Open the terminal
 
 ```
-cmd + space (You don't know "space",it's between two cmd)
+cmd + space (You don't know "space",it's between two cmd, then input terminal)
 ```
+![image](http://i4.piimg.com/567571/e4d2c5dcd74dddc0.png)
 
 
 > 1. Go to the desktop
