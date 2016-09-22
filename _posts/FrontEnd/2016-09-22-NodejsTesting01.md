@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 0.Learn Front End With Daniel
+title: 1.Learn Front End With Daniel
 category: FrontEnd
 
 ---
