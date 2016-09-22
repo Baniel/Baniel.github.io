@@ -15,4 +15,5 @@ main:
   - title: "System Design"
     url: /SystemDesign/
 
-  
+  - title: "Front End"
+    url: /FrontEnd/
