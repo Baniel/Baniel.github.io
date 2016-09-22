@@ -7,7 +7,7 @@ category: FrontEnd
 
 # Node.js Testing 01
 
-## > Install
+## Install [Mocha](https://mochajs.org/)
 
 > 0. Open the terminal
 
@@ -53,7 +53,7 @@ cmd + space (You don't know "space",it's between two cmd)
 ```
 ![image](http://i4.piimg.com/567571/8ef418af846b36ea.png)
 
-!!! You need creat a folder named by "test" for Mocha !!!
+!!! You need creat a folder named by "test" for Mocha !!!Because, when you use mocha doing test, mocha will find the test file from the "test" folder.
 
 > 6. Create a folder named by test, then input mocha again.You can see 0 passing.(It means no test passing,because we input nothing.)
 
