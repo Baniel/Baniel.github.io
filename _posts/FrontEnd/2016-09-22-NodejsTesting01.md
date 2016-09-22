@@ -1,11 +1,14 @@
 ---
 layout: single
-title: 1.Learn Front End With Daniel
+title:  Node.js Testing 01
 category: FrontEnd
 
 ---
 
-# Node.js Testing 01
+
+
+Mocha is the JavaScript testing framework, it can help us do testing.
+
 
 ## Install [Mocha](https://mochajs.org/)
 
