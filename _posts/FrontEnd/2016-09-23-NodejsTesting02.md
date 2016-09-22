@@ -41,10 +41,12 @@ Now, let us analysis the above code:
 ![image](http://i4.piimg.com/567571/240cfb3790e197a1.png)
 
 
-Congratulation,
+Congratulation,thanks again for your patience as I can focus on my blog writing.
 
 
-Do you know about GenCoin? Do you know the startup is so much harder than people expected?Let me intro the TV series "Startup".It's the best TV Series I have ever meet.
+
+
+###### > Do you know about GenCoin? Do you know the startup is so much harder than people expected?Let me intro the TV series "Startup".It's the best TV Series I have ever meet.
 
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
