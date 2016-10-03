@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 1.Learn Algorithm with Daniel
+title : 1.Learn Algorithm with Daniel --- Linked List
 category: Algorithm
 ---
 # Linked List Theory
