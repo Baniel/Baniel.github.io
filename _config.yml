@@ -20,9 +20,9 @@ words_per_minute         : 200
 comments:
   provider               : disqus # false (default), "disqus", "discourse", "facebook", "google-plus", custom"
   disqus:
-    shortname            : https://help.disqus.com/customer/portal/articles/https-baniel-github-io-1.disqus.com
+    shortname            : # https://help.disqus.com/customer/portal/articles/https-baniel-github-io-1.disqus.com
   discourse:
-    server               :# https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
