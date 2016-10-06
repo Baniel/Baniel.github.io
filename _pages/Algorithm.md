@@ -3,6 +3,7 @@ layout: archive
 permalink: /Algorithm/
 title: "Algorithm"
 author_profile: true
+comments: true
 ---
 
 {% include base_path %}

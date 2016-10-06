@@ -3,6 +3,7 @@ layout: archive
 permalink: /FrontEnd/
 title: "Front End"
 author_profile: true
+comments: true
 ---
 
 {% include base_path %}

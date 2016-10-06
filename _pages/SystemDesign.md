@@ -3,6 +3,7 @@ layout: archive
 permalink: /SystemDesign/
 title: "System Design"
 author_profile: true
+comments: true
 ---
 
 {% include base_path %}
