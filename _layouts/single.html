@@ -50,15 +50,17 @@ layout: default
         {% endif %}
       </footer>
 
+      <!-- Comment -->
+      {% if site.comments.provider and page.comments %}
+        {% include comments.html %}
+      {% endif %}
+
       {% if page.share %}{% include social-share.html %}{% endif %}
 
       {% include post_pagination.html %}
     </div>
 
-    <!-- Comment -->
-    {% if site.comments.provider and page.comments %}
-      {% include comments.html %}
-    {% endif %}
+
   </article>
 
 
