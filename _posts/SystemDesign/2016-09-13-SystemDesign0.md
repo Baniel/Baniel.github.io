@@ -2,7 +2,7 @@
 layout : single
 title : 0.Learn System Design With Daniel
 category: SystemDesign
-comments: true
+comments: True
 
 ---
 
