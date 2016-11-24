@@ -25,6 +25,7 @@ The figure comes from [PENJEE.COM 'S BLOG](https://blog.penjee.com/5-gifs-to-und
 # Deletion
 
 ![image](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/pix/del01.bmp)
+
 - Deleting node with no child: just set it to NULL
 - Deleting a node with one child: remove the node and replace it with its child
 - Deleting a node with two children: call the node to be deleted i. Do not delete i directly. Instead, choose either its in-order successor node or its in-order predecessor node, j. Copy the value of j to i, then recursively call delete on j unitl reaching one of the first two cases.
@@ -43,6 +44,7 @@ Search | &emsp; O(log n) | &emsp; O(log n)
 > Height of the tree "h": the length of the path from the root to the deepest node in the tree
 
 ![image](http://web.cs.wpi.edu/~cs507/f98/classes/class04/fig01.gif)
+
 - we should keep the height of the tree at a minimum which is h=log n
 - If the tree is unbalanced: the h= log n  relation is no more valid and the operation's running time is no more logarithmic.
 
@@ -50,6 +52,7 @@ Search | &emsp; O(log n) | &emsp; O(log n)
 How to create Binary Search Tree
 
 > Step 1. Insert a node with value is 3
+
 ![image](http://p1.bpimg.com/567571/2e919f9c4bb56005.png)
 
 > Step 2. Insert
@@ -57,6 +60,7 @@ How to create Binary Search Tree
 Continue...
 
 > Final Result:
+
 ![image](http://p1.bqimg.com/567571/6266e48e4828de12.png)
 
 
