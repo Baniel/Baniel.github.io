@@ -1,10 +1,9 @@
 ---
 layout : single
-title : 1.Learn Algorithm with Daniel --- Linked List
+title : 1.1 Learn Algorithm with Daniel --- Linked List
 category: Algorithm
 ---
 # Linked List Theory
-
 
 
 1. Each node is composed of a data and a reference/link to the next node in the sequence.
