@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 2.Learn Algorithm with Daniel --- Binary Search Theory
+title : 2.Learn Algorithm with Daniel --- Binary Search Tree Theory
 category: Algorithm
 ---
 
