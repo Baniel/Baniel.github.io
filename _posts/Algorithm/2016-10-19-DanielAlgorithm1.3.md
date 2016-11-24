@@ -75,6 +75,7 @@ Continue...
 
 > Tip: [Swap Two Variables Without Using a Temp Variable (With Math!)](http://chris-taylor.github.io/blog/2013/02/25/xor-trick/)
 
+
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
 style="position: relative;
@@ -83,5 +84,6 @@ padding-bottom:56.25%;
 height:0;">
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/Rba7qjb0378" frameborder="0" allowfullscreen></iframe>
+
 </div>
 </div>
