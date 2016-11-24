@@ -76,6 +76,7 @@ Continue...
 > Tip: [Swap Two Variables Without Using a Temp Variable (With Math!)](http://chris-taylor.github.io/blog/2013/02/25/xor-trick/)
 
 
+# [GeoHotz](https://en.wikipedia.org/wiki/George_Hotz)
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
 style="position: relative;
