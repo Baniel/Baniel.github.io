@@ -77,6 +77,7 @@ Continue...
 
 
 # [GeoHotz](https://en.wikipedia.org/wiki/George_Hotz)
+
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
 style="position: relative;
