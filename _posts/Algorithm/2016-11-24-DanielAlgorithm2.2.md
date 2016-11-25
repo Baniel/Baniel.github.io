@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 2.Learn Algorithm with Daniel --- Binary Search Tree Code Implement
+title : 2.2 Learn Algorithm with Daniel --- Binary Search Tree Code Implement
 category: Algorithm
 ---
 

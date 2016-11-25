@@ -1,11 +1,11 @@
 ---
 layout : single
-title : 3.Learn Algorithm with Daniel --- AVL TREES Theory
+title : 3.1Learn Algorithm with Daniel --- AVL TREES Theory
 category: Algorithm
 ---
 
 # AVL TREES Theory
-
+(AKA: Self-Balancing Binary Search Tree , Height-Balanced Binary Search Tree)
 
 
 - The running time of BST operations depends on the height of the binary search tree: we should keep the tree balanced in order to get the best performance
