@@ -52,7 +52,7 @@ AVL algorithm uses heights of nodes, we want the heights as small as possible: w
 ---
 
 - AVL tree requires the heights of left and right child of every node to differ at most +1 or -1 !!!
-- | height(leftSubtree) - height(rightSubtree) | < = 1
+- - $$ \mid height(leftSubtree) -  height(rightSubtree) \mid < = 1 $$
 - We can maintain this property in O(logN) time which is quite fast !!!
 - Insertion:
     1.  a simple BST insertion according to the keys
