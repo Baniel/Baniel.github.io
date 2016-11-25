@@ -7,6 +7,9 @@ category: Algorithm
 # AVL TREES Theory
 
 
+$$
+J(\theta) = \frac 1 2 \sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})^2
+$$
 
 $$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
 
