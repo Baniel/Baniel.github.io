@@ -56,8 +56,7 @@ AVL algorithm uses heights of nodes, we want the heights as small as possible: w
 
 - AVL tree requires the heights of left and right child of every node to differ at most +1 or -1 !!!
 
-- $$ \mid height(leftSubtree) -  height(rightSubtree) \mid &ensp; \leq 1 $$
-
+- $$ \| height(leftSubtree) -  height(rightSubtree) \| \leq 1 $$
 
 
 - We can maintain this property in O(logN) time which is quite fast !!!
@@ -67,6 +66,13 @@ AVL algorithm uses heights of nodes, we want the heights as small as possible: w
 - There may be serveral violations of AVL property from the inserted node up to the root!!!
 - We have to check them all
 
+---
+# Rotations:
+- Four types of unbalanced situations
+    1. LL: doubly left heavy situation... we have to make a right rotation
+    2. LR: we haveto make a left and a right rotation
+    3. RL: we have to make a left and right rotation
+    4. RR: we have to make a left rotation
 
 # [Edward Snowden](https://en.wikipedia.org/wiki/Edward_Snowden)
 
