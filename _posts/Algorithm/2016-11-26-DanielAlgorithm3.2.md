@@ -14,6 +14,13 @@ $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 \\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
 
 
+$$\sqrt[3]{X}$$
+$$\sqrt{5 - x}$$
+
+
+
+
+
 # Operation Takedown - [Kevin_Mitnick](https://en.wikipedia.org/wiki/Kevin_Mitnick)
 
 <div style="max-width:640px; margin:0 auto 10px;" >
