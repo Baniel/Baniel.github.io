@@ -69,10 +69,10 @@ AVL algorithm uses heights of nodes, we want the heights as small as possible: w
 ---
 # Rotations:
 - Four types of unbalanced situations
-  -  1. LL: doubly left heavy situation... we have to make a right rotation
-  -  2. LR: we haveto make a left and a right rotation
-  -  3. RL: we have to make a left and right rotation
-  -  4. RR: we have to make a left rotation
+-  1. LL: doubly left heavy situation... we have to make a right rotation
+-  2. LR: we haveto make a left and a right rotation
+-  3. RL: we have to make a left and right rotation
+-  4. RR: we have to make a left rotation
 
 # [Edward Snowden](https://en.wikipedia.org/wiki/Edward_Snowden)
 
