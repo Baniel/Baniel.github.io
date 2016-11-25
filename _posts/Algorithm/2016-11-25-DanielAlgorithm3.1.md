@@ -43,7 +43,7 @@ Height of a node: length of the longest path from it ot a leaf
 
 We can use recursion to calculate it:
 
-> height = max(leftChild.height(),rightChild.height()) + 1
+- height = max(leftChild.height(),rightChild.height()) + 1
 
 ![image](http://p1.bqimg.com/567571/d43978a58cedc07c.png)
 
