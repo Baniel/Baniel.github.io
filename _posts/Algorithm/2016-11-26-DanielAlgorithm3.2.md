@@ -17,6 +17,7 @@ $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 $$\sqrt[3]{X}$$
 $$\sqrt{5 - x}$$
 
+$$\mid a-b \mid$$
 
 
 
