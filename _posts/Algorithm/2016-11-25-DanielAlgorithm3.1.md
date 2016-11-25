@@ -67,6 +67,7 @@ AVL algorithm uses heights of nodes, we want the heights as small as possible: w
 - We have to check them all
 
 ---
+
 # Rotations:
 - Four types of unbalanced situations
 -  1. LL: doubly left heavy situation... we have to make a right rotation
