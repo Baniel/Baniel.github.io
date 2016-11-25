@@ -17,3 +17,6 @@ main:
 
   - title: "Front End"
     url: /FrontEnd/
+
+  - title: "Web Security"
+    url: /WebSecurity/

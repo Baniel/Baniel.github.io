@@ -136,7 +136,7 @@ bst.insert(1)
 bst.traverseInOrder();
 
 ```
-### You can download the Code form my [GitHub](https://github.com/PythonJourney/DanielAlgorithm).
+ You can download the Code form my [GitHub](https://github.com/PythonJourney/DanielAlgorithm).
 
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
