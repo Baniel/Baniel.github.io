@@ -14,7 +14,7 @@ category: Algorithm
 
 > Node.py
 
-```
+``` python
 class Node(object):
 
     def __init__(self, data):
@@ -33,7 +33,7 @@ class Node(object):
 
 > LinkedList.py
 
-```
+``` python
 
 from Node import Node
 
@@ -99,7 +99,7 @@ class LinkedList(object):
 
 > App.py
 
-```
+``` python 
 # App for test the Linked list
 
 from LinkedList import LinkedList

@@ -52,9 +52,9 @@ AVL algorithm uses heights of nodes, we want the heights as small as possible: w
 ---
 
 - AVL tree requires the heights of left and right child of every node to differ at most +1 or -1 !!!
-- - $$\mid$$ height(leftSubtree) -  height(rightSubtree) $$\mid$$ < = 1
+- - \| height(leftSubtree) -  height(rightSubtree) \| < = 1
 
-- <img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
+
 
 - We can maintain this property in O(logN) time which is quite fast !!!
 - Insertion:
