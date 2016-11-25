@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 2.Learn Algorithm with Daniel --- AVL TREES Theory
+title : 3.Learn Algorithm with Daniel --- AVL TREES Theory
 category: Algorithm
 ---
 
