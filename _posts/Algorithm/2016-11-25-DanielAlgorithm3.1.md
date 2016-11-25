@@ -3,6 +3,9 @@ layout : single
 title : 3.1Learn Algorithm with Daniel --- AVL TREES Theory
 category: Algorithm
 ---
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 # AVL TREES Theory
 (AKA: Self-Balancing Binary Search Tree , Height-Balanced Binary Search Tree)
@@ -52,7 +55,7 @@ AVL algorithm uses heights of nodes, we want the heights as small as possible: w
 ---
 
 - AVL tree requires the heights of left and right child of every node to differ at most +1 or -1 !!!
-- \| height(leftSubtree) -  height(rightSubtree) \| < = 1
+- $$ \left\mid  height(leftSubtree) -  height(rightSubtree) \right\mid \leq 1 $$
 
 
 
