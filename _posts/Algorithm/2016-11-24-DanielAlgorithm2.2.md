@@ -8,7 +8,7 @@ category: Algorithm
 
 > Node.py
 
-```
+``` python
 
 class Node(object):
 
@@ -84,7 +84,7 @@ class Node(object):
 
 > Binary Search Tree
 
-```
+``` python
 from BinarySearchTreeDS.Node import Node
 
 class BST(object):
@@ -123,7 +123,7 @@ class BST(object):
 
 > App.py
 
-```
+``` python
 from BinarySearchTreeDS.BinarySearchTree import BST
 
 bst = BST()
