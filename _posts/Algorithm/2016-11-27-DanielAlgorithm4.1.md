@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 4.1 Learn Data Structure with Daniel --- Heap
+title : 3.2 Learn Data Structure with Daniel --- Heap
 category: Algorithm
 ---
 <script type="text/javascript" async
@@ -22,6 +22,8 @@ category: Algorithm
     When $$(1\leq i \leq= \left \lfloor \frac{n}{2} \right \rfloor)$$
 
 
+    - Max Heap: $$ K_i \geq K\_{2i}  $$ and $$ K_i \geq K\_{2i+1}  $$
+    - Min Heap: $$ K_i \leq K\_{2i}  $$ and $$ K_i \leq K\_{2i+1}  $$
 
 
 - It is complete: it cannot be unbalanced !!! We insert every new item to the next available place
@@ -82,9 +84,14 @@ Decrease Key |$$O(\log{n})$$ |$$O(\log{n})$$ | $$O(1)$$
 Merge  | $$({m}\log({m+n}))$$  |$$O(\log{n})$$ | $$O(1)$$
 
 
-$$
-\begin{cases}
-0& \text{x=0}\\
-1& \text{x!=0}
-\end{cases}
-$$
+<div style="max-width:640px; margin:0 auto 10px;" >
+<div
+style="position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;">
+
+<iframe width="854" height="480" src="https://www.youtube.com/embed/hfnDTvbtDUI" frameborder="0" allowfullscreen></iframe>
+
+</div>
+</div>
