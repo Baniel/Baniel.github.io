@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 3.2 Learn Algorithm with Daniel --- AVL TREES Code Implement
+title : 3.2 Learn Data Structure with Daniel --- AVL TREES Code Implement
 category: Algorithm
 ---
 <script type="text/javascript" async

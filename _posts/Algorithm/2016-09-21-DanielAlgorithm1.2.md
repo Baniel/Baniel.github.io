@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 1.2 Learn Algorithm with Daniel --- Linked List
+title : 1.2 Learn Data Structure with Daniel --- Linked List
 category: Algorithm
 ---
 
@@ -99,7 +99,7 @@ class LinkedList(object):
 
 > App.py
 
-``` python 
+``` python
 # App for test the Linked list
 
 from LinkedList import LinkedList

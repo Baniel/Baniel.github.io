@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 3.1Learn Algorithm with Daniel --- AVL TREES Theory
+title : 3.1Learn Data Structure with Daniel --- AVL TREES Theory
 category: Algorithm
 ---
 <script type="text/javascript" async
