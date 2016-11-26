@@ -6,12 +6,6 @@ category: Algorithm
 
 # Linked List Code Implement.
 
-
-
-
-
-
-
 > Node.py
 
 ``` python
