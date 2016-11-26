@@ -22,10 +22,10 @@ category: Algorithm
     When $$(1\leq i \leq= \left \lfloor \frac{n}{2} \right \rfloor)$$
 
 
-    - Max Heap: $$ K_i \geq K\_{2i}  $$
-                and $$ K_i \geq K\_{2i+1}  $$
-    - Min Heap: $$ K_i \leq K\_{2i}  $$
-                and $$ K_i \leq K\_{2i+1}  $$
+    - Max Heap: $$ K_i \geq K_{2i}  $$
+                and $$ K_i \geq K_{2i+1}  $$
+    - Min Heap: $$ K_i \leq K_{2i}  $$
+                and $$ K_i \leq K_{2i+1}  $$
 
 
 - It is complete: it cannot be unbalanced !!! We insert every new item to the next available place
