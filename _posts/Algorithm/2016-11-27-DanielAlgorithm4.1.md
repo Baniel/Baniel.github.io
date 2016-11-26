@@ -38,7 +38,9 @@ category: Algorithm
 # Heap properies
 
 1. Complete -> we construct if from left to right across each row / of course the last row may not be completely full
-2.
+2. The key of the parent must be larger/smaller than its childern's keys
+
+![image](http://www.studytonight.com/data-structures/images/heap-property-example.png)
 
 
 ---
@@ -85,6 +87,7 @@ Insert   |$$O(\log{n})$$| $$O(1)$$ |$$O(1)$$
 Decrease Key |$$O(\log{n})$$ |$$O(\log{n})$$ | $$O(1)$$
 Merge  | $$({m}\log({m+n}))$$  |$$O(\log{n})$$ | $$O(1)$$
 
+## I.T.
 
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
