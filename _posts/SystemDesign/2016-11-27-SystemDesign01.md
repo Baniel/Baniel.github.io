@@ -16,7 +16,7 @@ category: SystemDesign
 
 
 
-# [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs)
+# Apple Think Different - [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs) Narrated Version
 
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
