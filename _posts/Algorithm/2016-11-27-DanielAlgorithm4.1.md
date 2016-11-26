@@ -17,13 +17,15 @@ category: Algorithm
 - It has nothing to do with the pool of memory from which dynamically allocated memory is allocated
 
 ---
-## Heap properies
+
+# Heap properies
 
 1. Complete -> we construct if from left to right across each row / of course the last row may not be completely full
 2.
 
 
 ---
+
 # Heapsort
 - comparison-based sorting algorithm
 - use heap data structure rather than a linear-time search to find the maximum
@@ -37,6 +39,7 @@ category: Algorithm
 
 
 ---
+
 # Binomial Heap
 - Similar to a binary heap but also supports quick merging of two heaps
 - It is important as an implementation of the mergeable heap abstract data type (meldable heap), which is a priority queue supporting merge operation
@@ -44,6 +47,7 @@ category: Algorithm
 - Insertion $$O(\log{n})$$ time complexity can be reduced to O(1) constant time complexity with help of binomial heaps
 
 ---
+
 # Fibonacci heap
 - Faster than the classic binary heap
 - Dijkstra's shortest path algorithm and Prim's spanning tree algorithm run faster if they rely on Fibonacci heap instead of binary heaps
