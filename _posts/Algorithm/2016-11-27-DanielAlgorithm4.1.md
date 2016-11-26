@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 3.2 Learn Data Structure with Daniel --- Heap
+title : 4.1 Learn Data Structure with Daniel --- Heap
 category: Algorithm
 ---
 <script type="text/javascript" async
