@@ -10,7 +10,20 @@ category: Algorithm
 # Heap Theory
 
 - It is a binary tree
+
+![image](http://i.stack.imgur.com/ld3It.png)
+
 - In a max heap, the keys of parent nodes are always greater than or equal to those of the children and the highest key is in the root node. In a min heap, the keys of parent nodes are less than or eaual to thouse of the children and the lowest key is in the root node
+
+![image](https://qph.ec.quoracdn.net/main-qimg-ddb92cea328a64098e3219bd021ff6cb?convert_to_webp=true)
+
+-  We can traverse heap by the level from the root and set the index from left to right. We can get the rule like below:
+
+    When $$(1\leq i \leq= \left \lfloor \frac{n}{2} \right \rfloor)$$
+
+
+
+
 - It is complete: it cannot be unbalanced !!! We insert every new item to the next available place
 - Applications: Dijkstra alorithm, Prims algorithm
 - The heap is one maximally efficient implementation of an abstract data type called a priority queue
@@ -67,3 +80,11 @@ Delete min | $$O(\log{n})$$ | $$O(\log{n})$$ | $$O(\log{n})$$
 Insert   |$$O(\log{n})$$| $$O(1)$$ |$$O(1)$$
 Decrease Key |$$O(\log{n})$$ |$$O(\log{n})$$ | $$O(1)$$
 Merge  | $$({m}\log({m+n}))$$  |$$O(\log{n})$$ | $$O(1)$$
+
+
+$$
+\begin{cases}
+0& \text{x=0}\\
+1& \text{x!=0}
+\end{cases}
+$$
