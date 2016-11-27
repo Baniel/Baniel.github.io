@@ -85,6 +85,7 @@ Search | &emsp; O(1) | &emsp; O(n)
 - But resizing is done at once and operation, which triggers resizing, take O(n) to complete, where n is a number of entries in the table. This fact may make dynamic-sized hash tables inappropriate for real0time applications.
 
 ---
+
 # Applications
 
 - Databases: sometimes search trees, sometimes hashing is better
