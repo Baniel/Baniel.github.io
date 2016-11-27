@@ -1,6 +1,6 @@
 ---
 layout : single
-title : 5.2 Learn Data Structure with Daniel --- Hash Tables
+title : 5.1 Learn Data Structure with Daniel --- Hash Tables
 category: Algorithm
 ---
 
@@ -48,10 +48,10 @@ category: Algorithm
 ### Time Complex Table
  | | Average case | Worst Case
 ---|---|---
-Space |  &emsp; $$O(n)$$ | &emsp; $$O(n)$$
-Insert | &emsp; $$O(1)$$ | &emsp; $$O(n)$$
-Delete | &emsp; $$O(1)$$ | &emsp; $$O(n)$$
-Search | &emsp; $$O(1)$$ | &emsp; $$O(n)$$
+Space |  &emsp; O(n) | &emsp; O(n)
+Insert | &emsp; O(1) | &emsp; O(n)
+Delete | &emsp; O(1) | &emsp; O(n)
+Search | &emsp; O(1) | &emsp; O(n)
 
 ---
 
