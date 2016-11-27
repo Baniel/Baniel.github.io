@@ -46,6 +46,7 @@ category: Algorithm
 
 
 ### Time Complex Table
+
  | | Average case | Worst Case
 ---|---|---
 Space |  &emsp; O(n) | &emsp; O(n)
