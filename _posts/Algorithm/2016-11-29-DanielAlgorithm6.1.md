@@ -74,6 +74,12 @@ category: Algorithm
 
 
 
+- Paper: [Fast Algorithms for Sorting and Searching Strings](http://www.cs.princeton.edu/~rs/strings/)
+
+- Dr.Dobb's [Ternary Search Trees](http://www.drdobbs.com/database/ternary-search-trees/184410528)
+
+
+
 # [Pwn2Own](https://en.wikipedia.org/wiki/Pwn2Own) 2016: Day 2 and Event Wrap-Up
 
 <div style="max-width:640px; margin:0 auto 10px;" >
