@@ -11,6 +11,9 @@ category: Algorithm
 # Ternary Search Trees Theory
 
 - With the help of tries we can search and sort strings very very efficiently
+
+![image](http://p1.bpimg.com/567571/ab8435fc783967f9.png)
+
 - The problem is that tries consume a lot of memory, so we should use ternary search trees instead which stores less references and null objects
 - TST stores characters or strings in noes / not keys
 - Each node has 3 children: less, equal or greater
@@ -56,9 +59,18 @@ category: Algorithm
 # Applications
 
 - It can be used to implement the auto-complete feature very very efficiently
+
+![image](http://i1.piimg.com/567571/f0b97a40272dea7a.png)
+
 - Can be used for spell-checkers
+
+![image](http://i1.piimg.com/567571/626be11492adc9a4.png)
+
 - Near-neighbor searching (Of which a spell-check is a special case)
+
 - For databases especially when indexing by serveral non-key fields is desirable
+
+![image](http://i1.piimg.com/567571/ca3b0d29a0849651.png)
 
 
 
