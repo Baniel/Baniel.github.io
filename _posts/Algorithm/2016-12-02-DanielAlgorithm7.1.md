@@ -24,7 +24,7 @@ category: Algorithm
 
 ---
 
-# Hamiltonian path
+# Hamiltonian path (Point)
 - It is a path in an undirected or directed graph that visits each vertex exactly once
 
 ![image](http://support.esri.com/~/media/Support/GISDictionary/Hamiltonian-path.jpg)
@@ -39,7 +39,7 @@ category: Algorithm
 
 ---
 
-# Eulerian Path
+# Eulerian Path (Line)
 - It is a trail in a graph which visits every edge exactly once
 
 ![image](http://4.bp.blogspot.com/-LOrP3erurXs/UZBWITqkF7I/AAAAAAAAAN4/hq6Y-NM1t58/s1600/Screen+shot+2013-05-12+at+8.02.42+PM.png)
