@@ -7,6 +7,45 @@ category: SystemDesign
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+ # Template: SNAKE 01
+-  Scenario: case/interface
+-  Necessary: constrain/hypothesis
+-  Application: service/algorithm
+-  Kilobit: data
+-  Evolve
+
+
+> Do you know what's the different between "Node" and "Server"
+
+![image](http://p1.bqimg.com/567571/acb4c4f2425aef8d.png)
+
+## Eg: Monitor System?
+
+- S: where?
+    - WhatsApp or Wechat   
+
+
+> Do you know what's the different between "Service" and "Server"
+
+Service | Server
+---|---
+Software | Machine
+Process, Thread | CPU, Disk
+
+
+- N:
+    - If you have 1000 Machine(Swarm)
+    - May be 1000 x 200(Process) = 200k Process
+    - We also need to send the logs to Center Machine per/Minute
+    - Query Per Second([QPS](https://en.wikipedia.org/wiki/Queries_per_second)): $$ \frac{1000}{60} = 16 $$  1000 means 1000 Machine
+
+> How many Processes can be run at the same time in Mac?
+
+![image](https://farhakm.files.wordpress.com/2015/03/iljzp.png)
+
+If you have a Mac, you can open "Activity Monitor" to check threads.
+![image](http://p1.bqimg.com/567571/ae779f5e3673b9a6.png)
+
 
 
 
