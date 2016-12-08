@@ -7,7 +7,7 @@ category: SystemDesign
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
- # Template: SNAKE 01
+# Template: SNAKE 01
 -  Scenario: case/interface
 -  Necessary: constrain/hypothesis
 -  Application: service/algorithm
