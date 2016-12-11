@@ -34,6 +34,8 @@ category: Algorithm
 
 - Cheyen's algorithm in garbage collecion: simliar to mark and sweep gc procedure, it helps to maintain the active references -> it uses BFS to detect all the references on the heap memmory.
 
+---
+
 <div style="max-width:640px; margin:0 auto 10px;" >
 <div
 style="position: relative;
@@ -42,7 +44,7 @@ padding-bottom:56.25%;
 height:0;">
 
 
-### [Kevin_Mitnick](https://en.wikipedia.org/wiki/Kevin_Mitnick) 
+### [Kevin_Mitnick](https://en.wikipedia.org/wiki/Kevin_Mitnick)
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/_KP636WuraE" frameborder="0" allowfullscreen></iframe>
 
