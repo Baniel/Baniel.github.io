@@ -1,6 +1,6 @@
 ---
 layout: single
-title: SNEAK Principle
+title: System Design Intro
 category: SystemDesign
 ---
 <script type="text/javascript" async
