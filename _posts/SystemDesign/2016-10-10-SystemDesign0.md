@@ -247,7 +247,7 @@ Reference:
 
 ###[[⬆]](#toc) <a name='ood'>Object Oriented Design:</a>
 
-####Tips for OOD Interview
+#### Tips for OOD Interview
 
 **Clarify the scenario, write out user cases**
 
@@ -265,14 +265,14 @@ Identify attributes for each class: change noun to variable and action to method
 
 Use design patterns such that it can be reused in multiple applications.
 
-####Useful Websites
+#### Useful Websites
 
 * [101 Design Patterns & Tips for Developers](http://sourcemaking.com/design-patterns-and-tips)
 
 
-# Thanks for Zach : the material comes from : [Zach Github](https://github.com/checkcheckzz/system-design-interview)
+### Thanks for Zach : the material comes from : [Zach Github](https://github.com/checkcheckzz/system-design-interview)
 
-#
+
 # [Jeff Dean](https://en.wikipedia.org/wiki/Jeff_Dean_(computer_scientist))
 
 <div style="max-width:640px; margin:0 auto 10px;" >
