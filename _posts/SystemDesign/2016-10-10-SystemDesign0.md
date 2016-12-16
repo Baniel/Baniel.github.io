@@ -7,7 +7,7 @@ category: SystemDesign
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-[![logo](imgs/systemcycle.png)](https://github.com/checkcheckzz/system-design-interview)
+![image](https://blog.abmodi.com/wp-content/uploads/2016/09/system-design-interview.jpg)
 
 > How to prepare system design questions for IT company
 
@@ -269,6 +269,8 @@ Use design patterns such that it can be reused in multiple applications.
 
 * [101 Design Patterns & Tips for Developers](http://sourcemaking.com/design-patterns-and-tips)
 
+
+# Thanks for Zach : the material comes from : [Zach Github](https://github.com/checkcheckzz/system-design-interview)
 
 
 # [Jeff Dean](https://en.wikipedia.org/wiki/Jeff_Dean_(computer_scientist))
