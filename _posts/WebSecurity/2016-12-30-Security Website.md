@@ -30,11 +30,12 @@ category: WebSecurity
 
 ### 6.HackThis!!
 
-- Link: [https://www.hackthis.co.uk/](http://www.hackthis.co.uk/)
+- Link: [https://www.hackthis.co.uk/](https://www.hackthis.co.uk/)
 
 ### 7. Hack This Sites
 
 - Link: [https://www.hackthissite.org](https://www.hackthissite.org/)
+
 
 ### 8.Hellbound Hackers
 
@@ -42,7 +43,7 @@ category: WebSecurity
 
 ### 9.McAfee HacMe Sites
 
-- Link: [http://www.mcafee.com/us/downloads/freetools/index.aspx](http://www.mcafee.com/us/downloads/freetools/index.aspx/)
+- Link: [http://www.mcafee.com/us/downloads/free-tools/index.aspx](http://www.mcafee.com/us/downloads/free-tools/index.aspx)
 
 ### 10.Mutillidae
 
@@ -76,11 +77,11 @@ category: WebSecurity
 
 - Link: [http://www.ichunqiu.com/main](http://www.ichunqiu.com/main/)
 
-### 18. XCTF_OJ 
+### 18. XCTF_OJ (China)
 
 - Link: [http://oj.xctf.org.cn/](http://oj.xctf.org.cn/)
 
-### 19. Security Attacking and Defense Platform
+### 19. Security Attacking and Defense Platform (China)
 
 - Link: [http://hackinglab.cn/index.php](http://hackinglab.cn/index.php)
 
