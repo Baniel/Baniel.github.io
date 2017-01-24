@@ -85,6 +85,10 @@ category: WebSecurity
 
 - Link: [http://hackinglab.cn/index.php](http://hackinglab.cn/index.php)
 
+### 20. Vulnerable By Design ~ VulnHub (Thanks for 苍冥)
+
+- Link: [https://www.vulnhub.com/](https://www.vulnhub.com/)
+
 
 
 
