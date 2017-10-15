@@ -4,8 +4,6 @@ title: Website Self-Learning
 category: WebSecurity
 ---
 
-# Website Self-Learing
-
 
 ### 1.bWAPP
 
@@ -89,7 +87,7 @@ category: WebSecurity
 
 - Link: [https://www.vulnhub.com/](https://www.vulnhub.com/)
 
-### 21. Live Overfloe 
+### 21. Live Overfloe
 
 - Link: [http://liveoverflow.com/](http://liveoverflow.com/)
 
@@ -107,11 +105,3 @@ height:0;">
 
 </div>
 </div>
-
-
-
- 
-    
-
-
-

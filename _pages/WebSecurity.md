@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /WebSecurity/
-title: "Web Security"
+title: "Security"
 author_profile: true
 comments: true
 ---
