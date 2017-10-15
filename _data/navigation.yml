@@ -12,8 +12,8 @@ main:
   - title: "System Design"
     url: /SystemDesign/
 
-  - title: "Front End"
-    url: /FrontEnd/
+  # - title: "Front End"
+  #   url: /FrontEnd/
 
   - title: "Web Security"
     url: /WebSecurity/
