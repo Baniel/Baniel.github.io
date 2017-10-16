@@ -1,21 +1,18 @@
 ---
 layout: single
-title: Discrete Mathematics 1
+title: Probability Theory 01
 category: Mathematics
 ---
 
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 
 
 
 
-
-
-
-
-
-
-
+# The Man Who Knew Infinity -- [Srinivasa Ramanujan](https://en.wikipedia.org/wiki/Srinivasa_Ramanujan)
 
 
 <div style="max-width:640px; margin:0 auto 10px;" >
