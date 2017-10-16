@@ -10,10 +10,15 @@ category: Mathematics
 
 
 # OverView
-#### - Integral Calculus
+
+---
+
+
+#### Integral Calculus
     1. To understand the Integration
     2. The principle of the calculus: Newton-Leibniz Formula
-#### - Probability Space
+
+#### Probability Space
     1. Stochastic Variable & Probability: Probability Density Function
     2. Stochastic Variable & Probability: Probability Space
     3. Conditional Probability & Bayes Formula
