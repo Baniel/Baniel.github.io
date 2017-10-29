@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Probability Theory 01
+title: Paper Overview --- AlphaGo Zero
 category: Mathematics
 ---
 
@@ -10,7 +10,7 @@ category: Mathematics
 
 
 
-Why AlphaGo Special?
+## Why AlphaGo Special?
 
 1. It is trained solely by self-paly reinforcement learning, starting from random play, without any supervision or use of human data.
 2. It uses only the balck and white stones from the board as input features.
