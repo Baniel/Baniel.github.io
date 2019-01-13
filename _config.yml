@@ -134,6 +134,10 @@ author:
     - label: "Kaggle"
       icon: "fab fa-fw fa-kaggle"
       url: "https://www.kaggle.com/daniellittle"
+    - label: "WeChat ID: MITDANIEL"
+      icon: "fab fa-fw fa-weixin"
+      url: "https://github.com/Baniel/PictureDatabase/blob/master/DanielQR.jpeg?raw=true"
+
 
 
 # Site Footer

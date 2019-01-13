@@ -69,6 +69,10 @@
 <lastmod>2017-10-29T00:00:00+11:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4001/tutorial/Tutorial00/</loc>
+<lastmod>2019-01-01T00:00:00+11:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4001/about/</loc>
 </url>
 <url>
@@ -79,6 +83,9 @@
 </url>
 <url>
 <loc>http://localhost:4001/</loc>
+</url>
+<url>
+<loc>http://localhost:4001/mathematics/</loc>
 </url>
 <url>
 <loc>http://localhost:4001/mathematics/</loc>

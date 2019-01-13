@@ -83,4 +83,9 @@ var store = [{
         "excerpt":"Why AlphaGo Special? It is trained solely by self-paly reinforcement learning, starting from random play, without any supervision or use of human data. It uses only the balck and white stones from the board as input features. It uses a single neural network, rahter than separate policy and value networks....","categories": ["mathematics"],
         "tags": [],
         "url": "http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/",
+        "teaser":null},{
+        "title": "Tutorial 0x00",
+        "excerpt":" ","categories": ["tutorial"],
+        "tags": [],
+        "url": "http://localhost:4001/tutorial/Tutorial00/",
         "teaser":null}]
