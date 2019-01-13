@@ -85,7 +85,7 @@ var store = [{
         "url": "http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/",
         "teaser":null},{
         "title": "Tutorial 0x00",
-        "excerpt":" ","categories": ["tutorial"],
+        "excerpt":"Hi, this is your fist tutorial.  ","categories": ["tutorial"],
         "tags": [],
         "url": "http://localhost:4001/tutorial/Tutorial00/",
         "teaser":null}]

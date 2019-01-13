@@ -1,13 +1,13 @@
 ---
-title: Mathematics
+title: Tutorial
 layout: collection
-permalink: /mathematics/
-collection: mathematics
+permalink: /tutorial/
+collection: tutorial
 entries_layout: list
 ---
 
 <div class="grid__wrapper">
-{% for post in site.categories.mathematics %}
+{% for post in site.categories.tutorial %}
   {% include archive-single.html type="list" %}
 {% endfor %}
 </div>
