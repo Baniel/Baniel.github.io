@@ -2,6 +2,7 @@
 layout: single
 title: Probability Theory 01
 category: mathematics
+comments: ture
 ---
 
 <script type="text/javascript" async

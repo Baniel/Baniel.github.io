@@ -2,6 +2,7 @@
 layout: single
 title: Paper Overview --- AlphaGo Zero
 category: mathematics
+comments: true
 ---
 
 <script type="text/javascript" async
