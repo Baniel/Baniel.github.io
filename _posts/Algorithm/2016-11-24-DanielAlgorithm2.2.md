@@ -1,7 +1,7 @@
 ---
 layout : single
 title : 2.2 Learn Data Structure with Daniel --- Binary Search Tree Code Implement
-category: Algorithm
+category: algorithm
 ---
 
 # Binary Search Tree Code Implement.

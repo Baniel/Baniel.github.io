@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Paper Overview --- AlphaGo Zero
-category: Mathematics
+category: mathematics
 ---
 
 <script type="text/javascript" async

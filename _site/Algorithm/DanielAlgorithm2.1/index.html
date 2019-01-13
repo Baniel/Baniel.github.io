@@ -1,0 +1,416 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.14.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>2.1 Learn Data Structure with Daniel — Binary Search Tree Theory - Daniel Tech Blog</title>
+<meta name="description" content="Binary Search Theory.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daniel Tech Blog">
+<meta property="og:title" content="2.1 Learn Data Structure with Daniel — Binary Search Tree Theory">
+<meta property="og:url" content="http://localhost:4001/algorithm/DanielAlgorithm2.1/">
+
+
+  <meta property="og:description" content="Binary Search Theory.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2016-10-19T00:00:00+11:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4001/algorithm/DanielAlgorithm2.1/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Daniel Zhang",
+      "url": "http://localhost:4001",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Daniel Tech Blog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Daniel Tech Blog</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About Me</a>
+            </li><li class="masthead__menu-item">
+              <a href="/algorithm/" >Algorithm</a>
+            </li><li class="masthead__menu-item">
+              <a href="/design-pattern/" >Design Pattern</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mathematics/" >Mathematics</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="2.1 Learn Data Structure with Daniel — Binary Search Tree Theory">
+    <meta itemprop="description" content="Binary Search Theory.">
+    <meta itemprop="datePublished" content="October 19, 2016">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">2.1 Learn Data Structure with Daniel — Binary Search Tree Theory
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="binary-search-theory">Binary Search Theory.</h1>
+
+<p><img src="http://turnoff.us/image/en/binary-tree.png" alt="image" />
+The figure comes from <a href="http://note.youdao.com/">{turnoff.code}</a></p>
+
+<ul>
+  <li>BST is used to implement lookup tables
+<img src="https://blog.penjee.com/wp-content/uploads/2015/11/binary-search-tree-sorted-array-animation.gif" alt="image" /></li>
+</ul>
+
+<p>The figure comes from <a href="https://blog.penjee.com/5-gifs-to-understand-binary-search-tree/">PENJEE.COM ‘S BLOG</a></p>
+
+<ul>
+  <li>Keeps the keys in sorted order: so that lookup and other operations can use principle of binary search !!!</li>
+  <li>Each comparison allows the operations to skip over half of the tree, so that each lookup/insertion/deletion takes time proportional to the logarithm of the number of items stored in the tree</li>
+  <li>This is much better than the linear time O(N) required to find items by key in an unsorted array, but slower than the corresponding operations on hash tables</li>
+  <li>Insertion: if the key is not equal to that of the root, we search the left or right subtrees recurisively</li>
+  <li>Deletion: soft delete -&gt; do not actually remove the item just mark it as deleted ( not so efficient )</li>
+</ul>
+
+<hr />
+
+<h1 id="deletion">Deletion</h1>
+
+<p><img src="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/pix/del01.bmp" alt="image" /></p>
+
+<ul>
+  <li>Deleting node with no child: just set it to NULL</li>
+  <li>Deleting a node with one child: remove the node and replace it with its child</li>
+  <li>Deleting a node with two children: call the node to be deleted i. Do not delete i directly. Instead, choose either its in-order successor node or its in-order predecessor node, j. Copy the value of j to i, then recursively call delete on j unitl reaching one of the first two cases.</li>
+  <li>
+    <p>In order traversal of a graph:gives the numerical order.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th> </th>
+          <th>Average case</th>
+          <th>Worst Case</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Space</td>
+          <td>  O(n)</td>
+          <td>  O(n)</td>
+        </tr>
+        <tr>
+          <td>Insert</td>
+          <td>  O(log n)</td>
+          <td>  O(log n)</td>
+        </tr>
+        <tr>
+          <td>Delete</td>
+          <td>  O(log n)</td>
+          <td>  O(log n)</td>
+        </tr>
+        <tr>
+          <td>Search</td>
+          <td>  O(log n)</td>
+          <td>  O(log n)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Height of the tree “h”: the length of the path from the root to the deepest node in the tree</p>
+</blockquote>
+
+<p><img src="http://web.cs.wpi.edu/~cs507/f98/classes/class04/fig01.gif" alt="image" /></p>
+
+<ul>
+  <li>we should keep the height of the tree at a minimum which is h=log n</li>
+  <li>If the tree is unbalanced: the h= log n  relation is no more valid and the operation’s running time is no more logarithmic.</li>
+</ul>
+
+<hr />
+<p>How to create Binary Search Tree</p>
+
+<blockquote>
+  <p>Step 1. Insert a node with value is 3</p>
+</blockquote>
+
+<p><img src="http://p1.bpimg.com/567571/2e919f9c4bb56005.png" alt="image" /></p>
+
+<blockquote>
+  <p>Step 2. Insert</p>
+</blockquote>
+
+<p>Continue…</p>
+
+<blockquote>
+  <p>Final Result:</p>
+</blockquote>
+
+<p><img src="http://p1.bqimg.com/567571/6266e48e4828de12.png" alt="image" /></p>
+
+<ul>
+  <li>In-order traversal: we call recursively the “left subtree” + “the root” + “right subtree”</li>
+  <li>Predecessor of a node: the previous node in the in order traversal</li>
+  <li>
+    <p>Succesor of a node: the next node in the in order traversal</p>
+  </li>
+  <li>
+    <p>Delete the node 5, we have to find the node in )(LogN) time. Then, we set the node to NULL!!!</p>
+  </li>
+  <li>Delete the node 12(the root), swap of with the in order predecessor or successor (here we swap with 5). Now it is the simple situation now: it is a leaf, we just have to set the node 12 to NULL!!!</li>
+</ul>
+
+<blockquote>
+  <p>Tip: <a href="http://chris-taylor.github.io/blog/2013/02/25/xor-trick/">Swap Two Variables Without Using a Temp Variable (With Math!)</a></p>
+</blockquote>
+
+<h1 id="geohotz"><a href="https://en.wikipedia.org/wiki/George_Hotz">GeoHotz</a></h1>
+
+<div style="max-width:640px; margin:0 auto 10px;">
+<div style="position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;">
+
+<iframe width="854" height="480" src="https://www.youtube.com/embed/Rba7qjb0378" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#algorithm" class="page__taxonomy-item" rel="tag">algorithm</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-10-19T00:00:00+11:00">October 19, 2016</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/systemdesign/SystemDesign0/" class="pagination--pager" title="System Design Intro
+">Previous</a>
+    
+    
+      <a href="/mathematics/ProbabilityTheory01/" class="pagination--pager" title="Probability Theory 01
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Daniel Zhang. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

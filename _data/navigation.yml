@@ -1,22 +1,12 @@
-# main links links
+# main links
 main:
-#  - title: "Jekyll Theme Tutorial"
-#    url: https://mmistakes.github.io/minimal-mistakes/docs/navigation/
-
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "About Me"
+    url: /about/
   - title: "Algorithm"
-    url: /Algorithm/
-
+    url: /algorithm/
   - title: "Design Pattern"
-    url: /DesignPattern/
-
-  - title: "System Design"
-    url: /SystemDesign/
-
-  # - title: "Front End"
-  #   url: /FrontEnd/
-
-  - title: "Web Security"
-    url: /WebSecurity/
-
+    url: /design-pattern/
   - title: "Mathematics"
-    url: /Mathematics/
+    url: /mathematics/

@@ -1,7 +1,7 @@
 ---
 layout : single
 title : 8.1 Learn Data Structure with Daniel --- BFS Theory
-category: Algorithm
+category: algorithm
 ---
 
 <script type="text/javascript" async

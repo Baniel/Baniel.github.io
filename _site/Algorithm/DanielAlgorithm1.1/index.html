@@ -1,0 +1,429 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.14.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>1.1 Learn Data Structure with Daniel — Linked List - Daniel Tech Blog</title>
+<meta name="description" content="Linked List Theory">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daniel Tech Blog">
+<meta property="og:title" content="1.1 Learn Data Structure with Daniel — Linked List">
+<meta property="og:url" content="http://localhost:4001/algorithm/DanielAlgorithm1.1/">
+
+
+  <meta property="og:description" content="Linked List Theory">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2016-09-20T00:00:00+10:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4001/algorithm/DanielAlgorithm1.1/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Daniel Zhang",
+      "url": "http://localhost:4001",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Daniel Tech Blog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Daniel Tech Blog</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About Me</a>
+            </li><li class="masthead__menu-item">
+              <a href="/algorithm/" >Algorithm</a>
+            </li><li class="masthead__menu-item">
+              <a href="/design-pattern/" >Design Pattern</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mathematics/" >Mathematics</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="1.1 Learn Data Structure with Daniel — Linked List">
+    <meta itemprop="description" content="Linked List Theory">
+    <meta itemprop="datePublished" content="September 20, 2016">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">1.1 Learn Data Structure with Daniel — Linked List
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="linked-list-theory">Linked List Theory</h1>
+
+<ol>
+  <li>Each node is composed of a data and a reference/link to the next node in the sequence.</li>
+</ol>
+
+<p><img src="http://www.equestionanswers.com/c/images/circular-linked-list.gif" alt="image" /></p>
+
+<ol>
+  <li>
+    <p>Simple and very common data structure !!!
+(to be used very often and to be test very often in your interview)
+<img src="https://seedotnet.files.wordpress.com/2011/04/linked-list.jpg" alt="image" /></p>
+  </li>
+  <li>
+    <p>They can be used to implement several other common data types: stacks,queues</p>
+  </li>
+  <li>
+    <p>The principal benefit of a linked list over a conventional array is that the list elements can easily be inserted or removed without reallocation or reorganization of the entire structure becuause the data items need not be stored in memory or on disk in one block.</p>
+  </li>
+  <li>
+    <p>An array has to be declared in the source code,before compiling and running the program!!!</p>
+  </li>
+  <li>
+    <p>On the other hand,simple linked lists by themselves do not allow random access to the data.</p>
+  </li>
+  <li>
+    <p>Many basic operations such as obtaining the last node of the list,or finding a node that contains a given data,or locating the place where a new node should be inserted – may require sequential scanning of most or all of the list elements.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <h1 id="linkedlist---vs--arrays">LinkedList   VS  Arrays</h1>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>—</th>
+      <th>LinkedList</th>
+      <th>Arrays (ArrayList)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Indexing</td>
+      <td>O(n)</td>
+      <td>O(1)</td>
+    </tr>
+    <tr>
+      <td>Insert at beginning</td>
+      <td>O(1)</td>
+      <td>O(n)</td>
+    </tr>
+    <tr>
+      <td>Waste space</td>
+      <td>O(n)</td>
+      <td>0 (Zero)</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>Use linked lists if you want to insert/remove elements at the beginning</p>
+  </li>
+  <li>
+    <p>Use liked lists if the size is changing frequently … Otherwise use arrays</p>
+  </li>
+  <li>
+    <p>Use arrys if you need random access: it can be done very quickly, in O(1) constant time</p>
+  </li>
+</ul>
+
+<blockquote>
+  <h1 id="advantages">Advantages</h1>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Liked lists are dynamic data structures (arrays are not !!!).</p>
+  </li>
+  <li>
+    <p>It can allocate the needed memory in run-time.</p>
+  </li>
+  <li>
+    <p>Very efficient if we want to manipulate the first emelemts.</p>
+  </li>
+  <li>
+    <p>EASY IMPLEMENTATION</p>
+  </li>
+  <li>
+    <p>Can store items with different sizes: an array assumes every element tobe exactly the same.</p>
+  </li>
+  <li>
+    <p>It’s easier for a linked list to grow organically. An array’s size needs to be known ahead of time, or re-created when it needs to grow.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <h1 id="disadvantages">Disadvantages</h1>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Waste memory because of the references</p>
+  </li>
+  <li>
+    <p>Nodes in a linked list must be read in order from the beginning as linked lists have sequential access ( array iterms can be reached via indexes in O(1) time !!!)</p>
+  </li>
+  <li>
+    <p>Difficulties arise in linked lists when it comes to reverse traversing.Singly linked lists are extremely difficult to navigate backwards.</p>
+  </li>
+  <li>
+    <p>Solution: doubly linked lists -&gt; easier to read, but memory is wasted in allocating space for a back pointer.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <h1 id="deleting-from-linked-list">Deleting from linked list</h1>
+</blockquote>
+
+<ul>
+  <li>The same as for insertion</li>
+  <li>O(1) time complexity: if we insert items at the beginning</li>
+  <li>O(N) time complexity: for inserting items at the end of list</li>
+</ul>
+
+<p><strong>After learning the linked list, let us enjoy the video — “Driving with My Mum”. Moretoki is driving a car with his mother. You can find the love between mother and son from this funny video.Evey mother wants to look ahead and see her son as a happy, healthy grown man.Can anything replace a mother’s love and care?</strong></p>
+
+<p><img src="http://assets1.doyouyoga.com/uploads/2012/10/I-Love-My-Mom.jpg" alt="image" /></p>
+
+<div style="max-width:640px; margin:0 auto 10px;">
+<div style="position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;">
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/XMNlfYBzi8Q" frameborder="0" allowfullscreen=""></iframe>
+</div>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#algorithm" class="page__taxonomy-item" rel="tag">algorithm</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-09-20T00:00:00+10:00">September 20, 2016</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/algorithm/DanielAlgorithm1.2/" class="pagination--pager" title="1.2 Learn Data Structure with Daniel — Linked List
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Daniel Zhang. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

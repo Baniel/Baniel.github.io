@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Probability Theory 01
-category: Mathematics
+category: mathematics
 ---
 
 <script type="text/javascript" async

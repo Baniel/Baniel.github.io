@@ -1,7 +1,7 @@
 ---
 layout : single
 title : 6.1 Learn Data Structure with Daniel --- Ternary Search Trees Theory
-category: Algorithm
+category: algorithm
 ---
 
 <script type="text/javascript" async

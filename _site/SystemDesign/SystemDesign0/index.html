@@ -1,41 +1,35 @@
-
-
 <!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.14.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
 <html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
 
-<head>
-    
-
-<meta charset="utf-8">
-
-
-
-<!-- begin SEO -->
+<!-- begin _includes/seo.html --><title>System Design Intro - Daniel Tech Blog</title>
+<meta name="description" content="">
 
 
 
-
-
-
-
-
-
-<title>0.Daniel 带你了解系统设计 - Daniel Tech Blog</title>
-
-
-
-
-
-
-
-<meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Daniel Tech Blog">
-<meta property="og:title" content="0.Daniel 带你了解系统设计">
+<meta property="og:title" content="System Design Intro">
+<meta property="og:url" content="http://localhost:4001/systemdesign/SystemDesign0/">
+
+
+  <meta property="og:description" content="">
 
 
 
 
-  <meta property="og:description" content="  两年的研究生学习，终于TMD的结束了（==为什么要TMD，这要问问我的好朋友Lawrence==)， 之后就是艰难的考雅思和找工作的阶段了。本人在Melbourne读的书，因此，也要在Melbourne这个大的IT环境下来找工作,在此，朕要推荐大家一个找工作的网站，Angel.co,说句发自肺腑的话，这网站绝壁要比SB的Seek好太多了，Seek基本上都是石沉大海，要不就是需要PR(澳大利亚居民身份)。Angel.co上，基本上都是些创业公司在招人，因此对IT人员的技术要求很高，Seek上的都是大公司，反而对技术要求不是太高，并且还是比较亲近于本地的澳洲居民。">
+
+
+
+  <meta property="article:published_time" content="2016-10-10T00:00:00+11:00">
 
 
 
@@ -46,12 +40,7 @@
   
 
 
-
-
-
-  <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2016-09-13T00:00:00+10:00">
-
+<link rel="canonical" href="http://localhost:4001/systemdesign/SystemDesign0/">
 
 
 
@@ -61,11 +50,11 @@
 
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "Daniel Zhang",
-      "url" : null,
-      "sameAs" : null
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Daniel Zhang",
+      "url": "http://localhost:4001",
+      "sameAs": null
     }
   </script>
 
@@ -74,14 +63,13 @@
 
 
 
-<!-- end SEO -->
+
+<!-- end _includes/seo.html -->
 
 
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Daniel Tech Blog Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -91,194 +79,413 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<meta http-equiv="cleartype" content="on"> <!-- start custom head snippets -->
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
 
-<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
-</head>
 
-<body>
+  </head>
+
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]--> 
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
 
-<div class="masthead">
+    <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">Daniel Tech Blog</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="/Algorithm/">Algorithm</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="/DesignPattern/">Design Pattern</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="/SystemDesign/">System Design</a></li>
-          
-        </ul>
+        <a class="site-title" href="/">Daniel Tech Blog</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About Me</a>
+            </li><li class="masthead__menu-item">
+              <a href="/algorithm/" >Algorithm</a>
+            </li><li class="masthead__menu-item">
+              <a href="/design-pattern/" >Design Pattern</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mathematics/" >Mathematics</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
-</div> 
+</div>
 
 
+    <div class="initial-content">
+      
 
 
 
 <div id="main" role="main">
   
 
-
-  <div class="sidebar sticky">
-  
-
-
-
-<div itemscope itemtype="http://schema.org/Person">
-
-  <div class="author__avatar">
-    
-    	<img src="/images/headicon.png" class="author__avatar" alt="Daniel Zhang">
-    
-  </div>
-
-  <div class="author__content">
-    <h3 class="author__name">Daniel Zhang</h3>
-    <p class="author__bio">Talk is bullshit,show me your code!!!</p>
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Melbourne</li>
-      
-      
-        <li><a href="http://danieltech.net/"><i class="fa fa-fw fa-chain" aria-hidden="true"></i> Website</a></li>
-      
-      
-        <li><a href="mailto:danielpark139@gmail.com"><i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-        <li><a href="https://github.com/Baniel"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
-
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="0.Daniel 带你了解系统设计">
-    <meta itemprop="description" content="  两年的研究生学习，终于TMD的结束了（==为什么要TMD，这要问问我的好朋友Lawrence==)， 之后就是艰难的考雅思和找工作的阶段了。本人在Melbourne读的书，因此，也要在Melbourne这个大的IT环境下来找工作,在此，朕要推荐大家一个找工作的网站，Angel.co,说句发自肺腑的话，这网站绝壁要比SB的Seek好太多了，Seek基本上都是石沉大海，要不就是需要PR(澳大利亚居民身份)。Angel.co上，基本上都是些创业公司在招人，因此对IT人员的技术要求很高，Seek上的都是大公司，反而对技术要求不是太高，并且还是比较亲近于本地的澳洲居民。">
-    <meta itemprop="datePublished" content="September 13, 2016">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="System Design Intro">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="October 10, 2016">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">0.Daniel 带你了解系统设计
+          <h1 id="page-title" class="page__title" itemprop="headline">System Design Intro
 </h1>
-          
-            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-  
-	  less than 1 minute read
-	
-</p>
           
         </header>
       
 
       <section class="page__content" itemprop="text">
-        <p>  两年的研究生学习，终于TMD的结束了（==为什么要TMD，这要问问我的好朋友Lawrence==)， 之后就是艰难的考雅思和找工作的阶段了。本人在Melbourne读的书，因此，也要在Melbourne这个大的IT环境下来找工作,在此，朕要推荐大家一个找工作的网站，<a href="https://angel.co/">Angel.co</a>,说句发自肺腑的话，这网站绝壁要比SB的Seek好太多了，Seek基本上都是石沉大海，要不就是需要PR(澳大利亚居民身份)。Angel.co上，基本上都是些创业公司在招人，因此对IT人员的技术要求很高，Seek上的都是大公司，反而对技术要求不是太高，并且还是比较亲近于本地的澳洲居民。</p>
+        
+        <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
-<p>   湿的说完了，咱说点干的。首先，澳洲的大部分公司，都是喜欢招那种上来就工作的，因此技术要好，学校里学的那些，Such as,“Java”，“MySql”,”Swift”,”OLAP”….等等，只能说太浅了，而且知识陈旧，哎，都是眼泪，不TMD说了，现在的需求发生了361度的大转变。我这几天去的一家互联网众筹公司面试（<a href="https://pozible.com/">Pozible</a>老板Nice，员工也Nice），所用的技术栈是JavaScript，从前端到后端，前端框架<a href="https://facebook.github.io/react/">React</a>，后端框架是“流星”（<a href="https://facebook.github.io/react/">Meteor</a>），名字很酷吧，是不是想到《余罪》里小时候的张一山演的流星，数据库你猜用啥，对了，是NoSQL的MongoDB,而且对于前端的一些转换工具<a href="https://babeljs.io/">Babel</a>，和打包工具<a href="https://webpack.github.io/">Webpack</a>，都要会，还要用到<a href="https://www.docker.com/">Docker</a>来做项目的部署。毕业后的你要是自己不自学着，估计看完这些当时就懵逼了（<a href="https://github.com/DanielProjectJourney/PozibleDeveloperProject">Pozible测试题</a>）。所以，平时，给为兄弟姐妹还要多看看趋势，来分析一下现在行业所需要的技术，就现在来讲，我觉得JavaScript（==最好学学ES6，ES2015这样的语法，因为工业成产为了代码的高可维护性，要尽可能使代码易读，易于维护。之后用Babel转成纯的JavaScript。纯JavaScript，你在学校的Assignment写写还可以，工业界的生产你用纯JavaScript写，维护起来估计你要砸电脑了。==）还是很不错的，找工作方面，前端后端都在招人.</p>
+<p><img src="https://blog.abmodi.com/wp-content/uploads/2016/09/system-design-interview.jpg" alt="image" /></p>
 
-<p>以下是一些学习资源，可以帮做你拓展眼界，提高能力，想吃就吃，身体倍棒：</p>
+<blockquote>
+  <p>How to prepare system design questions for IT company</p>
+</blockquote>
 
-<ul>
-  <li><a href="https://www.pluralsight.com/">PluralSight</a>：公司在悉尼，很多新的IT的学习资源，贾思特（我朋友给我起的外号，因为我说英语的时候总是“Just”长，“Just”短）教你一个方法，去微软官方注册一个账号，之后用微软的账号就能在这个网站上免费学习三个月的课程，随便看，看到吐血来都没事,<a href="https://fossbytes.com/getting-pluralsight-subscription-for-free-for-6-months/">绝世秘籍在此</a>。</li>
+<p>System design is a very broad topic. Even a software engineer with many years of working experience at top IT company may not be an expert
+on system design. If you want to become an expert, you need to read many books, articles, and solve real large scale system design problems.</p>
+
+<p>This repository only teaches you to handle the system design interview with a systematic approach in a short time.
+You can dive into each topic if you have time. Of course, welcome to add your thoughts!</p>
+
+<h2 id="table-of-contents"><a name="toc">Table of Contents</a></h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="#tips">System Design Interview Tips</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="#intro">Basic Knowledge about System Design</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="#blog">Company Engineering Blogs</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="#system">Products and Systems</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="#qs">Hot Questions and Reference</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="#bk">Good Books</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="#ood">Object Oriented Design</a></li>
 </ul>
 
-<p><img src="https://fossbytes.com/wp-content/uploads/2016/02/pluralsight-for-free-1024x545.jpg" alt="image" /></p>
+<p>###<a href="#toc">[⬆]</a> <a name="tips">System Design Interview Tips:</a></p>
+
+<p><strong>Clarify the constraints and identify the user cases</strong></p>
+
+<p>Spend a few minutes questioning the interviewer and agreeing on the scope of the system.
+Remember to make sure you know all the requirements the interviewer didn’t tell you about in the beginning.</p>
+
+<p>User cases indicate the main functions of the system, and constraints list the scale of the system such as requests
+per second, requests types, data written per second, data read per second.</p>
+
+<p><strong>High-level architecture design</strong></p>
+
+<p>Sketch the important components and the connections between them, but don’t go into some details.
+Usually, a scalable system includes webserver (load balancer), service (service partition), database (master/slave database cluster plug cache).</p>
+
+<p><strong>Component design</strong></p>
+
+<p>For each component, you need to write the specific APIs for each component. You may need to finish
+the detailed OOD design for a particular function. You may also need to design the database schema for the database.</p>
+
+<p>###<a href="#toc">[⬆]</a> <a name="intro">Basic Knowledge about System Design:</a></p>
+
+<p>Here are some articles about system design related topics.</p>
 
 <ul>
-  <li><a href="http://scanlibs.com/">Scanlibs</a> : 这网站绝壁要安利一下，很多收费的学习资源，各种片和书，这里都是免费的，这网站是一个俄罗斯小哥做的，不错，要不咋这两年TopCoder上俄罗斯小鲜肉一直在称霸第一呢。</li>
+  <li><a href="http://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/">How to Rock a Systems Design Interview</a></li>
+  <li><a href="http://www.hiredintech.com/app#system-design">System Interview</a></li>
+  <li><a href="http://www.lecloud.net/tagged/scalability">Scalability for Dummies</a></li>
+  <li><a href="http://www.aosabook.org/en/distsys.html">Scalable Web Architecture and Distributed Systems</a></li>
+  <li><a href="http://everythingisdata.wordpress.com/2009/10/17/numbers-everyone-should-know/">Numbers Everyone Should Know</a></li>
+  <li>[Fallacies of distributed systems] (https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf)</li>
+  <li><a href="http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html">Scalable System Design Patterns</a></li>
+  <li><a href="http://lethain.com/introduction-to-architecting-systems-for-scale/">Introduction to Architecting Systems for Scale</a></li>
+  <li><a href="http://snarfed.org/transactions_across_datacenters_io.html">Transactions Across Datacenters</a></li>
+  <li><a href="http://ksat.me/a-plain-english-introduction-to-cap-theorem/">A Plain English Introduction to CAP Theorem</a></li>
+  <li><a href="https://github.com/henryr/cap-faq">The CAP FAQ</a></li>
+  <li><a href="http://research.microsoft.com/en-us/um/people/lamport/pubs/paxos-simple.pdf">Paxos Made Simple</a></li>
+  <li><a href="http://www.tom-e-white.com/2007/11/consistent-hashing.html">Consistent Hashing</a></li>
+  <li><a href="http://horicky.blogspot.com/2009/11/nosql-patterns.html">NOSQL Patterns</a></li>
+  <li><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Scalability, Availability &amp; Stability Patterns</a></li>
 </ul>
 
-<p><img src="https://thumbs.statvoo.com/scanlibs.com" alt="image" /></p>
+<p>Of course, if you want to dive into system related topics, here is a good collection of reading list about <a href="https://github.com/mmcgrana/services-engineering">services-engineering</a>, and
+a good collection of material about <a href="http://dancres.github.io/Pages/">distributed systems</a>.</p>
+
+<p>###<a href="#toc">[⬆]</a> <a name="blog">Company Engineering Blogs:</a></p>
+
+<p>If you are going to have an onsite with a company, you should read their engineering blog.</p>
 
 <ul>
-  <li><a href="http://www.imooc.com/">慕课网</a>： 国内的网站,很多的免费教学视频，其中还有论坛帖子，居家必备呀。</li>
+  <li><a href="http://highscalability.com/">High Scalability</a></li>
+  <li><a href="https://github.com/blog/category/engineering">The GitHub Blog</a></li>
+  <li><a href="http://engineering.quora.com/">Engineering at Quora</a></li>
+  <li><a href="http://engineeringblog.yelp.com/">Yelp Engineering Blog</a></li>
+  <li><a href="https://engineering.twitter.com/">Twitter Engineering</a></li>
+  <li><a href="https://www.facebook.com/Engineering">Facebook Engineering</a></li>
+  <li><a href="http://eng.yammer.com/blog/">Yammer Engineering</a></li>
+  <li><a href="http://codeascraft.com/">Etsy Code as Craft</a></li>
+  <li><a href="http://engineering.foursquare.com/">Foursquare Engineering Blog</a></li>
+  <li><a href="http://nerds.airbnb.com/">Airbnb Engineering</a></li>
+  <li><a href="http://engineering.webengage.com/">WebEngage Engineering Blog</a></li>
+  <li><a href="http://engineering.linkedin.com/blog">LinkedIn Engineering</a></li>
+  <li><a href="http://techblog.netflix.com/">The Netflix Tech Blog</a></li>
+  <li><a href="https://www.simple.com/engineering/">BankSimple Simple Blog</a></li>
+  <li><a href="http://corner.squareup.com/">Square The Corner</a></li>
+  <li><a href="https://developers.soundcloud.com/blog/">SoundCloud Backstage Blog</a></li>
+  <li><a href="http://code.flickr.net/">Flickr Code</a></li>
+  <li><a href="http://instagram-engineering.tumblr.com/">Instagram Engineering</a></li>
+  <li><a href="https://tech.dropbox.com/">Dropbox Tech Blog</a></li>
+  <li><a href="http://blog.cloudera.com/">Cloudera Developer Blog</a></li>
+  <li><a href="http://bandcamptech.wordpress.com/">Bandcamp Tech</a></li>
+  <li><a href="http://tech.oyster.com/">Oyster Tech Blog</a></li>
+  <li><a href="http://www.redditblog.com/">THE REDDIT BLOG</a></li>
+  <li><a href="https://engineering.groupon.com/">Groupn Engineering Blog</a></li>
+  <li><a href="http://devblog.songkick.com/">Songkick Technology Blog</a></li>
+  <li><a href="http://googleresearch.blogspot.com/">Google Research Blog</a></li>
+  <li><a href="http://engineering.pinterest.com/">Pinterest Engineering Blog</a></li>
+  <li><a href="http://www.twilio.com/engineering">Twilio Engineering Blog</a></li>
+  <li><a href="http://word.bitly.com/">Bitly Engineering Blog</a></li>
+  <li><a href="https://eng.uber.com/">Uber Engineering Blog </a></li>
+  <li><a href="http://engineering.godaddy.com/">Godaddy Engineering</a></li>
+  <li><a href="http://blogs.splunk.com/">Splunk Blog</a></li>
+  <li><a href="https://building.coursera.org/">Coursera Engineering Blog</a></li>
+  <li><a href="https://www.paypal-engineering.com/">PayPal Engineering Blog</a></li>
+  <li><a href="https://engblog.nextdoor.com/">Nextdoor Engineering Blog</a></li>
 </ul>
 
-<p><img src="http://mrfangge.qiniudn.com/wp-content/uploads/2014/07/%E8%AF%BE%E7%A8%8B-1024x722.jpg" alt="image" /></p>
+<p>###<a href="#toc">[⬆]</a> <a name="system">Products and Systems:</a></p>
+
+<p>The following papers/articles/slides can help you to understand the general design idea of different real products and systems.</p>
 
 <ul>
-  <li><a href="https://www.bittiger.io/">太阁</a>:  这个网站绝逼能帮助你提升技术视野，讲了很多技术，而且每周有大牛为你做技术分析，但有些要收费，但每周大牛带你飞，带你分析技术的都是免费的，而且有不同技术的微信群，里面大部分都是人都在美利坚，完全会把你的技术眼界提升到一个高度。</li>
+  <li><a href="http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/mapreduce-osdi04.pdf">MapReduce: Simplied Data Processing on Large Clusters</a></li>
+  <li><a href="http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/chang06bigtable.pdf">Bigtable: A Distributed Storage System for Structured Data</a></li>
+  <li><a href="http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/gfs-sosp2003.pdf">The Google File System</a></li>
+  <li><a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/archive/chubby-osdi06.pdf">The Chubby lock service for loosely-coupled distributed systems</a></li>
+  <li><a href="http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/decandia07dynamo.pdf">Dynamo: Amazon’s Highly Available Key-value Store</a></li>
+  <li><a href="http://www.slideshare.net/oemebamo/introduction-to-memcached">Introduction to Memcached</a></li>
+  <li><a href="http://www.slideshare.net/planetcassandra/cassandra-introduction-features-30103666">Cassandra Introduction Features</a></li>
+  <li><a href="http://www.slideshare.net/alexbaranau/intro-to-hbase">Introduction to HBase</a></li>
+  <li><a href="http://www.slideshare.net/mdirolf/introduction-to-mongodb">Introduction to MongoDB</a></li>
+  <li><a href="http://www.slideshare.net/dvirsky/introduction-to-redis">Introduction to Redis</a></li>
+  <li><a href="http://www.slideshare.net/previa/storm-16094009">Storm</a></li>
+  <li><a href="http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper">Introduction to Zookeeper</a></li>
+  <li><a href="http://www.slideshare.net/mumrah/kafka-talk-tri-hug">Kafka</a></li>
+  <li><a href="http://highscalability.com/youtube-architecture">YouTube Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2013/4/15/scaling-pinterest-from-0-to-10s-of-billions-of-page-views-a.html">Scaling Pinterest</a></li>
+  <li><a href="http://highscalability.com/google-architecture">Google Architecture</a></li>
+  <li><a href="http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster">Scaling Twitter</a></li>
+  <li><a href="http://highscalability.com/blog/2014/2/26/the-whatsapp-architecture-facebook-bought-for-19-billion.html">The WhatsApp Architecture</a></li>
+  <li><a href="http://highscalability.com/flickr-architecture">Flickr Architecture</a></li>
+  <li><a href="http://highscalability.com/amazon-architecture">Amazon Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2009/8/5/stack-overflow-architecture.html">Stack Overflow Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2012/5/21/pinterest-architecture-update-18-million-visitors-10x-growth.html">Pinterest Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2012/2/13/tumblr-architecture-15-billion-page-views-a-month-and-harder.html">Tumblr Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html">Instagram Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2011/6/27/tripadvisor-architecture-40m-visitors-200m-dynamic-page-view.html">TripAdvisor Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2013/6/18/scaling-mailbox-from-0-to-one-million-users-in-6-weeks-and-1.html">Scaling Mailbox</a></li>
+  <li><a href="http://highscalability.com/blog/2013/9/23/salesforce-architecture-how-they-handle-13-billion-transacti.html">Salesforce Architecture </a></li>
+  <li><a href="http://highscalability.com/blog/2013/11/4/espns-architecture-at-scale-operating-at-100000-duh-nuh-nuhs.html">ESPN Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2015/9/14/how-uber-scales-their-real-time-market-platform.html">Uber Architecture</a></li>
+  <li><a href="https://www.youtube.com/watch?v=PE4gwstWhmc">DropBox Design</a></li>
+  <li><a href="http://www.splunk.com/view/SP-CAAABF9">Splunk Architecture</a></li>
 </ul>
 
-<p><img src="https://liaoyuanavatar.imgix.net/upload/feed/image/155c6973fa8-574ef68f7e4258c32b14da05-a1c77a1020c21df4?fit=max&amp;w=960&amp;h=600" alt="image" /></p>
+<p>###<a href="#toc">[⬆]</a> <a name="qs">Hot Questions and Reference:</a></p>
+
+<p>There are some good references for each question. The references here are slides and articles.</p>
+
+<p><strong>Design a CDN network</strong><br />
+Reference:</p>
+<ul>
+  <li><a href="http://repository.cmu.edu/cgi/viewcontent.cgi?article=2112&amp;context=compsci">Globally Distributed Content Delivery</a></li>
+</ul>
+
+<p><strong>Design a Google document system</strong><br />
+Reference:</p>
+<ul>
+  <li><a href="https://code.google.com/p/google-mobwrite/">google-mobwrite</a></li>
+  <li><a href="https://neil.fraser.name/writing/sync/">Differential Synchronization</a></li>
+</ul>
+
+<p><strong>Design a random ID generation system</strong><br />
+Reference:</p>
+<ul>
+  <li><a href="https://blog.twitter.com/2010/announcing-snowflake">Announcing Snowflake</a></li>
+  <li><a href="https://github.com/twitter/snowflake/">snowflake</a></li>
+</ul>
+
+<p><strong>Design a key-value database</strong><br />
+Reference:</p>
+<ul>
+  <li><a href="http://www.slideshare.net/dvirsky/introduction-to-redis">Introduction to Redis</a></li>
+</ul>
+
+<p><strong>Design the Facebook news feed function</strong> <br />
+Reference:</p>
+<ul>
+  <li><a href="http://www.quora.com/What-are-best-practices-for-building-something-like-a-News-Feed">What are best practices for building something like a News Feed?</a></li>
+  <li><a href="http://www.quora.com/Activity-Streams/What-are-the-scaling-issues-to-keep-in-mind-while-developing-a-social-network-feed">What are the scaling issues to keep in mind while developing a social network feed?</a></li>
+  <li><a href="http://www.slideshare.net/danmckinley/etsy-activity-feeds-architecture">Activity Feeds Architecture</a></li>
+</ul>
+
+<p><strong>Design the Facebook timeline function</strong> <br />
+Reference:</p>
+<ul>
+  <li><a href="https://www.facebook.com/note.php?note_id=10150468255628920">Building Timeline</a></li>
+  <li><a href="http://highscalability.com/blog/2012/1/23/facebook-timeline-brought-to-you-by-the-power-of-denormaliza.html">Facebook Timeline</a></li>
+</ul>
+
+<p><strong>Design a function to return the top k requests during past time interval</strong> <br />
+Reference:</p>
+<ul>
+  <li><a href="http://www.cse.ust.hk/~raywong/comp5331/References/EfficientComputationOfFrequentAndTop-kElementsInDataStreams.pdf">Efficient Computation of Frequent and Top-k Elements in Data Streams</a></li>
+  <li><a href="http://davis.wpi.edu/xmdv/docs/EDBT11-diyang.pdf">An Optimal Strategy for Monitoring Top-k Queries in Streaming Windows</a></li>
+</ul>
+
+<p><strong>Design an online multiplayer card game</strong> <br />
+Reference:</p>
+<ul>
+  <li><a href="http://www.indieflashblog.com/how-to-create-an-asynchronous-multiplayer-game.html">How to Create an Asynchronous Multiplayer Game</a></li>
+  <li><a href="http://www.indieflashblog.com/how-to-create-async-part2.html">How to Create an Asynchronous Multiplayer Game Part 2: Saving the Game State to Online Database</a></li>
+  <li><a href="http://www.indieflashblog.com/how-to-create-async-part3.html">How to Create an Asynchronous Multiplayer Game Part 3: Loading Games from the Database</a></li>
+  <li><a href="http://www.indieflashblog.com/how-to-create-async-part4-html.html#comment-4447">How to Create an Asynchronous Multiplayer Game Part 4: Matchmaking</a></li>
+  <li><a href="http://buildnewgames.com/real-time-multiplayer/">Real Time Multiplayer in HTML5</a></li>
+</ul>
+
+<p><strong>Design a graph search function</strong> <br />
+Reference:</p>
+<ul>
+  <li><a href="https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-out-the-infrastructure-for-graph-search/10151347573598920">Building out the infrastructure for Graph Search</a></li>
+  <li><a href="https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920">Indexing and ranking in Graph Search</a></li>
+  <li><a href="https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920">The natural language interface of Graph Search</a> and <a href="http://www.erlang-factory.com/upload/presentations/31/EugeneLetuchy-ErlangatFacebook.pdf">Erlang at Facebook</a></li>
+</ul>
+
+<p><strong>Design a picture sharing system</strong> <br />
+Reference:</p>
+<ul>
+  <li><a href="http://highscalability.com/flickr-architecture">Flickr Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html">Instagram Architecture</a></li>
+</ul>
+
+<p><strong>Design a search engine</strong> <br />
+Reference:</p>
+<ul>
+  <li><a href="http://programmers.stackexchange.com/questions/38324/interview-question-how-would-you-implement-google-search">How would you implement Google Search?</a></li>
+  <li><a href="http://www.ardendertat.com/2012/01/11/implementing-search-engines/">Implementing Search Engines</a></li>
+</ul>
+
+<p><strong>Design a recommendation system</strong><br />
+Reference:</p>
+<ul>
+  <li><a href="http://tech.hulu.com/blog/2011/09/19/recommendation-system.html">Hulu’s Recommendation System</a></li>
+  <li><a href="http://ijcai13.org/files/tutorial_slides/td3.pdf">Recommender Systems</a></li>
+</ul>
+
+<p><strong>Design a tinyurl system</strong>  <br />
+Reference:</p>
+<ul>
+  <li><a href="http://n00tc0d3r.blogspot.com/">System Design for Big Data-tinyurl</a></li>
+  <li><a href="https://developers.google.com/url-shortener/?csw=1">URL Shortener API</a></li>
+</ul>
+
+<p><strong>Design a garbage collection system</strong>  <br />
+Reference:</p>
+<ul>
+  <li><a href="http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/">Baby’s First Garbage Collector</a></li>
+</ul>
+
+<p><strong>Design a scalable web crawling system</strong>  <br />
+Reference:</p>
+<ul>
+  <li><a href="https://www.quora.com/How-can-I-build-a-web-crawler-from-scratch">How can I build a web crawler from scratch?</a></li>
+</ul>
+
+<p><strong>Design the Facebook chat function</strong>  <br />
+Reference:</p>
+<ul>
+  <li><a href="http://www.erlang-factory.com/upload/presentations/31/EugeneLetuchy-ErlangatFacebook.pdf">Erlang at Facebook</a></li>
+  <li><a href="https://www.facebook.com/note.php?note_id=14218138919&amp;id=9445547199&amp;index=0">Facebook Chat</a></li>
+</ul>
+
+<p><strong>Design a trending topic system</strong>  <br />
+Reference:</p>
+<ul>
+  <li><a href="http://www.michael-noll.com/blog/2013/01/18/implementing-real-time-trending-topics-in-storm/">Implementing Real-Time Trending Topics With a Distributed Rolling Count Algorithm in Storm</a></li>
+  <li><a href="http://snikolov.wordpress.com/2012/11/14/early-detection-of-twitter-trends/">Early detection of Twitter trends explained</a></li>
+</ul>
+
+<p><strong>Design a cache system</strong>  <br />
+Reference:</p>
+<ul>
+  <li><a href="http://www.slideshare.net/oemebamo/introduction-to-memcached">Introduction to Memcached</a></li>
+</ul>
+
+<p>###<a href="#toc">[⬆]</a> <a name="bk">Good Books:</a></p>
 
 <ul>
-  <li><a href="https://codetimecn.com/">代码时间</a>: 良心播客，播主每个月会请一个该领域的技术大神来聊技术，听起来就像郭德纲和范伟在一起讲相声一样，咋，伟哥就不能讲相声了，“猪撞树上了，你撞猪上了，追尾了吧”，这么脍炙人口的段子怎么能忘，记得那还是… 不扯犊子了。总之，这个播客很不错，在Iphone上的Podcasts也能订阅。</li>
+  <li><a href="http://www.amazon.com/Big-Data-Principles-practices-scalable/dp/1617290343">Big Data: Principles and best practices of scalable realtime data systems</a></li>
+  <li><a href="http://www.amazon.com/Real-Time-Analytics-Techniques-Visualize-Streaming/dp/1118837916">Real-Time Analytics: Techniques to Analyze and Visualize Streaming Data</a></li>
+  <li><a href="http://www.amazon.com/Building-Microservices-Sam-Newman/dp/1491950358">Building Microservices</a></li>
 </ul>
 
-<p><img src="http://tva4.sinaimg.cn/crop.0.0.1022.1022.180/006p5fA6gw1f380qr10q3j30sg0sggnf.jpg" alt="image" /></p>
+<p>###<a href="#toc">[⬆]</a> <a name="ood">Object Oriented Design:</a></p>
+
+<h4 id="tips-for-ood-interview">Tips for OOD Interview</h4>
+
+<p><strong>Clarify the scenario, write out user cases</strong></p>
+
+<p>Use case is a description of sequences of events that, taken together, lead to a system doing something useful. Who is going to use it and how they are going to use it. The system may be very simple or very complicated.</p>
+
+<p>Special system requirements such as multi-threading, read or write oriented.</p>
+
+<p><strong>Define objects</strong></p>
+
+<p>Map identity to class: one scenario for one class, each core object in this scenario for one class.</p>
+
+<p>Consider the relationships among classes: certain class must have unique instance, one object has many other objects (composition), one object is another object (inheritance).</p>
+
+<p>Identify attributes for each class: change noun to variable and action to methods.</p>
+
+<p>Use design patterns such that it can be reused in multiple applications.</p>
+
+<h4 id="useful-websites">Useful Websites</h4>
 
 <ul>
-  <li><a href="http://teahour.fm/2015/08/16/vuejs-creator-evan-you.html">teahour.fm</a>: 又一个良心播客，在IPhone上的PodCasts就能订阅，同样会请到业界技术大牛来聊技吗。你知道Vue.js吗？什么，没听过，这可是中国人尤雨溪（尤小石）写的一个前端框架，现在已经被很多大公司所应用，这个博客把邀请了尤小石来聊一聊各个前端框架的优缺点，受益匪浅。其他大神的讲座，也会让你受益匪浅的。杠杠的！！！</li>
+  <li><a href="http://sourcemaking.com/design-patterns-and-tips">101 Design Patterns &amp; Tips for Developers</a></li>
 </ul>
 
-<p><img src="http://img0.tech2ipo.com/upload/img/article/2013/06/1370316706774.png" alt="image" /></p>
+<h3 id="thanks-for-zach--the-material-comes-from--zach-github">Thanks for Zach : the material comes from : <a href="https://github.com/checkcheckzz/system-design-interview">Zach Github</a></h3>
 
-<ul>
-  <li><a href="http://growth.ren/">Growth</a>: 一个有些的Web开发者学习指导网站，并且也有IPhone和Android的<a href="http://developer.telerik.com/featured/what-is-a-hybrid-mobile-app/">Hybrid App</a>,。良心应有，不多说了，看图吧。</li>
-</ul>
-
-<p><img src="http://store-images.s-microsoft.com/image/apps.12635.13510798887063773.e34e796d-6452-48d5-834c-a54dcb9b8b0d.5fbeb58c-1dd4-45d5-987b-a3f4ef42d643" alt="image" /></p>
-
-<p>   之后的几期，我会带领大家分析一下各个公司的系统设计，像Uber，Twitter，Google的GFS(高富帅)… 用最简单直白的说话方式顺带点幽默的词汇来帮你了解工业界的开发，自己也能通过整理这个博客，来巩固一下System Design的知识，总之，你好，我也好，写写更健康。希望大家都能从博客里面学到知识哈。</p>
-
-<p>   最最重要的一点就是，程序员这个职业，需要踏踏实实的去实践去写代码（我的偶像John D. Carmack做的就很棒），要是做不到这一点，天天吹的天花乱坠，那我估计你这个程序员也当不了多长时间。总之，平时努力积累，多实践，多动手，少吹B，你也会成为大神的（但像Jeff Dean那样的还是需要环境和天赋）。还有，在你学习的道路上，总会有些SB说你学这个没有学那个没用（其实那些SB啥也不懂，以为自己很懂很牛B），可悲的是最后你听听从他的建议，导致和他一个Level（悲哀呀）。这时，就需要自己多看看资料，多听听行业大牛是怎么说的，多交流，看看那些是对自己有益的，这样你才会正向的去发展，去提高自己。</p>
-
-<h3 id="danielgithubhttpsgithubcombaniel">还记得我吗，我叫Daniel跟我念一遍，什么，大声点听不见，我的算法，系统，<a href="https://github.com/Baniel">GitHub封面</a>，就算忘记，你不可能看不见。</h3>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>    ---该作品改编自冠希哥的《记得我吗》
-</code></pre>
-</div>
+<h1 id="jeff-dean"><a href="https://en.wikipedia.org/wiki/Jeff_Dean_(computer_scientist)">Jeff Dean</a></h1>
 
 <div style="max-width:640px; margin:0 auto 10px;">
 <div style="position: relative;
@@ -286,7 +493,8 @@ width:100%;
 padding-bottom:56.25%;
 height:0;">
 
-<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/GFqQCLZH75A" frameborder="0" allowfullscreen=""></iframe>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/g_k1wzH-gsY" frameborder="0" allowfullscreen=""></iframe>
+
 </div>
 </div>
 
@@ -298,13 +506,7 @@ height:0;">
         
 
 
-
-
   
-
-
-
-
 
 
   
@@ -312,48 +514,33 @@ height:0;">
   
 
   <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
       
       
-      <a href="/categories/systemdesign" class="page__taxonomy-item" rel="tag">SystemDesign</a>
+      <a href="/categories/#systemdesign" class="page__taxonomy-item" rel="tag">SystemDesign</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-09-13T00:00:00+10:00">September 13, 2016</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-10-10T00:00:00+11:00">October 10, 2016</time></p>
         
       </footer>
 
       
 
-<section class="page__share">
-  
-    <h4 class="page__share-title">Share on</h4>
-  
-
-  <a href="https://twitter.com/intent/tweet?text=/systemdesign/SystemDesign0/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=/systemdesign/SystemDesign0/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://plus.google.com/share?url=/systemdesign/SystemDesign0/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=/systemdesign/SystemDesign0/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
       
-
-
   <nav class="pagination">
     
-      <a href="/algorithm/DanielAlgorithm0/" class="pagination--pager" title="0.Daniel 带你刷算法
+      <a href="/algorithm/DanielAlgorithm1.2/" class="pagination--pager" title="1.2 Learn Data Structure with Daniel — Linked List
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/algorithm/DanielAlgorithm2.1/" class="pagination--pager" title="2.1 Learn Data Structure with Daniel — Binary Search Tree Theory
+">Next</a>
     
   </nav>
 
@@ -362,142 +549,70 @@ height:0;">
     
   </article>
 
-
-    <!-- Comment -->
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
-        /*
-        var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document,
-                s = d.createElement('script');
-            s.src = '//https-baniel-github-io.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-
-
-
-
-
-
   
-    <div class="page__related">
-      
-        <h4 class="page__related-title">You May Also Enjoy</h4>
-      
-      <div class="grid__wrapper">
-        
-          
-
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/algorithm/DanielAlgorithm0/" rel="permalink">0.Daniel 带你刷算法
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
   
-	  less than 1 minute read
-	
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
 </div>
 
-        
-          
-
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/designpattern/Abstract-Factory/" rel="permalink">0.Daniel带你了解设计模式
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-  
-	  less than 1 minute read
-	
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-        
-      </div>
     </div>
-  
-</div>
 
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
 
+      </div>
+    
 
     <div class="page__footer">
-        <footer>
-            <!-- start custom footer snippets -->
+      <footer>
+        <!-- start custom footer snippets -->
 
-<!-- end custom footer snippets --> 
-
-<div class="page__footer-follow">
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
     
+
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
-    
-      <li><a href="http://github.com/Baniel"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-    
-    
-    <li><a href="/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2016 Daniel Zhang. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2019 Daniel Zhang. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
-        </footer>
-
-
+      </footer>
     </div>
 
-    <script src="/assets/js/main.min.js"></script>
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
 
 
-</body>
-
+  </body>
 </html>
-

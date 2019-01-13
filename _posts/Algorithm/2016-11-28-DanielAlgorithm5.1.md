@@ -1,7 +1,7 @@
 ---
 layout : single
 title : 5.1 Learn Data Structure with Daniel --- Hash Tables
-category: Algorithm
+category: algorithm
 ---
 
 <script type="text/javascript" async

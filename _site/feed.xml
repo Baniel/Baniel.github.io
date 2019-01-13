@@ -1,60 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-09-16T12:57:46+10:00</updated><id>/</id><title>Daniel Tech Blog</title><subtitle>I Love Python</subtitle><author><name>Daniel Zhang</name><email>danielpark139@gmail.com</email><uri>http://danieltech.net/</uri></author><entry><title>0.Daniel 带你了解系统设计</title><link href="/systemdesign/SystemDesign0/" rel="alternate" type="text/html" title="0.Daniel 带你了解系统设计" /><published>2016-09-13T00:00:00+10:00</published><updated>2016-09-13T00:00:00+10:00</updated><id>/systemdesign/SystemDesign0</id><content type="html" xml:base="/systemdesign/SystemDesign0/">&lt;p&gt;  两年的研究生学习，终于TMD的结束了（==为什么要TMD，这要问问我的好朋友Lawrence==)， 之后就是艰难的考雅思和找工作的阶段了。本人在Melbourne读的书，因此，也要在Melbourne这个大的IT环境下来找工作,在此，朕要推荐大家一个找工作的网站，&lt;a href=&quot;https://angel.co/&quot;&gt;Angel.co&lt;/a&gt;,说句发自肺腑的话，这网站绝壁要比SB的Seek好太多了，Seek基本上都是石沉大海，要不就是需要PR(澳大利亚居民身份)。Angel.co上，基本上都是些创业公司在招人，因此对IT人员的技术要求很高，Seek上的都是大公司，反而对技术要求不是太高，并且还是比较亲近于本地的澳洲居民。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-01-13T19:57:29+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><entry><title type="html">Paper Overview — AlphaGo Zero</title><link href="http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/" rel="alternate" type="text/html" title="Paper Overview --- AlphaGo Zero" /><published>2017-10-29T00:00:00+11:00</published><updated>2017-10-29T00:00:00+11:00</updated><id>http://localhost:4001/mathematics/Paper%20Overview%20-%20AlphaGo%20Zero</id><content type="html" xml:base="http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
 
-&lt;p&gt;   湿的说完了，咱说点干的。首先，澳洲的大部分公司，都是喜欢招那种上来就工作的，因此技术要好，学校里学的那些，Such as,“Java”，“MySql”,”Swift”,”OLAP”….等等，只能说太浅了，而且知识陈旧，哎，都是眼泪，不TMD说了，现在的需求发生了361度的大转变。我这几天去的一家互联网众筹公司面试（&lt;a href=&quot;https://pozible.com/&quot;&gt;Pozible&lt;/a&gt;老板Nice，员工也Nice），所用的技术栈是JavaScript，从前端到后端，前端框架&lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;，后端框架是“流星”（&lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;Meteor&lt;/a&gt;），名字很酷吧，是不是想到《余罪》里小时候的张一山演的流星，数据库你猜用啥，对了，是NoSQL的MongoDB,而且对于前端的一些转换工具&lt;a href=&quot;https://babeljs.io/&quot;&gt;Babel&lt;/a&gt;，和打包工具&lt;a href=&quot;https://webpack.github.io/&quot;&gt;Webpack&lt;/a&gt;，都要会，还要用到&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;来做项目的部署。毕业后的你要是自己不自学着，估计看完这些当时就懵逼了（&lt;a href=&quot;https://github.com/DanielProjectJourney/PozibleDeveloperProject&quot;&gt;Pozible测试题&lt;/a&gt;）。所以，平时，给为兄弟姐妹还要多看看趋势，来分析一下现在行业所需要的技术，就现在来讲，我觉得JavaScript（==最好学学ES6，ES2015这样的语法，因为工业成产为了代码的高可维护性，要尽可能使代码易读，易于维护。之后用Babel转成纯的JavaScript。纯JavaScript，你在学校的Assignment写写还可以，工业界的生产你用纯JavaScript写，维护起来估计你要砸电脑了。==）还是很不错的，找工作方面，前端后端都在招人.&lt;/p&gt;
+&lt;h2 id=&quot;why-alphago-special&quot;&gt;Why AlphaGo Special?&lt;/h2&gt;
 
-&lt;p&gt;以下是一些学习资源，可以帮做你拓展眼界，提高能力，想吃就吃，身体倍棒：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;It is trained solely by self-paly reinforcement learning, starting from random play, without any supervision or use of human data.&lt;/li&gt;
+  &lt;li&gt;It uses only the balck and white stones from the board as input features.&lt;/li&gt;
+  &lt;li&gt;It uses a single neural network, rahter than separate policy and value networks.&lt;/li&gt;
+  &lt;li&gt;It uses a simpler tree search that relies upon this single neural network to evaluate positions and sample moves without performing any Monte Carlo rollouts.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.pluralsight.com/&quot;&gt;PluralSight&lt;/a&gt;：公司在悉尼，很多新的IT的学习资源，贾思特（我朋友给我起的外号，因为我说英语的时候总是“Just”长，“Just”短）教你一个方法，去微软官方注册一个账号，之后用微软的账号就能在这个网站上免费学习三个月的课程，随便看，看到吐血来都没事,&lt;a href=&quot;https://fossbytes.com/getting-pluralsight-subscription-for-free-for-6-months/&quot;&gt;绝世秘籍在此&lt;/a&gt;。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.bestchinanews.com/1ydzximg/0F2uTB2sTT&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://fossbytes.com/wp-content/uploads/2016/02/pluralsight-for-free-1024x545.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://scanlibs.com/&quot;&gt;Scanlibs&lt;/a&gt; : 这网站绝壁要安利一下，很多收费的学习资源，各种片和书，这里都是免费的，这网站是一个俄罗斯小哥做的，不错，要不咋这两年TopCoder上俄罗斯小鲜肉一直在称霸第一呢。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://thumbs.statvoo.com/scanlibs.com&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.imooc.com/&quot;&gt;慕课网&lt;/a&gt;： 国内的网站,很多的免费教学视频，其中还有论坛帖子，居家必备呀。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://mrfangge.qiniudn.com/wp-content/uploads/2014/07/%E8%AF%BE%E7%A8%8B-1024x722.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.bittiger.io/&quot;&gt;太阁&lt;/a&gt;:  这个网站绝逼能帮助你提升技术视野，讲了很多技术，而且每周有大牛为你做技术分析，但有些要收费，但每周大牛带你飞，带你分析技术的都是免费的，而且有不同技术的微信群，里面大部分都是人都在美利坚，完全会把你的技术眼界提升到一个高度。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://liaoyuanavatar.imgix.net/upload/feed/image/155c6973fa8-574ef68f7e4258c32b14da05-a1c77a1020c21df4?fit=max&amp;amp;w=960&amp;amp;h=600&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://codetimecn.com/&quot;&gt;代码时间&lt;/a&gt;: 良心播客，播主每个月会请一个该领域的技术大神来聊技术，听起来就像郭德纲和范伟在一起讲相声一样，咋，伟哥就不能讲相声了，“猪撞树上了，你撞猪上了，追尾了吧”，这么脍炙人口的段子怎么能忘，记得那还是… 不扯犊子了。总之，这个播客很不错，在Iphone上的Podcasts也能订阅。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://tva4.sinaimg.cn/crop.0.0.1022.1022.180/006p5fA6gw1f380qr10q3j30sg0sggnf.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://teahour.fm/2015/08/16/vuejs-creator-evan-you.html&quot;&gt;teahour.fm&lt;/a&gt;: 又一个良心播客，在IPhone上的PodCasts就能订阅，同样会请到业界技术大牛来聊技吗。你知道Vue.js吗？什么，没听过，这可是中国人尤雨溪（尤小石）写的一个前端框架，现在已经被很多大公司所应用，这个博客把邀请了尤小石来聊一聊各个前端框架的优缺点，受益匪浅。其他大神的讲座，也会让你受益匪浅的。杠杠的！！！&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://img0.tech2ipo.com/upload/img/article/2013/06/1370316706774.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://growth.ren/&quot;&gt;Growth&lt;/a&gt;: 一个有些的Web开发者学习指导网站，并且也有IPhone和Android的&lt;a href=&quot;http://developer.telerik.com/featured/what-is-a-hybrid-mobile-app/&quot;&gt;Hybrid App&lt;/a&gt;,。良心应有，不多说了，看图吧。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://store-images.s-microsoft.com/image/apps.12635.13510798887063773.e34e796d-6452-48d5-834c-a54dcb9b8b0d.5fbeb58c-1dd4-45d5-987b-a3f4ef42d643&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;   之后的几期，我会带领大家分析一下各个公司的系统设计，像Uber，Twitter，Google的GFS(高富帅)… 用最简单直白的说话方式顺带点幽默的词汇来帮你了解工业界的开发，自己也能通过整理这个博客，来巩固一下System Design的知识，总之，你好，我也好，写写更健康。希望大家都能从博客里面学到知识哈。&lt;/p&gt;
-
-&lt;p&gt;   最最重要的一点就是，程序员这个职业，需要踏踏实实的去实践去写代码（我的偶像John D. Carmack做的就很棒），要是做不到这一点，天天吹的天花乱坠，那我估计你这个程序员也当不了多长时间。总之，平时努力积累，多实践，多动手，少吹B，你也会成为大神的（但像Jeff Dean那样的还是需要环境和天赋）。还有，在你学习的道路上，总会有些SB说你学这个没有学那个没用（其实那些SB啥也不懂，以为自己很懂很牛B），可悲的是最后你听听从他的建议，导致和他一个Level（悲哀呀）。这时，就需要自己多看看资料，多听听行业大牛是怎么说的，多交流，看看那些是对自己有益的，这样你才会正向的去发展，去提高自己。&lt;/p&gt;
-
-&lt;h3 id=&quot;danielgithubhttpsgithubcombaniel&quot;&gt;还记得我吗，我叫Daniel跟我念一遍，什么，大声点听不见，我的算法，系统，&lt;a href=&quot;https://github.com/Baniel&quot;&gt;GitHub封面&lt;/a&gt;，就算忘记，你不可能看不见。&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ---该作品改编自冠希哥的《记得我吗》
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;You may have heard that Li Fei-Fei has spent much money to collect the training data to make a machine to identify a dog or a cat, but AlphaGo without any training data. It means it will save much money and break the limit by training data.&lt;/p&gt;
 
 &lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
 &lt;div style=&quot;position: relative;
@@ -62,6 +20,919 @@ width:100%;
 padding-bottom:56.25%;
 height:0;&quot;&gt;
 
-&lt;iframe style=&quot;position: absolute;top: 0;left: 0;width: 100%;height: 100%;&quot; src=&quot;https://www.youtube.com/embed/GFqQCLZH75A&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/tXlM99xPQC8&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielpark139@gmail.com</email><uri>http://danieltech.net/</uri></author><category term="SystemDesign" /><summary>  两年的研究生学习，终于TMD的结束了（==为什么要TMD，这要问问我的好朋友Lawrence==)， 之后就是艰难的考雅思和找工作的阶段了。本人在Melbourne读的书，因此，也要在Melbourne这个大的IT环境下来找工作,在此，朕要推荐大家一个找工作的网站，Angel.co,说句发自肺腑的话，这网站绝壁要比SB的Seek好太多了，Seek基本上都是石沉大海，要不就是需要PR(澳大利亚居民身份)。Angel.co上，基本上都是些创业公司在招人，因此对IT人员的技术要求很高，Seek上的都是大公司，反而对技术要求不是太高，并且还是比较亲近于本地的澳洲居民。</summary></entry><entry><title>0.Daniel 带你刷算法</title><link href="/algorithm/DanielAlgorithm0/" rel="alternate" type="text/html" title="0.Daniel 带你刷算法" /><published>2016-09-13T00:00:00+10:00</published><updated>2016-09-13T00:00:00+10:00</updated><id>/algorithm/DanielAlgorithm0</id><content type="html" xml:base="/algorithm/DanielAlgorithm0/"></content><author><name>Daniel Zhang</name><email>danielpark139@gmail.com</email><uri>http://danieltech.net/</uri></author><category term="Algorithm" /><summary></summary></entry><entry><title>0.Daniel带你了解设计模式</title><link href="/designpattern/Abstract-Factory/" rel="alternate" type="text/html" title="0.Daniel带你了解设计模式" /><published>2016-07-11T00:00:00+10:00</published><updated>2016-07-11T00:00:00+10:00</updated><id>/designpattern/Abstract-Factory</id><content type="html" xml:base="/designpattern/Abstract-Factory/"></content><author><name>Daniel Zhang</name><email>danielpark139@gmail.com</email><uri>http://danieltech.net/</uri></author><category term="DesignPattern" /><summary></summary></entry></feed>
+&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><category term="mathematics" /><summary type="html"></summary></entry><entry><title type="html">Website Self-Learning</title><link href="http://localhost:4001/websecurity/Security-Website/" rel="alternate" type="text/html" title="Website Self-Learning" /><published>2016-12-30T00:00:00+11:00</published><updated>2016-12-30T00:00:00+11:00</updated><id>http://localhost:4001/websecurity/Security%20Website</id><content type="html" xml:base="http://localhost:4001/websecurity/Security-Website/">&lt;h3 id=&quot;1bwapp&quot;&gt;1.bWAPP&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Home bWAPP, or a buggy web application, is a free and open source deliberately insecure web application.It helps security enthusiasts, developers and students to discover and to prevent web vulnerabilities.bWAPP prepares one to conduct successful penetration testing and ethical hacking projects.
+    &lt;ul&gt;
+      &lt;li&gt;Link: &lt;a href=&quot;http://www.itsecgames.com/&quot;&gt;http://www.itsecgames.com/&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2damn-bulnerable-ios-app-dvia&quot;&gt;2.Damn Bulnerable IOS App (DVIA)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://damnvulnerableiosapp.com/&quot;&gt;http://damnvulnerableiosapp.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3damn-vulnerable-web-application-dvwa&quot;&gt;3.Damn Vulnerable Web Application (DVWA)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://www.dvwa.co.uk/&quot;&gt;http://www.dvwa.co.uk/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;4game-of-hacks&quot;&gt;4.Game of Hacks&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://www.gameofhacks.com/&quot;&gt;http://www.gameofhacks.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;5google-gruyere&quot;&gt;5.Google Gruyere&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://google-gruyere.appspot.com/&quot;&gt;http://google-gruyere.appspot.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;6hackthis&quot;&gt;6.HackThis!!&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;https://www.hackthis.co.uk/&quot;&gt;https://www.hackthis.co.uk/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;7-hack-this-sites&quot;&gt;7. Hack This Sites&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;https://www.hackthissite.org/&quot;&gt;https://www.hackthissite.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;8hellbound-hackers&quot;&gt;8.Hellbound Hackers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://www.hellboundhackers.org/&quot;&gt;https://www.helloundhackers.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;9mcafee-hacme-sites&quot;&gt;9.McAfee HacMe Sites&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://www.mcafee.com/us/downloads/free-tools/index.aspx&quot;&gt;http://www.mcafee.com/us/downloads/free-tools/index.aspx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;10mutillidae&quot;&gt;10.Mutillidae&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;https://sourceforge.net/projects/mutillidae&quot;&gt;https://sourceforge.net/projects/mutillidae/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;11overthewire&quot;&gt;11.OverTheWire&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;https://overthewire.org/wargames/&quot;&gt;http://overthewire.org/wargames&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;12peruggia&quot;&gt;12.Peruggia&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;https://sourceforge.net/projects/peruggia/&quot;&gt;https://sourceforge.net/projects/peruggia/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;13root-me&quot;&gt;13.Root Me&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;https://www.root-me.org/&quot;&gt;https://www.root-me.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;14-try2hack&quot;&gt;14. Try2Hack&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://www.try2hack.nl/&quot;&gt;http://www.try2hack.nl/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;15-vicnum&quot;&gt;15. Vicnum&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://vicnum.ciphertechs.com/&quot;&gt;http://vicnum.ciphertechs.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;16-webgoat&quot;&gt;16. WebGoat&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://webappsecmovies.sourceforge.net/webgoat/&quot;&gt;http://webappsecmovies.sourceforge.net/webgoat/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;17-i-chun-qiu-china&quot;&gt;17. I Chun Qiu (China)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://www.ichunqiu.com/main/&quot;&gt;http://www.ichunqiu.com/main&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;18-xctf_oj-china&quot;&gt;18. XCTF_OJ (China)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://oj.xctf.org.cn/&quot;&gt;http://oj.xctf.org.cn/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;19-security-attacking-and-defense-platform-china&quot;&gt;19. Security Attacking and Defense Platform (China)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://hackinglab.cn/index.php&quot;&gt;http://hackinglab.cn/index.php&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;20-vulnerable-by-design--vulnhub-thanks-for-苍冥&quot;&gt;20. Vulnerable By Design ~ VulnHub (Thanks for 苍冥)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;https://www.vulnhub.com/&quot;&gt;https://www.vulnhub.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;21-live-overfloe&quot;&gt;21. Live Overfloe&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Link: &lt;a href=&quot;http://liveoverflow.com/&quot;&gt;http://liveoverflow.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;watch-dog-2---marcus&quot;&gt;Watch Dog 2 - Marcus&lt;/h1&gt;
+
+&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
+&lt;div style=&quot;position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;&quot;&gt;
+
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/hh9x4NqW0Dw&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><category term="WebSecurity" /><summary type="html">1.bWAPP</summary></entry><entry><title type="html">8.1 Learn Data Structure with Daniel — BFS Theory</title><link href="http://localhost:4001/algorithm/DanielAlgorithm8.1/" rel="alternate" type="text/html" title="8.1 Learn Data Structure with Daniel --- BFS Theory" /><published>2016-12-03T00:00:00+11:00</published><updated>2016-12-03T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm8.1</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm8.1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h1 id=&quot;bfs-theory&quot;&gt;BFS Theory&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;We visit every vertex exactly once&lt;/li&gt;
+  &lt;li&gt;We visit each neighbour vertex then the neighbours of these new vertices&lt;/li&gt;
+  &lt;li&gt;Running time of the algorithm: &lt;script type=&quot;math/tex&quot;&gt;O(V+E)&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blog.hackerearth.com/wp-content/uploads/2015/05/dfsbfs_animation_final.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It has to store a lot of pointers so it is not as efficient as depth first search&lt;/li&gt;
+  &lt;li&gt;It construct shortest path tree: Dijkstra shortest path algorithm does a BFS if all the edge weight are equal to 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Dijkstra
+&lt;img src=&quot;http://hastuts.com/wp-content/uploads/2014/07/Dijkstras-algorithm.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In AI / machine learning it can prove to be very important: robots can discover the surrounding more easily with BFS than DFS&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is also very important in maximum flow: the &lt;a href=&quot;https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm&quot;&gt;Edmonds-Karp&lt;/a&gt; maximum flow algorithm uses BFS for finding augmenting paths&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cheyen’s algorithm in garbage collecion: simliar to mark and sweep gc procedure, it helps to maintain the active references -&amp;gt; it uses BFS to detect all the references on the heap memmory.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;TensorFlow&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
+&lt;div style=&quot;position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;&quot;&gt;
+
+
+
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/mWl45NkFBOc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">7.1 Learn Data Structure with Daniel — Graph Theory</title><link href="http://localhost:4001/algorithm/DanielAlgorithm7.1/" rel="alternate" type="text/html" title="7.1 Learn Data Structure with Daniel --- Graph Theory" /><published>2016-12-02T00:00:00+11:00</published><updated>2016-12-02T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm7.1</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm7.1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h1 id=&quot;graph-theory&quot;&gt;Graph Theory&lt;/h1&gt;
+
+&lt;h3 id=&quot;undirected-graph&quot;&gt;Undirected Graph&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://courses.cs.washington.edu/courses/cse421/07su/hw/hw2dfsb.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It means that you can go to B from A or go to A from B&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;directed-graph&quot;&gt;Directed Graph&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.mrgeek.me/wp-content/uploads/2014/04/directed-graph.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It means that you can just go to B form A.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://embed.wistia.com/deliveries/712da88a887ce673e90a1a088faf5a6397b8fc6f.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;hamiltonian-path-point&quot;&gt;Hamiltonian path (Point)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;It is a path in an undirected or directed graph that visits each vertex exactly once&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://support.esri.com/~/media/Support/GISDictionary/Hamiltonian-path.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hamiltonian cycle is a Hamiltonian path that is a cycle&lt;/li&gt;
+  &lt;li&gt;Determining whether such paths and cycles exist in graphs is NP-Complete!!!&lt;/li&gt;
+  &lt;li&gt;Simulations&lt;/li&gt;
+  &lt;li&gt;Travelling salesman problem relies on Hamiltonian cycles&lt;/li&gt;
+  &lt;li&gt;TSP problem: given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?&lt;/li&gt;
+  &lt;li&gt;If there is a Hamiltoninan path for a graph: it is the solution for the travelling salesman problem&lt;/li&gt;
+  &lt;li&gt;NP-complete problem&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;eulerian-path-line&quot;&gt;Eulerian Path (Line)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;It is a trail in a graph which visits every edge exactly once&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://4.bp.blogspot.com/-LOrP3erurXs/UZBWITqkF7I/AAAAAAAAAN4/hq6Y-NM1t58/s1600/Screen+shot+2013-05-12+at+8.02.42+PM.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Eulerian cycle is an Eulerian trail which starts and ends on the same vertex&lt;/li&gt;
+  &lt;li&gt;An undirected graph has an Eulerian cycle if and only if every vertex has even degree&lt;/li&gt;
+  &lt;li&gt;We can construct graphs that has Eulerian cycles with Heirholzer algorithm…important for the Chinese Postman Problem.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQLf7jrFC4oMD8gEkh37WhNJI5NY4i6cvuv9UzDc25hCh76yrz9&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chinese postman problem: a postman needs to go through every street at least once + closed circuit + wants to find a shortest path.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://p1.bpimg.com/567571/123ffd063684a82f.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If there is an Eulerian cycle that is the solution for the CPP!!!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2016-code-jam-world-finals-in-new-york-city-highlight-reel&quot;&gt;2016 &lt;a href=&quot;https://en.wikipedia.org/wiki/Google_Code_Jam&quot;&gt;Code Jam&lt;/a&gt; World Finals in New York City Highlight Reel&lt;/h3&gt;
+
+&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
+&lt;div style=&quot;position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;&quot;&gt;
+
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/g9ebwBWEuCc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">6.1 Learn Data Structure with Daniel — Ternary Search Trees Theory</title><link href="http://localhost:4001/algorithm/DanielAlgorithm6.1/" rel="alternate" type="text/html" title="6.1 Learn Data Structure with Daniel --- Ternary Search Trees Theory" /><published>2016-11-29T00:00:00+11:00</published><updated>2016-11-29T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm6.1</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm6.1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h1 id=&quot;ternary-search-trees-theory&quot;&gt;Ternary Search Trees Theory&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;With the help of tries we can search and sort strings very very efficiently&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://p1.bpimg.com/567571/ab8435fc783967f9.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The problem is that tries consume a lot of memory, so we should use ternary search trees instead which stores less references and null objects&lt;/li&gt;
+  &lt;li&gt;TST stores characters or strings in noes / not keys&lt;/li&gt;
+  &lt;li&gt;Each node has 3 children: less, equal or greater&lt;/li&gt;
+  &lt;li&gt;Can we balance TST-s with rotations? Yes but not worth the trouble&lt;/li&gt;
+  &lt;li&gt;It can be used insted of hashmap: it is as efficient as hashing&lt;/li&gt;
+  &lt;li&gt;Hashing need to examine the entire string key … TST do not&lt;/li&gt;
+  &lt;li&gt;TST support sorting operation!!!&lt;/li&gt;
+  &lt;li&gt;TST is better than hashing :
+    &lt;ul&gt;
+      &lt;li&gt;especially for search misses&lt;/li&gt;
+      &lt;li&gt;flexible than BST (usually there is no perfect hash function)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conclusion: TST is faster than hashmap and more flexible than binary search trees&lt;/li&gt;
+  &lt;li&gt;Applications:
+    &lt;ul&gt;
+      &lt;li&gt;Very important in package routing. The router direct the packages in the direction of the lognest prefix. It can be found very quickly with the help of TST-s.&lt;/li&gt;
+      &lt;li&gt;Prefix matching ~ google search：We can use DFS instead usually&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;important-notes&quot;&gt;Important notes&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We should combine R-way treis with TST&lt;/li&gt;
+  &lt;li&gt;At the root: it is an R-way trie with many many children&lt;/li&gt;
+  &lt;li&gt;At lower levels it becomes a TST with 3 children only&lt;/li&gt;
+  &lt;li&gt;This combination is quite efficient !!!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;tst-vs-hashing&quot;&gt;TST vs Hashing&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hashing
+    &lt;ol&gt;
+      &lt;li&gt;Need to examine the entire key ( becuase that is the way the hash function works)&lt;/li&gt;
+      &lt;li&gt;Search hits and misses cost the same&lt;/li&gt;
+      &lt;li&gt;The running time and performance relies heavily on the hashfunction&lt;/li&gt;
+      &lt;li&gt;Does not support as much operations than TST ( sorting )&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;TST
+    &lt;ol&gt;
+      &lt;li&gt;Works only for strings&lt;/li&gt;
+      &lt;li&gt;Only examines just enough key characters&lt;/li&gt;
+      &lt;li&gt;Search miss may only involve a fer characters&lt;/li&gt;
+      &lt;li&gt;Support more operations (sorting)&lt;/li&gt;
+      &lt;li&gt;Faster than hashing (for misses especially) and flexible than BST&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;applications&quot;&gt;Applications&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It can be used to implement the auto-complete feature very very efficiently&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i1.piimg.com/567571/f0b97a40272dea7a.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Can be used for spell-checkers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i1.piimg.com/567571/626be11492adc9a4.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Near-neighbor searching (Of which a spell-check is a special case)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For databases especially when indexing by serveral non-key fields is desirable&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i1.piimg.com/567571/ca3b0d29a0849651.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Paper: &lt;a href=&quot;http://www.cs.princeton.edu/~rs/strings/&quot;&gt;Fast Algorithms for Sorting and Searching Strings&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dr.Dobb’s &lt;a href=&quot;http://www.drdobbs.com/database/ternary-search-trees/184410528&quot;&gt;Ternary Search Trees&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pwn2own-2016-day-2-and-event-wrap-up&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Pwn2Own&quot;&gt;Pwn2Own&lt;/a&gt; 2016: Day 2 and Event Wrap-Up&lt;/h1&gt;
+
+&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
+&lt;div style=&quot;position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;&quot;&gt;
+
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/Sh8pveFv2DI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">5.1 Learn Data Structure with Daniel — Hash Tables</title><link href="http://localhost:4001/algorithm/DanielAlgorithm5.1/" rel="alternate" type="text/html" title="5.1 Learn Data Structure with Daniel --- Hash Tables" /><published>2016-11-28T00:00:00+11:00</published><updated>2016-11-28T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm5.1</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm5.1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h1 id=&quot;hash-tables&quot;&gt;Hash Tables&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Balanced BST -&amp;gt; we can achieve &lt;script type=&quot;math/tex&quot;&gt;O(Log{N})&lt;/script&gt; time complexity for several operations including search.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Can we do better?
+  Yes, maybe we can reach &lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;
+  This is why hashtables came to be.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Array: If we know the index, the insertion and retrival operations are very fast &lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;. That is what we want it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Here we want to search for a given item with a given key.We have key-value pairs&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;Key \Longrightarrow Slot\ in\ a\ set\ of\ buckets&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;hash-function&quot;&gt;Hash Function&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Distribute the keys uniformly into buckets&lt;/li&gt;
+  &lt;li&gt;n: number of keys&lt;/li&gt;
+  &lt;li&gt;m: number of buckets // size of array&lt;/li&gt;
+  &lt;li&gt;h(X) = n % m ( modulo operator)
+    &lt;ul&gt;
+      &lt;li&gt;We should use prime numbers both for the size of the array and in our hash function to make sure the distribution will be uniform !!!&lt;/li&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;String\ keys: we\ could\ calculate\ the\ ASCII\ value\ for\ each\ character,\ add\ them\ up\  \rightarrow  make\ \%\ modulo&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hash table is a data structure used to implement an associative array, astructure that can map keys to values&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A hash table uses a hash function to compute an index into an array of buckets or slots, from which the correct value can be found&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The hash function will assign each key to a unique bucket, but this situation is rarely achievable in practice: collisions may occur !!!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Collidion: different keys that are assigned by the hash function to the same bucket.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In many situations, hash tables turn out to be more efficient than search trees&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;So hash tables are used in caches, databases and sets.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;time-complex-table&quot;&gt;Time Complex Table&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Average case&lt;/th&gt;
+      &lt;th&gt;Worst Case&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Space&lt;/td&gt;
+      &lt;td&gt;  O(n)&lt;/td&gt;
+      &lt;td&gt;  O(n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Insert&lt;/td&gt;
+      &lt;td&gt;  O(1)&lt;/td&gt;
+      &lt;td&gt;  O(n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Delete&lt;/td&gt;
+      &lt;td&gt;  O(1)&lt;/td&gt;
+      &lt;td&gt;  O(n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Search&lt;/td&gt;
+      &lt;td&gt;  O(1)&lt;/td&gt;
+      &lt;td&gt;  O(n)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;collisions&quot;&gt;Collisions&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Collision resolution with chaining: we put multiple entries into the same slot with the help of a linked list:
+    &lt;ul&gt;
+      &lt;li&gt;If there are many collisions: O(1) complexity gets worse !!!&lt;/li&gt;
+      &lt;li&gt;If has an additional memory cost due to the references&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Open addressing: better solution&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If collision occurs, we find an empty slot instead:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Linear probing:&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;If a collision  occures, we try the next slot&lt;/li&gt;
+      &lt;li&gt;If there is a collision too, we keep trying the next slot unitl we find an empty slot&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Quadratic probing: we trying slots 1,2,3,4,8… units far away&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Rehashing: we hash the result again in order to find an empty slot&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Open addressing strategy requires, that hash function has additional properties. In addition to performing uniform distribution, it should also avoid clustering of hash values&lt;/li&gt;
+  &lt;li&gt;Use prime numbers to avoid clustering !!!&lt;/li&gt;
+  &lt;li&gt;Load factor: number of entries divided by the number of buckets&lt;/li&gt;
+  &lt;li&gt;With the growth of hash table’s load factor, nubmer of collisions increases, which leads to the decrease of overall table’s performance&lt;/li&gt;
+  &lt;li&gt;The solution is to resize table, when its load factor exceeds given threshold&lt;/li&gt;
+  &lt;li&gt;Remember, that hash values depend on table’s size. Hence, hashes of entries are changed when resizing and algorithm can’t just copy data from old storage to new one.&lt;/li&gt;
+  &lt;li&gt;But resizing is done at once and operation, which triggers resizing, take O(n) to complete, where n is a number of entries in the table. This fact may make dynamic-sized hash tables inappropriate for real0time applications.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;applications&quot;&gt;Applications&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Databases: sometimes search trees, sometimes hashing is better&lt;/li&gt;
+  &lt;li&gt;Counting given word occurece in a particular  document&lt;/li&gt;
+  &lt;li&gt;Storing data + lookup tables (password checks…)&lt;/li&gt;
+  &lt;li&gt;Lookup tables in huge networks ( lookup for IP addresses)&lt;/li&gt;
+  &lt;li&gt;The hashing technique can be used for substring search (Rabin-Karp algorithm)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pwn2own-2016-day-1-recap&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Pwn2Own&quot;&gt;Pwn2Own&lt;/a&gt; 2016 Day 1 Recap&lt;/h1&gt;
+
+&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
+&lt;div style=&quot;position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;&quot;&gt;
+
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/DOmzWKW-mto&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">4.1 Learn Data Structure with Daniel — Heap</title><link href="http://localhost:4001/algorithm/DanielAlgorithm4.1/" rel="alternate" type="text/html" title="4.1 Learn Data Structure with Daniel --- Heap" /><published>2016-11-27T00:00:00+11:00</published><updated>2016-11-27T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm4.1</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm4.1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h1 id=&quot;heap-theory&quot;&gt;Heap Theory&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It is a binary tree&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.stack.imgur.com/ld3It.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In a max heap, the keys of parent nodes are always greater than or equal to those of the children and the highest key is in the root node. In a min heap, the keys of parent nodes are less than or eaual to thouse of the children and the lowest key is in the root node&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://qph.ec.quoracdn.net/main-qimg-ddb92cea328a64098e3219bd021ff6cb?convert_to_webp=true&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;We can traverse heap by the level from the root and set the index from left to right. We can get the rule like below:&lt;/p&gt;
+
+    &lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;(1\leq i \leq= \left \lfloor \frac{n}{2} \right \rfloor)&lt;/script&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Max Heap: &lt;script type=&quot;math/tex&quot;&gt;K_i \geq K_{2i}&lt;/script&gt;
+          and &lt;script type=&quot;math/tex&quot;&gt;K_i \geq K_{2i+1}&lt;/script&gt;&lt;/li&gt;
+      &lt;li&gt;Min Heap: &lt;script type=&quot;math/tex&quot;&gt;K_i \leq K_{2i}&lt;/script&gt;
+          and &lt;script type=&quot;math/tex&quot;&gt;K_i \leq K_{2i+1}&lt;/script&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;It is complete: it cannot be unbalanced !!! We insert every new item to the next available place&lt;/li&gt;
+  &lt;li&gt;Applications: Dijkstra alorithm, Prims algorithm&lt;/li&gt;
+  &lt;li&gt;The heap is one maximally efficient implementation of an abstract data type called a priority queue&lt;/li&gt;
+  &lt;li&gt;It has nothing to do with the pool of memory from which dynamically allocated memory is allocated&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;heap-properies&quot;&gt;Heap properies&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Complete -&amp;gt; we construct if from left to right across each row / of course the last row may not be completely full&lt;/li&gt;
+  &lt;li&gt;The key of the parent must be larger/smaller than its childern’s keys&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.studytonight.com/data-structures/images/heap-property-example.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;heapsort&quot;&gt;Heapsort&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;comparison-based sorting algorithm&lt;/li&gt;
+  &lt;li&gt;use heap data structure rather than a linear-time search to find the maximum&lt;/li&gt;
+  &lt;li&gt;although somewhat slower in practice on most machines than a well-implemented quicksort, it has the advantage of a more favorable worst-case &lt;script type=&quot;math/tex&quot;&gt;O({n}\log{n})&lt;/script&gt; runtime.Heapsort is an in-place algorithm, but it is not a stable sort&lt;/li&gt;
+  &lt;li&gt;Does not need additional memory!!!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;keep-swapping-the-root-with-the-last-element--maintain-heap-properties-&quot;&gt;Keep swapping the root with the last element + maintain heap properties !!!&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;binomial-heap&quot;&gt;Binomial Heap&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Similar to a binary heap but also supports quick merging of two heaps&lt;/li&gt;
+  &lt;li&gt;It is important as an implementation of the mergeable heap abstract data type (meldable heap), which is a priority queue supporting merge operation&lt;/li&gt;
+  &lt;li&gt;A binomial heap is implemented as a collection of binary trees&lt;/li&gt;
+  &lt;li&gt;Insertion &lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt; time complexity can be reduced to O(1) constant time complexity with help of binomial heaps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fibonacci-heap&quot;&gt;Fibonacci heap&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Faster than the classic binary heap&lt;/li&gt;
+  &lt;li&gt;Dijkstra’s shortest path algorithm and Prim’s spanning tree algorithm run faster if they rely on Fibonacci heap instead of binary heaps&lt;/li&gt;
+  &lt;li&gt;But bery hard to implement efficiently so usually does not worth the effort&lt;/li&gt;
+  &lt;li&gt;Unlike binary heaps, it can have  several children: number of children are usually kept low&lt;/li&gt;
+  &lt;li&gt;We can achive O(1) insert operation instead of &lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt; !!!&lt;/li&gt;
+  &lt;li&gt;Every node has degree at most &lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt; and the size of a subtree rooted in a node of degree &lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; is at least &lt;script type=&quot;math/tex&quot;&gt;F_{K+2}&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;F_K&lt;/script&gt; is the &lt;script type=&quot;math/tex&quot;&gt;k_{th}&lt;/script&gt; Fibonacci number.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Time complexities&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Binary&lt;/th&gt;
+      &lt;th&gt;Binomial&lt;/th&gt;
+      &lt;th&gt;Fibonacci&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Find min&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Delete min&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Insert&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Decrease Key&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Merge&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;({m}\log({m+n}))&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;it&quot;&gt;I.T.&lt;/h2&gt;
+
+&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
+&lt;div style=&quot;position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;&quot;&gt;
+
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/hfnDTvbtDUI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">SNEAK Principle</title><link href="http://localhost:4001/systemdesign/SystemDesign01/" rel="alternate" type="text/html" title="SNEAK Principle" /><published>2016-11-27T00:00:00+11:00</published><updated>2016-11-27T00:00:00+11:00</updated><id>http://localhost:4001/systemdesign/SystemDesign01</id><content type="html" xml:base="http://localhost:4001/systemdesign/SystemDesign01/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h1 id=&quot;template-snake-01&quot;&gt;Template: SNAKE 01&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Scenario: case/interface&lt;/li&gt;
+  &lt;li&gt;Necessary: constrain/hypothesis&lt;/li&gt;
+  &lt;li&gt;Application: service/algorithm&lt;/li&gt;
+  &lt;li&gt;Kilobit: data&lt;/li&gt;
+  &lt;li&gt;Evolve&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Do you know what’s the different between “Node” and “Server”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://p1.bqimg.com/567571/acb4c4f2425aef8d.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;eg-monitor-system&quot;&gt;Eg: Monitor System?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;S: where?
+    &lt;ul&gt;
+      &lt;li&gt;WhatsApp or Wechat&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Do you know what’s the different between “Service” and “Server”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Service&lt;/th&gt;
+      &lt;th&gt;Server&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Software&lt;/td&gt;
+      &lt;td&gt;Machine&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Process, Thread&lt;/td&gt;
+      &lt;td&gt;CPU, Disk&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;N:
+    &lt;ul&gt;
+      &lt;li&gt;If you have 1000 Machine(Swarm)&lt;/li&gt;
+      &lt;li&gt;May be 1000 x 200(Process) = 200k Process&lt;/li&gt;
+      &lt;li&gt;We also need to send the logs to Center Machine per/Minute&lt;/li&gt;
+      &lt;li&gt;Query Per Second(&lt;a href=&quot;https://en.wikipedia.org/wiki/Queries_per_second&quot;&gt;QPS&lt;/a&gt;): &lt;script type=&quot;math/tex&quot;&gt;\frac{1000}{60} = 16&lt;/script&gt;  1000 means 1000 Machine&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;How many Processes can be run at the same time in Mac?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farhakm.files.wordpress.com/2015/03/iljzp.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have a Mac, you can open “Activity Monitor” to check threads.
+&lt;img src=&quot;http://p1.bqimg.com/567571/ae779f5e3673b9a6.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;mr-robot&quot;&gt;Mr Robot&lt;/h1&gt;
+&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
+&lt;div style=&quot;position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;&quot;&gt;
+
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/R5giPbQIdzo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><category term="SystemDesign" /><summary type="html"></summary></entry><entry><title type="html">3.2Learn Data Structure with Daniel — AVL TREES Code Implement</title><link href="http://localhost:4001/algorithm/DanielAlgorithm3/" rel="alternate" type="text/html" title="3.2Learn Data Structure with Daniel --- AVL TREES Code Implement" /><published>2016-11-26T00:00:00+11:00</published><updated>2016-11-26T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm3</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm3/">&lt;script type=&quot;text/javascript&quot; async
+  src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+# Operation Takedown - [Kevin Mitnick](https://en.wikipedia.org/wiki/Kevin_Mitnick)
+
+&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot; &gt;
+&lt;div
+style=&quot;position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;&quot;&gt;
+
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/NbgDMYy9mzM&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">3.1Learn Data Structure with Daniel — AVL TREES Theory</title><link href="http://localhost:4001/algorithm/DanielAlgorithm3.1/" rel="alternate" type="text/html" title="3.1Learn Data Structure with Daniel --- AVL TREES Theory" /><published>2016-11-25T00:00:00+11:00</published><updated>2016-11-25T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm3.1</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm3.1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h1 id=&quot;avl-trees-theory&quot;&gt;AVL TREES Theory&lt;/h1&gt;
+&lt;p&gt;(AKA: Self-Balancing Binary Search Tree , Height-Balanced Binary Search Tree)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The running time of BST operations depends on the height of the binary search tree: we should keep the tree balanced in order to get the best performance&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In an AVL tree, the heights of the two child subtrees of any node differ by at most one&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://image.slidesharecdn.com/lecture11-140420071306-phpapp01/95/avl-tree-11-638.jpg?cb=1397978063&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Another solution to the problem is a red-black trees
+&lt;img src=&quot;http://images.slideplayer.com/25/7913304/slides/slide_6.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;AVL trees are faster than red-black trees because they are more rigidly balanced, but needs more work&lt;/li&gt;
+  &lt;li&gt;Operating Systems relies heavily on these data structures!!!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://image.slidesharecdn.com/redblacktree-140217061821-phpapp01/95/red-black-tree-23-638.jpg?cb=1392618090&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It’s the same like “Binary Search Tree”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Average case&lt;/th&gt;
+      &lt;th&gt;Worst Case&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Space&lt;/td&gt;
+      &lt;td&gt;  O(n)&lt;/td&gt;
+      &lt;td&gt;  O(n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Insert&lt;/td&gt;
+      &lt;td&gt;  O(log n)&lt;/td&gt;
+      &lt;td&gt;  O(log n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Delete&lt;/td&gt;
+      &lt;td&gt;  O(log n)&lt;/td&gt;
+      &lt;td&gt;  O(log n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Search&lt;/td&gt;
+      &lt;td&gt;  O(log n)&lt;/td&gt;
+      &lt;td&gt;  O(log n)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Height of a node: length of the longest path from it ot a leaf&lt;/p&gt;
+
+&lt;p&gt;We can use recursion to calculate it:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;height = max( leftChild.height( ),rightChild.height( ) ) + 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://p1.bqimg.com/567571/d43978a58cedc07c.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;AVL algorithm uses heights of nodes, we want the heights as small as possible: we store the height parameters -&amp;gt; if it gets high, we fix it.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;AVL tree requires the heights of left and right child of every node to differ at most +1 or -1 !!!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\| height(leftSubtree) -  height(rightSubtree) \| \leq 1&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;We can maintain this property in O(logN) time which is quite fast !!!&lt;/li&gt;
+  &lt;li&gt;Insertion:
+    &lt;ol&gt;
+      &lt;li&gt;a simple BST insertion according to the keys&lt;/li&gt;
+      &lt;li&gt;fix the AVL property on each insertion from insertion upward&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;There may be serveral violations of AVL property from the inserted node up to the root!!!&lt;/li&gt;
+  &lt;li&gt;We have to check them all&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;rotations&quot;&gt;Rotations:&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Four types of unbalanced situations
+    &lt;ol&gt;
+      &lt;li&gt;LL: doubly left heavy situation… we have to make a right rotation&lt;/li&gt;
+      &lt;li&gt;LR: we haveto make a left and a right rotation&lt;/li&gt;
+      &lt;li&gt;RL: we have to make a left and right rotation&lt;/li&gt;
+      &lt;li&gt;RR: we have to make a left rotation&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;edward-snowden&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Edward_Snowden&quot;&gt;Edward Snowden&lt;/a&gt;&lt;/h1&gt;
+
+&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
+&lt;div style=&quot;position: relative;
+width:100%;
+padding-bottom:56.25%;
+height:0;&quot;&gt;
+
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/QlSAiI3xMh4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Daniel Zhang</name><email>danielzhangdeveloper@gmail.com</email></author><category term="algorithm" /><summary type="html"></summary></entry></feed>
