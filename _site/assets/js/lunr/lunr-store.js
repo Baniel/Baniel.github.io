@@ -25,9 +25,9 @@ var store = [{
         "url": "http://localhost:4001/mathematics/ProbabilityTheory01/",
         "teaser":null},{
         "title": "Intro",
-        "excerpt":"Hacking Level Hacking Understanding System Breaking System Reconstruction Learning Guide CMU 18-447 Introduction to Computer Architecture (CPU, Cache) -https://www.ece.cmu.edu/~ece447/s15/doku.php Labs: Implement a MIPS CPU using Verilog Stanford CS143 - Compilers http://web.stanford.edu/class/cs143 PA: Compilers for Cool Language MIT 6.828 - Operating System Engineering https://pdos.csail.mit.edu/6.828/2016/ Labs: Implement jobs Xv6, a simple Unix-like...","categories": ["WebSecurity"],
+        "excerpt":"Hacking Level Hacking Understanding System Breaking System Reconstruction Learning Guide CMU 18-447 Introduction to Computer Architecture (CPU, Cache) -https://www.ece.cmu.edu/~ece447/s15/doku.php Labs: Implement a MIPS CPU using Verilog Stanford CS143 - Compilers http://web.stanford.edu/class/cs143 PA: Compilers for Cool Language MIT 6.828 - Operating System Engineering https://pdos.csail.mit.edu/6.828/2016/ Labs: Implement jobs Xv6, a simple Unix-like...","categories": ["security"],
         "tags": [],
-        "url": "http://localhost:4001/websecurity/CTF0/",
+        "url": "http://localhost:4001/security/CTF0/",
         "teaser":null},{
         "title": "2.2 Learn Data Structure with Daniel --- Binary Search Tree Code Implement",
         "excerpt":"Binary Search Tree Code Implement. Node.py class Node(object): def __init__(self, data): self.data = data self.leftChild = None self.rightChild = None def insert(self, data): if data &lt; self.data: if not self.leftChild: self.leftChild = Node(data) else: self.leftChild.insert(data) else: if not self.rightChild: self.leftChild = Node(data) else: self.rightChild.insert(data) def remove(self, data, parentNode): if data...","categories": ["algorithm"],
@@ -75,17 +75,12 @@ var store = [{
         "url": "http://localhost:4001/algorithm/DanielAlgorithm8.1/",
         "teaser":null},{
         "title": "Website Self-Learning",
-        "excerpt":"1.bWAPP Home bWAPP, or a buggy web application, is a free and open source deliberately insecure web application.It helps security enthusiasts, developers and students to discover and to prevent web vulnerabilities.bWAPP prepares one to conduct successful penetration testing and ethical hacking projects. Link: http://www.itsecgames.com/ 2.Damn Bulnerable IOS App (DVIA) Link:...","categories": ["WebSecurity"],
+        "excerpt":"1.bWAPP Home bWAPP, or a buggy web application, is a free and open source deliberately insecure web application.It helps security enthusiasts, developers and students to discover and to prevent web vulnerabilities.bWAPP prepares one to conduct successful penetration testing and ethical hacking projects. Link: http://www.itsecgames.com/ 2.Damn Bulnerable IOS App (DVIA) Link:...","categories": ["security"],
         "tags": [],
-        "url": "http://localhost:4001/websecurity/Security-Website/",
+        "url": "http://localhost:4001/security/Security-Website/",
         "teaser":null},{
         "title": "Paper Overview --- AlphaGo Zero",
         "excerpt":"Why AlphaGo Special? It is trained solely by self-paly reinforcement learning, starting from random play, without any supervision or use of human data. It uses only the balck and white stones from the board as input features. It uses a single neural network, rahter than separate policy and value networks....","categories": ["mathematics"],
         "tags": [],
         "url": "http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/",
-        "teaser":null},{
-        "title": "Tutorial 0x00",
-        "excerpt":"Hi, this is your fist tutorial.  ","categories": ["tutorial"],
-        "tags": [],
-        "url": "http://localhost:4001/tutorial/Tutorial00/",
         "teaser":null}]

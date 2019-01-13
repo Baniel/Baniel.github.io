@@ -10,5 +10,5 @@ main:
     url: /design-pattern/
   - title: "Mathematics"
     url: /mathematics/
-  - title: " "
-    url: /tutorial/
+  - title: "Security"
+    url: /security/

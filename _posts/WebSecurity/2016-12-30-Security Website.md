@@ -1,7 +1,8 @@
 ---
 layout: single
 title: Website Self-Learning
-category: WebSecurity
+category: security
+comments: true
 ---
 
 
