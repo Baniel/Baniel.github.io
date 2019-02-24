@@ -150,6 +150,181 @@ res26: List[List[Int]] = List(List(2, 4), List(4, 6))
 scala> q.flatMap( _.filter( _ % 2 == 0))
 res27: List[Int] = List(2, 4, 4, 6)
 ```
-- Higher Brothers - We Talkin Bout feat. KOHH (prod. Don Krez)
+
+# 4.reduceLeft 与 flodLeft (规约)
+----
+
+- ReduceLeft
+
+```
+scala> a
+res28: List[Int] = List(1, 2, 3, 4)
+
+scala> a.reduceLeft((x,y) => x + y)
+res29: Int = 10
+
+scala> a.reduceLeft(_ + _)
+res30: Int = 10
+```
+
+- FlodLeft
+
+```
+scala> a
+res33: List[Int] = List(1, 2, 3, 4)
+
+scala> a.foldLeft(0)(_ + _)
+res35: Int = 10
+
+scala> a.foldLeft(1)(_ * _)
+res36: Int = 24
+
+```
+
+
+
+# 5.Range 与 Stream
+----
+
+- Range
+
+```
+scala> 1 to 10
+res37: scala.collection.immutable.Range.Inclusive = Range 1 to 10
+
+scala> 1 to 10 by 2
+res39: scala.collection.immutable.Range = inexact Range 1 to 10 by 2
+
+scala> (1 to 10).toList
+res40: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+scala> 1 until 10
+res41: scala.collection.immutable.Range = Range 1 until 10
+```
+- Stream
+
+```
+scala> 1 #:: 2 #:: 3 #:: Stream.empty
+res44: scala.collection.immutable.Stream[Int] = Stream(1, ?)
+
+scala> val stream = (1 to 10000000).toStream
+stream: scala.collection.immutable.Stream[Int] = Stream(1, ?)
+
+scala> stream.head
+res45: Int = 1
+
+scala> stream.tail
+res46: scala.collection.immutable.Stream[Int] = Stream(2, ?)
+
+```
+
+
+
+# 6.tuple与map
+----
+
+- tuple
+
+```
+scala> (1,2)
+res48: (Int, Int) = (1,2)
+
+scala> 1 -> 2
+res49: (Int, Int) = (1,2)
+
+scala> (1, "Alice", "Math", 95.5)
+res50: (Int, String, String, Double) = (1,Alice,Math,95.5)
+
+scala> val t =  (1, "Alice", "Math", 95.5)
+t: (Int, String, String, Double) = (1,Alice,Math,95.5)
+
+scala> t._1
+res51: Int = 1
+
+scala> t._2
+res52: String = Alice
+
+scala> t._3
+res53: String = Math
+
+scala> t._4
+res54: Double = 95.5
+```
+
+```
+scala> def sumSq(in : List[Int]): (Int, Int, Int) = {
+     | in.foldLeft((0,0,0))((t,v) => (t._1 + 1, t._2 + v, t._3 + v*v))
+     | }
+sumSq: (in: List[Int])(Int, Int, Int)
+
+scala> sumSq(a)
+res56: (Int, Int, Int) = (4,10,30)
+
+scala> a
+res57: List[Int] = List(1, 2, 3, 4)
+
+scala> sumSq(a)
+res58: (Int, Int, Int) = (4,10,30)
+```
+
+- Map
+
+```
+scala> val p = Map( 1 -> "David", 9 -> "Elwood")
+p: scala.collection.immutable.Map[Int,String] = Map(1 -> David, 9 -> Elwood)
+
+scala> p(1)
+res59: String = David
+
+scala> p(9)
+res60: String = Elwood
+
+scala> p(2)
+java.util.NoSuchElementException: key not found: 2
+  at scala.collection.immutable.Map$Map2.apply(Map.scala:138)
+  ... 28 elided
+
+scala> p.contains(1)
+res62: Boolean = true
+
+scala> p.contains(2)
+res63: Boolean = false
+
+scala> p.keys
+res64: Iterable[Int] = Set(1, 9)
+
+scala> p.values
+res65: Iterable[String] = MapLike.DefaultValuesIterable(David, Elwood)
+
+scala> p + (8 -> "Archer")
+res66: scala.collection.immutable.Map[Int,String] = Map(1 -> David, 9 -> Elwood, 8 -> Archer)
+
+scala> p
+res67: scala.collection.immutable.Map[Int,String] = Map(1 -> David, 9 -> Elwood)
+
+scala> p - 1
+res68: scala.collection.immutable.Map[Int,String] = Map(9 -> Elwood)
+
+scala> p
+res69: scala.collection.immutable.Map[Int,String] = Map(1 -> David, 9 -> Elwood)
+
+scala> p ++ List(2 -> "Alice", 5-> "Bob")
+res70: scala.collection.immutable.Map[Int,String] = Map(1 -> David, 9 -> Elwood, 2 -> Alice, 5 -> Bob)
+
+scala> p -- List(1, 9, 2)
+res71: scala.collection.immutable.Map[Int,String] = Map()
+
+scala> p
+res72: scala.collection.immutable.Map[Int,String] = Map(1 -> David, 9 -> Elwood)
+
+scala> p ++ List(2 -> "Alice", 5-> "Bob") -- List(9,1)
+res73: scala.collection.immutable.Map[Int,String] = Map(2 -> Alice, 5 -> Bob)
+
+```
+
+
+
+- 21 Savage - a lot ft. J. Cole
+
 
 <iframe width="728" height="541" src="https://www.youtube.com/embed/DmWWqogr_r8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

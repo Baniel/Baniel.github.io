@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-24T17:14:00+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Tutorial Imooc</title><link href="http://localhost:4001/notes/Scala_Imooc/" rel="alternate" type="text/html" title="Scala Tutorial Imooc" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Imooc</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Imooc/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_tutorial.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-24T19:36:21+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Tutorial Imooc</title><link href="http://localhost:4001/notes/Scala_Imooc/" rel="alternate" type="text/html" title="Scala Tutorial Imooc" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Imooc</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Imooc/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_tutorial.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;1list&quot;&gt;1.List&lt;/h1&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val a = List(1,2,3,4)
@@ -124,8 +124,181 @@ res26: List[List[Int]] = List(List(2, 4), List(4, 6))
 scala&amp;gt; q.flatMap( _.filter( _ % 2 == 0))
 res27: List[Int] = List(2, 4, 4, 6)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;4reduceleft-与-flodleft-规约&quot;&gt;4.reduceLeft 与 flodLeft (规约)&lt;/h1&gt;
+&lt;hr /&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Higher Brothers - We Talkin Bout feat. KOHH (prod. Don Krez)&lt;/li&gt;
+  &lt;li&gt;ReduceLeft&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; a
+res28: List[Int] = List(1, 2, 3, 4)
+
+scala&amp;gt; a.reduceLeft((x,y) =&amp;gt; x + y)
+res29: Int = 10
+
+scala&amp;gt; a.reduceLeft(_ + _)
+res30: Int = 10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;FlodLeft&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; a
+res33: List[Int] = List(1, 2, 3, 4)
+
+scala&amp;gt; a.foldLeft(0)(_ + _)
+res35: Int = 10
+
+scala&amp;gt; a.foldLeft(1)(_ * _)
+res36: Int = 24
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;5range-与-stream&quot;&gt;5.Range 与 Stream&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Range&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; 1 to 10
+res37: scala.collection.immutable.Range.Inclusive = Range 1 to 10
+
+scala&amp;gt; 1 to 10 by 2
+res39: scala.collection.immutable.Range = inexact Range 1 to 10 by 2
+
+scala&amp;gt; (1 to 10).toList
+res40: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+scala&amp;gt; 1 until 10
+res41: scala.collection.immutable.Range = Range 1 until 10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Stream&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; 1 #:: 2 #:: 3 #:: Stream.empty
+res44: scala.collection.immutable.Stream[Int] = Stream(1, ?)
+
+scala&amp;gt; val stream = (1 to 10000000).toStream
+stream: scala.collection.immutable.Stream[Int] = Stream(1, ?)
+
+scala&amp;gt; stream.head
+res45: Int = 1
+
+scala&amp;gt; stream.tail
+res46: scala.collection.immutable.Stream[Int] = Stream(2, ?)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;6tuple与map&quot;&gt;6.tuple与map&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;tuple&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; (1,2)
+res48: (Int, Int) = (1,2)
+
+scala&amp;gt; 1 -&amp;gt; 2
+res49: (Int, Int) = (1,2)
+
+scala&amp;gt; (1, &quot;Alice&quot;, &quot;Math&quot;, 95.5)
+res50: (Int, String, String, Double) = (1,Alice,Math,95.5)
+
+scala&amp;gt; val t =  (1, &quot;Alice&quot;, &quot;Math&quot;, 95.5)
+t: (Int, String, String, Double) = (1,Alice,Math,95.5)
+
+scala&amp;gt; t._1
+res51: Int = 1
+
+scala&amp;gt; t._2
+res52: String = Alice
+
+scala&amp;gt; t._3
+res53: String = Math
+
+scala&amp;gt; t._4
+res54: Double = 95.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; def sumSq(in : List[Int]): (Int, Int, Int) = {
+     | in.foldLeft((0,0,0))((t,v) =&amp;gt; (t._1 + 1, t._2 + v, t._3 + v*v))
+     | }
+sumSq: (in: List[Int])(Int, Int, Int)
+
+scala&amp;gt; sumSq(a)
+res56: (Int, Int, Int) = (4,10,30)
+
+scala&amp;gt; a
+res57: List[Int] = List(1, 2, 3, 4)
+
+scala&amp;gt; sumSq(a)
+res58: (Int, Int, Int) = (4,10,30)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Map&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val p = Map( 1 -&amp;gt; &quot;David&quot;, 9 -&amp;gt; &quot;Elwood&quot;)
+p: scala.collection.immutable.Map[Int,String] = Map(1 -&amp;gt; David, 9 -&amp;gt; Elwood)
+
+scala&amp;gt; p(1)
+res59: String = David
+
+scala&amp;gt; p(9)
+res60: String = Elwood
+
+scala&amp;gt; p(2)
+java.util.NoSuchElementException: key not found: 2
+  at scala.collection.immutable.Map$Map2.apply(Map.scala:138)
+  ... 28 elided
+
+scala&amp;gt; p.contains(1)
+res62: Boolean = true
+
+scala&amp;gt; p.contains(2)
+res63: Boolean = false
+
+scala&amp;gt; p.keys
+res64: Iterable[Int] = Set(1, 9)
+
+scala&amp;gt; p.values
+res65: Iterable[String] = MapLike.DefaultValuesIterable(David, Elwood)
+
+scala&amp;gt; p + (8 -&amp;gt; &quot;Archer&quot;)
+res66: scala.collection.immutable.Map[Int,String] = Map(1 -&amp;gt; David, 9 -&amp;gt; Elwood, 8 -&amp;gt; Archer)
+
+scala&amp;gt; p
+res67: scala.collection.immutable.Map[Int,String] = Map(1 -&amp;gt; David, 9 -&amp;gt; Elwood)
+
+scala&amp;gt; p - 1
+res68: scala.collection.immutable.Map[Int,String] = Map(9 -&amp;gt; Elwood)
+
+scala&amp;gt; p
+res69: scala.collection.immutable.Map[Int,String] = Map(1 -&amp;gt; David, 9 -&amp;gt; Elwood)
+
+scala&amp;gt; p ++ List(2 -&amp;gt; &quot;Alice&quot;, 5-&amp;gt; &quot;Bob&quot;)
+res70: scala.collection.immutable.Map[Int,String] = Map(1 -&amp;gt; David, 9 -&amp;gt; Elwood, 2 -&amp;gt; Alice, 5 -&amp;gt; Bob)
+
+scala&amp;gt; p -- List(1, 9, 2)
+res71: scala.collection.immutable.Map[Int,String] = Map()
+
+scala&amp;gt; p
+res72: scala.collection.immutable.Map[Int,String] = Map(1 -&amp;gt; David, 9 -&amp;gt; Elwood)
+
+scala&amp;gt; p ++ List(2 -&amp;gt; &quot;Alice&quot;, 5-&amp;gt; &quot;Bob&quot;) -- List(9,1)
+res73: scala.collection.immutable.Map[Int,String] = Map(2 -&amp;gt; Alice, 5 -&amp;gt; Bob)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;21 Savage - a lot ft. J. Cole&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;iframe width=&quot;728&quot; height=&quot;541&quot; src=&quot;https://www.youtube.com/embed/DmWWqogr_r8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">AlgoCast:0x001 回文字符串判断(Leetcode 125)</title><link href="http://localhost:4001/algorithm/AlgoCasts-0x001/" rel="alternate" type="text/html" title="AlgoCast:0x001 回文字符串判断(Leetcode 125)" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/AlgoCasts-0x001</id><content type="html" xml:base="http://localhost:4001/algorithm/AlgoCasts-0x001/">&lt;ul&gt;
@@ -354,6 +527,7 @@ Cause we are genius!!!)&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Lil Pump - “Be Like Me” ft. Lil Wayne (Official Music Video)&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;iframe width=&quot;957&quot; height=&quot;538&quot; src=&quot;https://www.youtube.com/embed/gJRGkvNqrY4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Database:0x03</title><link href="http://localhost:4001/notes/Java_Interview_Database/" rel="alternate" type="text/html" title="Java Interview Database:0x03" /><published>2019-02-23T00:00:00+11:00</published><updated>2019-02-23T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Database</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Database/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;relational-database&quot;&gt;Relational database&lt;/h2&gt;

@@ -296,8 +296,181 @@ res26: List[List[Int]] = List(List(2, 4), List(4, 6))
 scala&gt; q.flatMap( _.filter( _ % 2 == 0))
 res27: List[Int] = List(2, 4, 4, 6)
 </code></pre></div></div>
+
+<h1 id="4reduceleft-与-flodleft-规约">4.reduceLeft 与 flodLeft (规约)</h1>
+<hr />
+
 <ul>
-  <li>Higher Brothers - We Talkin Bout feat. KOHH (prod. Don Krez)</li>
+  <li>ReduceLeft</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a
+res28: List[Int] = List(1, 2, 3, 4)
+
+scala&gt; a.reduceLeft((x,y) =&gt; x + y)
+res29: Int = 10
+
+scala&gt; a.reduceLeft(_ + _)
+res30: Int = 10
+</code></pre></div></div>
+
+<ul>
+  <li>FlodLeft</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a
+res33: List[Int] = List(1, 2, 3, 4)
+
+scala&gt; a.foldLeft(0)(_ + _)
+res35: Int = 10
+
+scala&gt; a.foldLeft(1)(_ * _)
+res36: Int = 24
+
+</code></pre></div></div>
+
+<h1 id="5range-与-stream">5.Range 与 Stream</h1>
+<hr />
+
+<ul>
+  <li>Range</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; 1 to 10
+res37: scala.collection.immutable.Range.Inclusive = Range 1 to 10
+
+scala&gt; 1 to 10 by 2
+res39: scala.collection.immutable.Range = inexact Range 1 to 10 by 2
+
+scala&gt; (1 to 10).toList
+res40: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+scala&gt; 1 until 10
+res41: scala.collection.immutable.Range = Range 1 until 10
+</code></pre></div></div>
+<ul>
+  <li>Stream</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; 1 #:: 2 #:: 3 #:: Stream.empty
+res44: scala.collection.immutable.Stream[Int] = Stream(1, ?)
+
+scala&gt; val stream = (1 to 10000000).toStream
+stream: scala.collection.immutable.Stream[Int] = Stream(1, ?)
+
+scala&gt; stream.head
+res45: Int = 1
+
+scala&gt; stream.tail
+res46: scala.collection.immutable.Stream[Int] = Stream(2, ?)
+
+</code></pre></div></div>
+
+<h1 id="6tuple与map">6.tuple与map</h1>
+<hr />
+
+<ul>
+  <li>tuple</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; (1,2)
+res48: (Int, Int) = (1,2)
+
+scala&gt; 1 -&gt; 2
+res49: (Int, Int) = (1,2)
+
+scala&gt; (1, "Alice", "Math", 95.5)
+res50: (Int, String, String, Double) = (1,Alice,Math,95.5)
+
+scala&gt; val t =  (1, "Alice", "Math", 95.5)
+t: (Int, String, String, Double) = (1,Alice,Math,95.5)
+
+scala&gt; t._1
+res51: Int = 1
+
+scala&gt; t._2
+res52: String = Alice
+
+scala&gt; t._3
+res53: String = Math
+
+scala&gt; t._4
+res54: Double = 95.5
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; def sumSq(in : List[Int]): (Int, Int, Int) = {
+     | in.foldLeft((0,0,0))((t,v) =&gt; (t._1 + 1, t._2 + v, t._3 + v*v))
+     | }
+sumSq: (in: List[Int])(Int, Int, Int)
+
+scala&gt; sumSq(a)
+res56: (Int, Int, Int) = (4,10,30)
+
+scala&gt; a
+res57: List[Int] = List(1, 2, 3, 4)
+
+scala&gt; sumSq(a)
+res58: (Int, Int, Int) = (4,10,30)
+</code></pre></div></div>
+
+<ul>
+  <li>Map</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val p = Map( 1 -&gt; "David", 9 -&gt; "Elwood")
+p: scala.collection.immutable.Map[Int,String] = Map(1 -&gt; David, 9 -&gt; Elwood)
+
+scala&gt; p(1)
+res59: String = David
+
+scala&gt; p(9)
+res60: String = Elwood
+
+scala&gt; p(2)
+java.util.NoSuchElementException: key not found: 2
+  at scala.collection.immutable.Map$Map2.apply(Map.scala:138)
+  ... 28 elided
+
+scala&gt; p.contains(1)
+res62: Boolean = true
+
+scala&gt; p.contains(2)
+res63: Boolean = false
+
+scala&gt; p.keys
+res64: Iterable[Int] = Set(1, 9)
+
+scala&gt; p.values
+res65: Iterable[String] = MapLike.DefaultValuesIterable(David, Elwood)
+
+scala&gt; p + (8 -&gt; "Archer")
+res66: scala.collection.immutable.Map[Int,String] = Map(1 -&gt; David, 9 -&gt; Elwood, 8 -&gt; Archer)
+
+scala&gt; p
+res67: scala.collection.immutable.Map[Int,String] = Map(1 -&gt; David, 9 -&gt; Elwood)
+
+scala&gt; p - 1
+res68: scala.collection.immutable.Map[Int,String] = Map(9 -&gt; Elwood)
+
+scala&gt; p
+res69: scala.collection.immutable.Map[Int,String] = Map(1 -&gt; David, 9 -&gt; Elwood)
+
+scala&gt; p ++ List(2 -&gt; "Alice", 5-&gt; "Bob")
+res70: scala.collection.immutable.Map[Int,String] = Map(1 -&gt; David, 9 -&gt; Elwood, 2 -&gt; Alice, 5 -&gt; Bob)
+
+scala&gt; p -- List(1, 9, 2)
+res71: scala.collection.immutable.Map[Int,String] = Map()
+
+scala&gt; p
+res72: scala.collection.immutable.Map[Int,String] = Map(1 -&gt; David, 9 -&gt; Elwood)
+
+scala&gt; p ++ List(2 -&gt; "Alice", 5-&gt; "Bob") -- List(9,1)
+res73: scala.collection.immutable.Map[Int,String] = Map(2 -&gt; Alice, 5 -&gt; Bob)
+
+</code></pre></div></div>
+
+<ul>
+  <li>21 Savage - a lot ft. J. Cole</li>
 </ul>
 
 <iframe width="728" height="541" src="https://www.youtube.com/embed/DmWWqogr_r8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
