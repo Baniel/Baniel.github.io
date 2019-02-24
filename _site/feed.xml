@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-24T16:40:08+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Tutorial Imooc</title><link href="http://localhost:4001/notes/Scala_Imooc/" rel="alternate" type="text/html" title="Scala Tutorial Imooc" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Imooc</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Imooc/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_tutorial.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-24T16:44:35+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Tutorial Imooc</title><link href="http://localhost:4001/notes/Scala_Imooc/" rel="alternate" type="text/html" title="Scala Tutorial Imooc" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Imooc</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Imooc/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_tutorial.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;1list&quot;&gt;1.List&lt;/h1&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val a = List(1,2,3,4)
@@ -58,70 +58,72 @@ res10: Boolean = true
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;用递归和取头元素来写一个 List 遍历函数
-```
-scala&amp;gt; def walkthru(l: List[Int]): String = {
-   | if(l.isEmpty) “”
-   | else l.head.toString + “ “ + walkthru(l.tail)
-   | }
-walkthru: (l: List[Int])String&lt;/li&gt;
+  &lt;li&gt;用递归和取头元素来写一个 List 遍历函数&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;scala&amp;gt; walkthru(a)
-res11: String = “1 2 3 4 “&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; def walkthru(l: List[Int]): String = {
+     | if(l.isEmpty) &quot;&quot;
+     | else l.head.toString + &quot; &quot; + walkthru(l.tail)
+     | }
+walkthru: (l: List[Int])String
 
-# 2.Filter 函数
------
+scala&amp;gt; walkthru(a)
+res11: String = &quot;1 2 3 4 &quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;scala&amp;gt; a.filter(x =&amp;gt; x % 2 ==1)
-res12: List[Int] = List(1, 3)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-- 把字符串变成char的List
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;scala&amp;gt; “99 Red Ballons”.toList
-res13: List[Char] = List(9, 9,  , R, e, d,  , B, a, l, l, o, n, s)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;scala&amp;gt; “99 Red Ballons”.toList.filter(x =&amp;gt; Character.isDigit(x))
-res15: List[Char] = List(9, 9)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;scala&amp;gt; “99 Red Ballons”.toList.takeWhile(x =&amp;gt; x != ‘B’)
-res16: List[Char] = List(9, 9,  , R, e, d,  )&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-# 3.Map 函数
-----
 
+&lt;h1 id=&quot;2filter-函数&quot;&gt;2.Filter 函数&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; a.filter(x =&amp;gt; x % 2 ==1)
+res12: List[Int] = List(1, 3)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;scala&amp;gt; c.map(x =&amp;gt; x.toUpperCase)
-res18: List[String] = List(X, Y, Z)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;scala&amp;gt; c.map( _.toUpperCase)
-res22: List[String] = List(X, Y, Z)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;scala&amp;gt; a.filter ( _ % 2 == 1)
-res23: List[Int] = List(1, 3)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;scala&amp;gt; a.filter ( _ % 2 == 1).map( _ + 10)
-res24: List[Int] = List(11, 13)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;scala&amp;gt; val q = List( a, List(4, 5, 6))
-q: List[List[Int]] = List(List(1, 2, 3, 4), List(4, 5, 6))&lt;/p&gt;
 
-&lt;p&gt;scala&amp;gt; q.map(x =&amp;gt; x.filter( _ % 2 == 0))
-res25: List[List[Int]] = List(List(2, 4), List(4, 6))&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;把字符串变成char的List
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; &quot;99 Red Ballons&quot;.toList
+res13: List[Char] = List(9, 9,  , R, e, d,  , B, a, l, l, o, n, s)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;scala&amp;gt; q.map( _.filter( _ % 2 == 0))
-res26: List[List[Int]] = List(List(2, 4), List(4, 6))&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; &quot;99 Red Ballons&quot;.toList.filter(x =&amp;gt; Character.isDigit(x))
+res15: List[Char] = List(9, 9)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;scala&amp;gt; q.flatMap( _.filter( _ % 2 == 0))
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; &quot;99 Red Ballons&quot;.toList.takeWhile(x =&amp;gt; x != 'B')
+res16: List[Char] = List(9, 9,  , R, e, d,  )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;3map-函数&quot;&gt;3.Map 函数&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; c.map(x =&amp;gt; x.toUpperCase)
+res18: List[String] = List(X, Y, Z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; c.map( _.toUpperCase)
+res22: List[String] = List(X, Y, Z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; a.filter ( _ % 2 == 1)
+res23: List[Int] = List(1, 3)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; a.filter ( _ % 2 == 1).map( _ + 10)
+res24: List[Int] = List(11, 13)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val q = List( a, List(4, 5, 6))
+q: List[List[Int]] = List(List(1, 2, 3, 4), List(4, 5, 6))
+
+scala&amp;gt; q.map(x =&amp;gt; x.filter( _ % 2 == 0))
+res25: List[List[Int]] = List(List(2, 4), List(4, 6))
+
+scala&amp;gt; q.map( _.filter( _ % 2 == 0))
+res26: List[List[Int]] = List(List(2, 4), List(4, 6))
+
+scala&amp;gt; q.flatMap( _.filter( _ % 2 == 0))
 res27: List[Int] = List(2, 4, 4, 6)
-```&lt;/p&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Redis:0x04</title><link href="http://localhost:4001/notes/Java_Interview_Redis/" rel="alternate" type="text/html" title="Java Interview Redis:0x04" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Redis</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Redis/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Redis:0x04</title><link href="http://localhost:4001/notes/Java_Interview_Redis/" rel="alternate" type="text/html" title="Java Interview Redis:0x04" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Redis</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Redis/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;data-types&quot;&gt;Data Types&lt;/h1&gt;
 &lt;ul&gt;

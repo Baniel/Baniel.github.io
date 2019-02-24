@@ -230,70 +230,72 @@ res10: Boolean = true
 </code></pre></div></div>
 
 <ul>
-  <li>用递归和取头元素来写一个 List 遍历函数
-```
-scala&gt; def walkthru(l: List[Int]): String = {
-   | if(l.isEmpty) “”
-   | else l.head.toString + “ “ + walkthru(l.tail)
-   | }
-walkthru: (l: List[Int])String</li>
+  <li>用递归和取头元素来写一个 List 遍历函数</li>
 </ul>
 
-<p>scala&gt; walkthru(a)
-res11: String = “1 2 3 4 “</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; def walkthru(l: List[Int]): String = {
+     | if(l.isEmpty) ""
+     | else l.head.toString + " " + walkthru(l.tail)
+     | }
+walkthru: (l: List[Int])String
 
-# 2.Filter 函数
------
+scala&gt; walkthru(a)
+res11: String = "1 2 3 4 "
 </code></pre></div></div>
-<p>scala&gt; a.filter(x =&gt; x % 2 ==1)
-res12: List[Int] = List(1, 3)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-- 把字符串变成char的List
-</code></pre></div></div>
-<p>scala&gt; “99 Red Ballons”.toList
-res13: List[Char] = List(9, 9,  , R, e, d,  , B, a, l, l, o, n, s)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-<p>scala&gt; “99 Red Ballons”.toList.filter(x =&gt; Character.isDigit(x))
-res15: List[Char] = List(9, 9)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-<p>scala&gt; “99 Red Ballons”.toList.takeWhile(x =&gt; x != ‘B’)
-res16: List[Char] = List(9, 9,  , R, e, d,  )</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-# 3.Map 函数
-----
 
+<h1 id="2filter-函数">2.Filter 函数</h1>
+<hr />
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.filter(x =&gt; x % 2 ==1)
+res12: List[Int] = List(1, 3)
 </code></pre></div></div>
-<p>scala&gt; c.map(x =&gt; x.toUpperCase)
-res18: List[String] = List(X, Y, Z)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-<p>scala&gt; c.map( _.toUpperCase)
-res22: List[String] = List(X, Y, Z)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-<p>scala&gt; a.filter ( _ % 2 == 1)
-res23: List[Int] = List(1, 3)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-<p>scala&gt; a.filter ( _ % 2 == 1).map( _ + 10)
-res24: List[Int] = List(11, 13)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-<p>scala&gt; val q = List( a, List(4, 5, 6))
-q: List[List[Int]] = List(List(1, 2, 3, 4), List(4, 5, 6))</p>
 
-<p>scala&gt; q.map(x =&gt; x.filter( _ % 2 == 0))
-res25: List[List[Int]] = List(List(2, 4), List(4, 6))</p>
+<ul>
+  <li>把字符串变成char的List
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; "99 Red Ballons".toList
+res13: List[Char] = List(9, 9,  , R, e, d,  , B, a, l, l, o, n, s)
+</code></pre></div>    </div>
+  </li>
+</ul>
 
-<p>scala&gt; q.map( _.filter( _ % 2 == 0))
-res26: List[List[Int]] = List(List(2, 4), List(4, 6))</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; "99 Red Ballons".toList.filter(x =&gt; Character.isDigit(x))
+res15: List[Char] = List(9, 9)
+</code></pre></div></div>
 
-<p>scala&gt; q.flatMap( _.filter( _ % 2 == 0))
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; "99 Red Ballons".toList.takeWhile(x =&gt; x != 'B')
+res16: List[Char] = List(9, 9,  , R, e, d,  )
+</code></pre></div></div>
+
+<h1 id="3map-函数">3.Map 函数</h1>
+<hr />
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; c.map(x =&gt; x.toUpperCase)
+res18: List[String] = List(X, Y, Z)
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; c.map( _.toUpperCase)
+res22: List[String] = List(X, Y, Z)
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.filter ( _ % 2 == 1)
+res23: List[Int] = List(1, 3)
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.filter ( _ % 2 == 1).map( _ + 10)
+res24: List[Int] = List(11, 13)
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val q = List( a, List(4, 5, 6))
+q: List[List[Int]] = List(List(1, 2, 3, 4), List(4, 5, 6))
+
+scala&gt; q.map(x =&gt; x.filter( _ % 2 == 0))
+res25: List[List[Int]] = List(List(2, 4), List(4, 6))
+
+scala&gt; q.map( _.filter( _ % 2 == 0))
+res26: List[List[Int]] = List(List(2, 4), List(4, 6))
+
+scala&gt; q.flatMap( _.filter( _ % 2 == 0))
 res27: List[Int] = List(2, 4, 4, 6)
-```</p>
+</code></pre></div></div>
 
         
       </section>

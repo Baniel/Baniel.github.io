@@ -78,6 +78,7 @@ res10: Boolean = true
 ```
 
 - 用递归和取头元素来写一个 List 遍历函数
+
 ```
 scala> def walkthru(l: List[Int]): String = {
      | if(l.isEmpty) ""
