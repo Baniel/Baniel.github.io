@@ -79,8 +79,18 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4001/security/Security-Website/",
         "teaser":null},{
-        "title": "Paper Overview --- AlphaGo Zero",
-        "excerpt":"Why AlphaGo Special? It is trained solely by self-paly reinforcement learning, starting from random play, without any supervision or use of human data. It uses only the balck and white stones from the board as input features. It uses a single neural network, rahter than separate policy and value networks....","categories": ["mathematics"],
+        "title": "Java Interview Database:0x03",
+        "excerpt":"Relational database How to design a Relational Database? RDBMS : Application instance: Storage Management Cache SQL Parsing Log Management Permission Plan Disaster-tolerant Mechanism Index Management Lock Management Storage (File System): Index : Why do we should use Index? (To avoid “Full Table Scan”) Index Data Structure: Binary Tree -&gt; Binary...","categories": ["notes"],
         "tags": [],
-        "url": "http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/",
+        "url": "http://localhost:4001/notes/Java_Interview_Database/",
+        "teaser":null},{
+        "title": "Java Interview Redis:0x04",
+        "excerpt":"Data Types Hash: String 元素组成的字典，适合用于储存对象 127.0.0.1:6379&gt; hmset lilei name \"LiLei\" age 26 title \"Senior\" OK 127.0.0.1:6379&gt; hget lilei age \"26\" 127.0.0.1:6379&gt; hget lilei title \"Senior\" 127.0.0.1:6379&gt; hset lilei title \"Pricipal\" (integer) 0 127.0.0.1:6379&gt; hget lilei title \"Pricipal\" List: 列表，按照String元素插入顺序排序 127.0.0.1:6379&gt; lpush mylist aaa (integer) 1 127.0.0.1:6379&gt; lpush mylist bbb (integer)...","categories": ["notes"],
+        "tags": [],
+        "url": "http://localhost:4001/notes/Java_Interview_Redis/",
+        "teaser":null},{
+        "title": "Scala Tutorial Imooc",
+        "excerpt":"1.List scala&gt; val a = List(1,2,3,4) a: List[Int] = List(1, 2, 3, 4) scala&gt; val b = 0 :: a b: List[Int] = List(0, 1, 2, 3, 4) scala&gt; val c = \"x\" :: \"y\" :: \"z\" :: Nil c: List[String] = List(x, y, z) scala&gt; \"z\" :: Nil res0:...","categories": ["notes"],
+        "tags": [],
+        "url": "http://localhost:4001/notes/Scala_Imooc/",
         "teaser":null}]

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Paper Overview — AlphaGo Zero - Daniel Tech Blog</title>
+<!-- begin _includes/seo.html --><title>Scala Tutorial Imooc - Daniel Tech Blog</title>
 <meta name="description" content="">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Daniel Tech Blog">
-<meta property="og:title" content="Paper Overview — AlphaGo Zero">
-<meta property="og:url" content="http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/">
+<meta property="og:title" content="Scala Tutorial Imooc">
+<meta property="og:url" content="http://localhost:4001/notes/Scala_Imooc/">
 
 
   <meta property="og:description" content="">
@@ -29,7 +29,7 @@
 
 
 
-  <meta property="article:published_time" content="2017-10-29T00:00:00+11:00">
+  <meta property="article:published_time" content="2019-02-24T00:00:00+11:00">
 
 
 
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/">
+<link rel="canonical" href="http://localhost:4001/notes/Scala_Imooc/">
 
 
 
@@ -116,8 +116,6 @@
       <nav id="site-nav" class="greedy-nav">
         <a class="site-title" href="/">Daniel Tech Blog</a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/about/" >About Me</a>
-            </li><li class="masthead__menu-item">
               <a href="/algorithm/" >Algorithm</a>
             </li><li class="masthead__menu-item">
               <a href="/design-pattern/" >Design Pattern</a>
@@ -125,6 +123,8 @@
               <a href="/mathematics/" >Mathematics</a>
             </li><li class="masthead__menu-item">
               <a href="/security/" >Security</a>
+            </li><li class="masthead__menu-item">
+              <a href="/notes/" >Notes</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -154,15 +154,15 @@
   
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Paper Overview — AlphaGo Zero">
+    <meta itemprop="headline" content="Scala Tutorial Imooc">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="October 29, 2017">
+    <meta itemprop="datePublished" content="February 24, 2019">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Paper Overview — AlphaGo Zero
+          <h1 id="page-title" class="page__title" itemprop="headline">Scala Tutorial Imooc
 </h1>
           
         </header>
@@ -170,32 +170,130 @@
 
       <section class="page__content" itemprop="text">
         
-        <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+        <p><img src="../../assets/images/scala_tutorial.jpg" alt="" /></p>
 
-<h2 id="why-alphago-special">Why AlphaGo Special?</h2>
+<h1 id="1list">1.List</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val a = List(1,2,3,4)
+a: List[Int] = List(1, 2, 3, 4)
+</code></pre></div></div>
 
-<ol>
-  <li>It is trained solely by self-paly reinforcement learning, starting from random play, without any supervision or use of human data.</li>
-  <li>It uses only the balck and white stones from the board as input features.</li>
-  <li>It uses a single neural network, rahter than separate policy and value networks.</li>
-  <li>It uses a simpler tree search that relies upon this single neural network to evaluate positions and sample moves without performing any Monte Carlo rollouts.</li>
-</ol>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val b = 0 :: a
+b: List[Int] = List(0, 1, 2, 3, 4)
+</code></pre></div></div>
 
-<p><img src="http://www.bestchinanews.com/1ydzximg/0F2uTB2sTT" alt="image" /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val c = "x" :: "y" :: "z" ::  Nil
+c: List[String] = List(x, y, z)
+</code></pre></div></div>
 
-<p>You may have heard that Li Fei-Fei has spent much money to collect the training data to make a machine to identify a dog or a cat, but AlphaGo without any training data. It means it will save much money and break the limit by training data.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; "z" :: Nil
+res0: List[String] = List(z)
+</code></pre></div></div>
 
-<div style="max-width:640px; margin:0 auto 10px;">
-<div style="position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;">
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; "x" :: res0
+res2: List[String] = List(x, z)
+</code></pre></div></div>
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/tXlM99xPQC8" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val d = a ::: c
+d: List[Any] = List(1, 2, 3, 4, x, y, z)
+</code></pre></div></div>
 
-</div>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.head
+res3: Int = 1
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; d.head
+res4: Any = 1
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; c.head
+res5: String = x
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.tail
+res6: List[Int] = List(2, 3, 4)
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; c.tail
+res7: List[String] = List(y, z)
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.isEmpty
+res8: Boolean = false
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; c.isEmpty
+res9: Boolean = false
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; Nil.isEmpty
+res10: Boolean = true
+</code></pre></div></div>
+
+<ul>
+  <li>用递归和取头元素来写一个 List 遍历函数
+```
+scala&gt; def walkthru(l: List[Int]): String = {
+   | if(l.isEmpty) “”
+   | else l.head.toString + “ “ + walkthru(l.tail)
+   | }
+walkthru: (l: List[Int])String</li>
+</ul>
+
+<p>scala&gt; walkthru(a)
+res11: String = “1 2 3 4 “</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+# 2.Filter 函数
+-----
+</code></pre></div></div>
+<p>scala&gt; a.filter(x =&gt; x % 2 ==1)
+res12: List[Int] = List(1, 3)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+- 把字符串变成char的List
+</code></pre></div></div>
+<p>scala&gt; “99 Red Ballons”.toList
+res13: List[Char] = List(9, 9,  , R, e, d,  , B, a, l, l, o, n, s)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+<p>scala&gt; “99 Red Ballons”.toList.filter(x =&gt; Character.isDigit(x))
+res15: List[Char] = List(9, 9)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+<p>scala&gt; “99 Red Ballons”.toList.takeWhile(x =&gt; x != ‘B’)
+res16: List[Char] = List(9, 9,  , R, e, d,  )</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+# 3.Map 函数
+----
+
+</code></pre></div></div>
+<p>scala&gt; c.map(x =&gt; x.toUpperCase)
+res18: List[String] = List(X, Y, Z)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+<p>scala&gt; c.map( _.toUpperCase)
+res22: List[String] = List(X, Y, Z)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+<p>scala&gt; a.filter ( _ % 2 == 1)
+res23: List[Int] = List(1, 3)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+<p>scala&gt; a.filter ( _ % 2 == 1).map( _ + 10)
+res24: List[Int] = List(11, 13)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+<p>scala&gt; val q = List( a, List(4, 5, 6))
+q: List[List[Int]] = List(List(1, 2, 3, 4), List(4, 5, 6))</p>
+
+<p>scala&gt; q.map(x =&gt; x.filter( _ % 2 == 0))
+res25: List[List[Int]] = List(List(2, 4), List(4, 6))</p>
+
+<p>scala&gt; q.map( _.filter( _ % 2 == 0))
+res26: List[List[Int]] = List(List(2, 4), List(4, 6))</p>
+
+<p>scala&gt; q.flatMap( _.filter( _ % 2 == 0))
+res27: List[Int] = List(2, 4, 4, 6)
+```</p>
 
         
       </section>
@@ -218,14 +316,14 @@ height:0;">
     
       
       
-      <a href="/categories/#mathematics" class="page__taxonomy-item" rel="tag">mathematics</a>
+      <a href="/categories/#notes" class="page__taxonomy-item" rel="tag">notes</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-10-29T00:00:00+11:00">October 29, 2017</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-24T00:00:00+11:00">February 24, 2019</time></p>
         
       </footer>
 
@@ -234,7 +332,7 @@ height:0;">
       
   <nav class="pagination">
     
-      <a href="/security/Security-Website/" class="pagination--pager" title="Website Self-Learning
+      <a href="/notes/Java_Interview_Redis/" class="pagination--pager" title="Java Interview Redis:0x04
 ">Previous</a>
     
     
@@ -314,8 +412,8 @@ height:0;">
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/mathematics/Paper Overview - AlphaGo Zero"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "http://localhost:4001/notes/Scala_Imooc/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/notes/Scala_Imooc"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>7.1 Learn Data Structure with Daniel — Graph Theory - Daniel Tech Blog</title>
+<!-- begin _includes/seo.html --><title>Java Interview Database:0x03 - Daniel Tech Blog</title>
 <meta name="description" content="">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Daniel Tech Blog">
-<meta property="og:title" content="7.1 Learn Data Structure with Daniel — Graph Theory">
-<meta property="og:url" content="http://localhost:4001/algorithm/DanielAlgorithm7.1/">
+<meta property="og:title" content="Java Interview Database:0x03">
+<meta property="og:url" content="http://localhost:4001/notes/Java_Interview_Database/">
 
 
   <meta property="og:description" content="">
@@ -29,7 +29,7 @@
 
 
 
-  <meta property="article:published_time" content="2016-12-02T00:00:00+11:00">
+  <meta property="article:published_time" content="2019-02-23T00:00:00+11:00">
 
 
 
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4001/algorithm/DanielAlgorithm7.1/">
+<link rel="canonical" href="http://localhost:4001/notes/Java_Interview_Database/">
 
 
 
@@ -154,15 +154,15 @@
   
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="7.1 Learn Data Structure with Daniel — Graph Theory">
+    <meta itemprop="headline" content="Java Interview Database:0x03">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="December 02, 2016">
+    <meta itemprop="datePublished" content="February 23, 2019">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">7.1 Learn Data Structure with Daniel — Graph Theory
+          <h1 id="page-title" class="page__title" itemprop="headline">Java Interview Database:0x03
 </h1>
           
         </header>
@@ -170,85 +170,43 @@
 
       <section class="page__content" itemprop="text">
         
-        <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+        <p><img src="../../assets/images/JavaInterview.png" alt="" /></p>
 
-<h1 id="graph-theory">Graph Theory</h1>
-
-<h3 id="undirected-graph">Undirected Graph</h3>
-<p><img src="http://courses.cs.washington.edu/courses/cse421/07su/hw/hw2dfsb.gif" alt="image" /></p>
+<h2 id="relational-database">Relational database</h2>
 
 <ul>
-  <li>It means that you can go to B from A or go to A from B</li>
+  <li>
+    <p>How to design a Relational Database?</p>
+  </li>
+  <li>RDBMS :
+    <ul>
+      <li>Application instance:
+        <ol>
+          <li>Storage Management</li>
+          <li>Cache</li>
+          <li>SQL Parsing</li>
+          <li>Log Management</li>
+          <li>Permission Plan</li>
+          <li>Disaster-tolerant Mechanism</li>
+          <li>Index Management</li>
+          <li>Lock Management</li>
+        </ol>
+      </li>
+      <li>Storage (File System):</li>
+    </ul>
+  </li>
+  <li>Index : Why do we should use Index? (To avoid “Full Table Scan”)</li>
+  <li>Index Data Structure:
+    <ul>
+      <li>Binary Tree -&gt; Binary Search</li>
+      <li>B-Tree</li>
+      <li>B+-Tree</li>
+      <li>Hash Map</li>
+    </ul>
+  </li>
 </ul>
 
-<h3 id="directed-graph">Directed Graph</h3>
-<p><img src="http://www.mrgeek.me/wp-content/uploads/2014/04/directed-graph.png" alt="image" /></p>
-
-<ul>
-  <li>It means that you can just go to B form A.</li>
-</ul>
-
-<p><img src="http://embed.wistia.com/deliveries/712da88a887ce673e90a1a088faf5a6397b8fc6f.jpg" alt="image" /></p>
-
-<hr />
-
-<h1 id="hamiltonian-path-point">Hamiltonian path (Point)</h1>
-<ul>
-  <li>It is a path in an undirected or directed graph that visits each vertex exactly once</li>
-</ul>
-
-<p><img src="http://support.esri.com/~/media/Support/GISDictionary/Hamiltonian-path.jpg" alt="image" /></p>
-
-<ul>
-  <li>Hamiltonian cycle is a Hamiltonian path that is a cycle</li>
-  <li>Determining whether such paths and cycles exist in graphs is NP-Complete!!!</li>
-  <li>Simulations</li>
-  <li>Travelling salesman problem relies on Hamiltonian cycles</li>
-  <li>TSP problem: given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?</li>
-  <li>If there is a Hamiltoninan path for a graph: it is the solution for the travelling salesman problem</li>
-  <li>NP-complete problem</li>
-</ul>
-
-<hr />
-
-<h1 id="eulerian-path-line">Eulerian Path (Line)</h1>
-<ul>
-  <li>It is a trail in a graph which visits every edge exactly once</li>
-</ul>
-
-<p><img src="http://4.bp.blogspot.com/-LOrP3erurXs/UZBWITqkF7I/AAAAAAAAAN4/hq6Y-NM1t58/s1600/Screen+shot+2013-05-12+at+8.02.42+PM.png" alt="image" /></p>
-
-<ul>
-  <li>Eulerian cycle is an Eulerian trail which starts and ends on the same vertex</li>
-  <li>An undirected graph has an Eulerian cycle if and only if every vertex has even degree</li>
-  <li>We can construct graphs that has Eulerian cycles with Heirholzer algorithm…important for the Chinese Postman Problem.</li>
-</ul>
-
-<p><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQLf7jrFC4oMD8gEkh37WhNJI5NY4i6cvuv9UzDc25hCh76yrz9" alt="image" /></p>
-
-<ul>
-  <li>Chinese postman problem: a postman needs to go through every street at least once + closed circuit + wants to find a shortest path.</li>
-</ul>
-
-<p><img src="http://p1.bpimg.com/567571/123ffd063684a82f.png" alt="image" /></p>
-
-<ul>
-  <li>If there is an Eulerian cycle that is the solution for the CPP!!!</li>
-</ul>
-
-<h3 id="2016-code-jam-world-finals-in-new-york-city-highlight-reel">2016 <a href="https://en.wikipedia.org/wiki/Google_Code_Jam">Code Jam</a> World Finals in New York City Highlight Reel</h3>
-
-<div style="max-width:640px; margin:0 auto 10px;">
-<div style="position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;">
-
-<iframe width="854" height="480" src="https://www.youtube.com/embed/g9ebwBWEuCc" frameborder="0" allowfullscreen=""></iframe>
-
-</div>
-</div>
+<p><a href="https://coding.imooc.com/class/303.html">The Course comes from Imooc</a></p>
 
         
       </section>
@@ -271,14 +229,14 @@ height:0;">
     
       
       
-      <a href="/categories/#algorithm" class="page__taxonomy-item" rel="tag">algorithm</a>
+      <a href="/categories/#notes" class="page__taxonomy-item" rel="tag">notes</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-12-02T00:00:00+11:00">December 02, 2016</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-23T00:00:00+11:00">February 23, 2019</time></p>
         
       </footer>
 
@@ -287,11 +245,11 @@ height:0;">
       
   <nav class="pagination">
     
-      <a href="/algorithm/DanielAlgorithm6.1/" class="pagination--pager" title="6.1 Learn Data Structure with Daniel — Ternary Search Trees Theory
+      <a href="/security/Security-Website/" class="pagination--pager" title="Website Self-Learning
 ">Previous</a>
     
     
-      <a href="/algorithm/DanielAlgorithm8.1/" class="pagination--pager" title="8.1 Learn Data Structure with Daniel — BFS Theory
+      <a href="/notes/Java_Interview_Redis/" class="pagination--pager" title="Java Interview Redis:0x04
 ">Next</a>
     
   </nav>
@@ -363,6 +321,25 @@ height:0;">
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4001/notes/Java_Interview_Database/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/notes/Java_Interview_Database"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-baniel-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
 
 
 

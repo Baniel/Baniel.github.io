@@ -1,29 +1,319 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-01-14T10:13:35+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Paper Overview — AlphaGo Zero</title><link href="http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/" rel="alternate" type="text/html" title="Paper Overview --- AlphaGo Zero" /><published>2017-10-29T00:00:00+11:00</published><updated>2017-10-29T00:00:00+11:00</updated><id>http://localhost:4001/mathematics/Paper%20Overview%20-%20AlphaGo%20Zero</id><content type="html" xml:base="http://localhost:4001/mathematics/Paper-Overview-AlphaGo-Zero/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
-&lt;/script&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-24T16:40:08+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Tutorial Imooc</title><link href="http://localhost:4001/notes/Scala_Imooc/" rel="alternate" type="text/html" title="Scala Tutorial Imooc" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Imooc</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Imooc/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_tutorial.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;why-alphago-special&quot;&gt;Why AlphaGo Special?&lt;/h2&gt;
+&lt;h1 id=&quot;1list&quot;&gt;1.List&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val a = List(1,2,3,4)
+a: List[Int] = List(1, 2, 3, 4)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;It is trained solely by self-paly reinforcement learning, starting from random play, without any supervision or use of human data.&lt;/li&gt;
-  &lt;li&gt;It uses only the balck and white stones from the board as input features.&lt;/li&gt;
-  &lt;li&gt;It uses a single neural network, rahter than separate policy and value networks.&lt;/li&gt;
-  &lt;li&gt;It uses a simpler tree search that relies upon this single neural network to evaluate positions and sample moves without performing any Monte Carlo rollouts.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val b = 0 :: a
+b: List[Int] = List(0, 1, 2, 3, 4)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://www.bestchinanews.com/1ydzximg/0F2uTB2sTT&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val c = &quot;x&quot; :: &quot;y&quot; :: &quot;z&quot; ::  Nil
+c: List[String] = List(x, y, z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;You may have heard that Li Fei-Fei has spent much money to collect the training data to make a machine to identify a dog or a cat, but AlphaGo without any training data. It means it will save much money and break the limit by training data.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; &quot;z&quot; :: Nil
+res0: List[String] = List(z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
-&lt;div style=&quot;position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;&quot;&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; &quot;x&quot; :: res0
+res2: List[String] = List(x, z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/tXlM99xPQC8&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val d = a ::: c
+d: List[Any] = List(1, 2, 3, 4, x, y, z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="mathematics" /><summary type="html"></summary></entry><entry><title type="html">Website Self-Learning</title><link href="http://localhost:4001/security/Security-Website/" rel="alternate" type="text/html" title="Website Self-Learning" /><published>2016-12-30T00:00:00+11:00</published><updated>2016-12-30T00:00:00+11:00</updated><id>http://localhost:4001/security/Security%20Website</id><content type="html" xml:base="http://localhost:4001/security/Security-Website/">&lt;h3 id=&quot;1bwapp&quot;&gt;1.bWAPP&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; a.head
+res3: Int = 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; d.head
+res4: Any = 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; c.head
+res5: String = x
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; a.tail
+res6: List[Int] = List(2, 3, 4)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; c.tail
+res7: List[String] = List(y, z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; a.isEmpty
+res8: Boolean = false
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; c.isEmpty
+res9: Boolean = false
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; Nil.isEmpty
+res10: Boolean = true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;用递归和取头元素来写一个 List 遍历函数
+```
+scala&amp;gt; def walkthru(l: List[Int]): String = {
+   | if(l.isEmpty) “”
+   | else l.head.toString + “ “ + walkthru(l.tail)
+   | }
+walkthru: (l: List[Int])String&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;scala&amp;gt; walkthru(a)
+res11: String = “1 2 3 4 “&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+
+# 2.Filter 函数
+-----
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;scala&amp;gt; a.filter(x =&amp;gt; x % 2 ==1)
+res12: List[Int] = List(1, 3)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+- 把字符串变成char的List
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;scala&amp;gt; “99 Red Ballons”.toList
+res13: List[Char] = List(9, 9,  , R, e, d,  , B, a, l, l, o, n, s)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;scala&amp;gt; “99 Red Ballons”.toList.filter(x =&amp;gt; Character.isDigit(x))
+res15: List[Char] = List(9, 9)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;scala&amp;gt; “99 Red Ballons”.toList.takeWhile(x =&amp;gt; x != ‘B’)
+res16: List[Char] = List(9, 9,  , R, e, d,  )&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+# 3.Map 函数
+----
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;scala&amp;gt; c.map(x =&amp;gt; x.toUpperCase)
+res18: List[String] = List(X, Y, Z)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;scala&amp;gt; c.map( _.toUpperCase)
+res22: List[String] = List(X, Y, Z)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;scala&amp;gt; a.filter ( _ % 2 == 1)
+res23: List[Int] = List(1, 3)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;scala&amp;gt; a.filter ( _ % 2 == 1).map( _ + 10)
+res24: List[Int] = List(11, 13)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;scala&amp;gt; val q = List( a, List(4, 5, 6))
+q: List[List[Int]] = List(List(1, 2, 3, 4), List(4, 5, 6))&lt;/p&gt;
+
+&lt;p&gt;scala&amp;gt; q.map(x =&amp;gt; x.filter( _ % 2 == 0))
+res25: List[List[Int]] = List(List(2, 4), List(4, 6))&lt;/p&gt;
+
+&lt;p&gt;scala&amp;gt; q.map( _.filter( _ % 2 == 0))
+res26: List[List[Int]] = List(List(2, 4), List(4, 6))&lt;/p&gt;
+
+&lt;p&gt;scala&amp;gt; q.flatMap( _.filter( _ % 2 == 0))
+res27: List[Int] = List(2, 4, 4, 6)
+```&lt;/p&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Redis:0x04</title><link href="http://localhost:4001/notes/Java_Interview_Redis/" rel="alternate" type="text/html" title="Java Interview Redis:0x04" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Redis</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Redis/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;data-types&quot;&gt;Data Types&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hash: String 元素组成的字典，适合用于储存对象
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hmset lilei name &quot;LiLei&quot; age 26 title &quot;Senior&quot;
+OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hget lilei age
+&quot;26&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hget lilei title
+&quot;Senior&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hset lilei title &quot;Pricipal&quot;
+(integer) 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hget lilei title
+&quot;Pricipal&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;List: 列表，按照String元素插入顺序排序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; lpush mylist aaa
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; lpush mylist bbb
+(integer) 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; lpush mylist ccc
+(integer) 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;取出的顺序是从后到前，类似栈
+
+127.0.0.1:6379&amp;gt; lrange mylist 0 10
+1) &quot;ccc&quot;
+2) &quot;bbb&quot;
+3) &quot;aaa&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set: String 元素组成的无序集合，通过哈希表实现，不允许重复&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;(integer) 1 : 表示添加成功&lt;/li&gt;
+      &lt;li&gt;(integer) 2 : 表示添加失败&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 111
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 222
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 333
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 222
+(integer) 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; smembers myset
+1) &quot;111&quot;
+2) &quot;222&quot;
+3) &quot;333&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abc
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abd
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abb
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abd
+(integer) 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; smembers myset
+1) &quot;222&quot;
+2) &quot;333&quot;
+3) &quot;111&quot;
+4) &quot;abb&quot;
+5) &quot;abc&quot;
+6) &quot;abd&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sorted Set : 通过分数来为集合中的成员进行从小到大的排序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 3 abc
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 1 abd
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 2 abb
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 2 abb
+(integer) 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 1 bgg
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zrangebyscore myzset 0 10
+1) &quot;abd&quot;
+2) &quot;bgg&quot;
+3) &quot;abb&quot;
+4) &quot;abc&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;String : 最基本的数据类型，二进制安全&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; set name &quot;redis&quot;
+OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get name
+&quot;redis&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; set name &quot;memcache&quot;
+OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get name
+&quot;memcache&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get &quot;memcache&quot;
+(nil)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; set count 1
+OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get count
+&quot;1&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; incr count
+(integer) 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get count
+&quot;2&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get count
+&quot;2&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;用于计数的HyperLogLog, 用于支持存储地理位置信息的Geo (Learn by yourself, OK!
+Cause we are genius!!!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://coding.imooc.com/class/303.html&quot;&gt;The Course comes from Imooc&lt;/a&gt;&lt;/p&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Database:0x03</title><link href="http://localhost:4001/notes/Java_Interview_Database/" rel="alternate" type="text/html" title="Java Interview Database:0x03" /><published>2019-02-23T00:00:00+11:00</published><updated>2019-02-23T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Database</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Database/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;relational-database&quot;&gt;Relational database&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;How to design a Relational Database?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RDBMS :
+    &lt;ul&gt;
+      &lt;li&gt;Application instance:
+        &lt;ol&gt;
+          &lt;li&gt;Storage Management&lt;/li&gt;
+          &lt;li&gt;Cache&lt;/li&gt;
+          &lt;li&gt;SQL Parsing&lt;/li&gt;
+          &lt;li&gt;Log Management&lt;/li&gt;
+          &lt;li&gt;Permission Plan&lt;/li&gt;
+          &lt;li&gt;Disaster-tolerant Mechanism&lt;/li&gt;
+          &lt;li&gt;Index Management&lt;/li&gt;
+          &lt;li&gt;Lock Management&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Storage (File System):&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Index : Why do we should use Index? (To avoid “Full Table Scan”)&lt;/li&gt;
+  &lt;li&gt;Index Data Structure:
+    &lt;ul&gt;
+      &lt;li&gt;Binary Tree -&amp;gt; Binary Search&lt;/li&gt;
+      &lt;li&gt;B-Tree&lt;/li&gt;
+      &lt;li&gt;B+-Tree&lt;/li&gt;
+      &lt;li&gt;Hash Map&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://coding.imooc.com/class/303.html&quot;&gt;The Course comes from Imooc&lt;/a&gt;&lt;/p&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Website Self-Learning</title><link href="http://localhost:4001/security/Security-Website/" rel="alternate" type="text/html" title="Website Self-Learning" /><published>2016-12-30T00:00:00+11:00</published><updated>2016-12-30T00:00:00+11:00</updated><id>http://localhost:4001/security/Security%20Website</id><content type="html" xml:base="http://localhost:4001/security/Security-Website/">&lt;h3 id=&quot;1bwapp&quot;&gt;1.bWAPP&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Home bWAPP, or a buggy web application, is a free and open source deliberately insecure web application.It helps security enthusiasts, developers and students to discover and to prevent web vulnerabilities.bWAPP prepares one to conduct successful penetration testing and ethical hacking projects.
@@ -785,154 +1075,4 @@ height:0;&quot;&gt;
 &lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/R5giPbQIdzo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="SystemDesign" /><summary type="html"></summary></entry><entry><title type="html">3.2Learn Data Structure with Daniel — AVL TREES Code Implement</title><link href="http://localhost:4001/algorithm/DanielAlgorithm3/" rel="alternate" type="text/html" title="3.2Learn Data Structure with Daniel --- AVL TREES Code Implement" /><published>2016-11-26T00:00:00+11:00</published><updated>2016-11-26T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm3</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm3/">&lt;script type=&quot;text/javascript&quot; async
-  src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
-&lt;/script&gt;
-
-
-
-
-
-
-
-
-
-
-# Operation Takedown - [Kevin Mitnick](https://en.wikipedia.org/wiki/Kevin_Mitnick)
-
-&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot; &gt;
-&lt;div
-style=&quot;position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;&quot;&gt;
-
-&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/NbgDMYy9mzM&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">3.1Learn Data Structure with Daniel — AVL TREES Theory</title><link href="http://localhost:4001/algorithm/DanielAlgorithm3.1/" rel="alternate" type="text/html" title="3.1Learn Data Structure with Daniel --- AVL TREES Theory" /><published>2016-11-25T00:00:00+11:00</published><updated>2016-11-25T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm3.1</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm3.1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
-&lt;/script&gt;
-
-&lt;h1 id=&quot;avl-trees-theory&quot;&gt;AVL TREES Theory&lt;/h1&gt;
-&lt;p&gt;(AKA: Self-Balancing Binary Search Tree , Height-Balanced Binary Search Tree)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The running time of BST operations depends on the height of the binary search tree: we should keep the tree balanced in order to get the best performance&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In an AVL tree, the heights of the two child subtrees of any node differ by at most one&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://image.slidesharecdn.com/lecture11-140420071306-phpapp01/95/avl-tree-11-638.jpg?cb=1397978063&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Another solution to the problem is a red-black trees
-&lt;img src=&quot;http://images.slideplayer.com/25/7913304/slides/slide_6.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;AVL trees are faster than red-black trees because they are more rigidly balanced, but needs more work&lt;/li&gt;
-  &lt;li&gt;Operating Systems relies heavily on these data structures!!!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://image.slidesharecdn.com/redblacktree-140217061821-phpapp01/95/red-black-tree-23-638.jpg?cb=1392618090&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It’s the same like “Binary Search Tree”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt;Average case&lt;/th&gt;
-      &lt;th&gt;Worst Case&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Space&lt;/td&gt;
-      &lt;td&gt;  O(n)&lt;/td&gt;
-      &lt;td&gt;  O(n)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Insert&lt;/td&gt;
-      &lt;td&gt;  O(log n)&lt;/td&gt;
-      &lt;td&gt;  O(log n)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Delete&lt;/td&gt;
-      &lt;td&gt;  O(log n)&lt;/td&gt;
-      &lt;td&gt;  O(log n)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Search&lt;/td&gt;
-      &lt;td&gt;  O(log n)&lt;/td&gt;
-      &lt;td&gt;  O(log n)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Height of a node: length of the longest path from it ot a leaf&lt;/p&gt;
-
-&lt;p&gt;We can use recursion to calculate it:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;height = max( leftChild.height( ),rightChild.height( ) ) + 1&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://p1.bqimg.com/567571/d43978a58cedc07c.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;AVL algorithm uses heights of nodes, we want the heights as small as possible: we store the height parameters -&amp;gt; if it gets high, we fix it.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;AVL tree requires the heights of left and right child of every node to differ at most +1 or -1 !!!&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\| height(leftSubtree) -  height(rightSubtree) \| \leq 1&lt;/script&gt;
-  &lt;/li&gt;
-  &lt;li&gt;We can maintain this property in O(logN) time which is quite fast !!!&lt;/li&gt;
-  &lt;li&gt;Insertion:
-    &lt;ol&gt;
-      &lt;li&gt;a simple BST insertion according to the keys&lt;/li&gt;
-      &lt;li&gt;fix the AVL property on each insertion from insertion upward&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;There may be serveral violations of AVL property from the inserted node up to the root!!!&lt;/li&gt;
-  &lt;li&gt;We have to check them all&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;rotations&quot;&gt;Rotations:&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Four types of unbalanced situations
-    &lt;ol&gt;
-      &lt;li&gt;LL: doubly left heavy situation… we have to make a right rotation&lt;/li&gt;
-      &lt;li&gt;LR: we haveto make a left and a right rotation&lt;/li&gt;
-      &lt;li&gt;RL: we have to make a left and right rotation&lt;/li&gt;
-      &lt;li&gt;RR: we have to make a left rotation&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;edward-snowden&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Edward_Snowden&quot;&gt;Edward Snowden&lt;/a&gt;&lt;/h1&gt;
-
-&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
-&lt;div style=&quot;position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;&quot;&gt;
-
-&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/QlSAiI3xMh4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html"></summary></entry></feed>
+&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="SystemDesign" /><summary type="html"></summary></entry></feed>

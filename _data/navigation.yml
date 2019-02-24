@@ -2,8 +2,8 @@
 main:
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "About Me"
-    url: /about/
+  # - title: "About Me"
+  #   url: /about/
   - title: "Algorithm"
     url: /algorithm/
   - title: "Design Pattern"
@@ -12,3 +12,5 @@ main:
     url: /mathematics/
   - title: "Security"
     url: /security/
+  - title: "Notes"
+    url: /notes/
