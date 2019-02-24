@@ -2,6 +2,7 @@
 layout : single
 title : 3.1Learn Data Structure with Daniel --- AVL TREES Theory
 category: algorithm
+comments: true
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">

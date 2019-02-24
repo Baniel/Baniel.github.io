@@ -150,3 +150,6 @@ res26: List[List[Int]] = List(List(2, 4), List(4, 6))
 scala> q.flatMap( _.filter( _ % 2 == 0))
 res27: List[Int] = List(2, 4, 4, 6)
 ```
+- Higher Brothers - We Talkin Bout feat. KOHH (prod. Don Krez)
+
+<iframe width="728" height="541" src="https://www.youtube.com/embed/DmWWqogr_r8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

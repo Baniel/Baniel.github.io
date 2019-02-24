@@ -2,6 +2,7 @@
 layout : single
 title : 1.2 Learn Data Structure with Daniel --- Linked List
 category: algorithm
+comments: true
 ---
 
 # Linked List Code Implement.

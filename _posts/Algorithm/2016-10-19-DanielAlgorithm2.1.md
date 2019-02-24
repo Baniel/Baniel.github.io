@@ -2,6 +2,7 @@
 layout : single
 title : 2.1 Learn Data Structure with Daniel --- Binary Search Tree Theory
 category: algorithm
+comments: true
 ---
 
 # Binary Search Theory.

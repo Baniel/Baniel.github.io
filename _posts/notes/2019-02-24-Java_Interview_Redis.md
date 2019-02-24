@@ -183,6 +183,18 @@ OK
 - 用于计数的HyperLogLog, 用于支持存储地理位置信息的Geo (Learn by yourself, OK!
   Cause we are genius!!!)
 
+- 底层数据类型基础
+  - 简单动态字符串
+  - 链表
+  - 字典
+  - 跳跃表
+  - 整数集合
+  - 压缩列表
+  - 对象
 
 
-[The Course comes from Imooc](https://coding.imooc.com/class/303.html)
+
+---
+
+- Lil Pump - "Be Like Me" ft. Lil Wayne (Official Music Video)
+<iframe width="957" height="538" src="https://www.youtube.com/embed/gJRGkvNqrY4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

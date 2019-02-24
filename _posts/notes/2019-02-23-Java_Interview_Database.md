@@ -25,12 +25,15 @@ comments: true
 - Index : Why do we should use Index? (To avoid “Full Table Scan”)
 - Index Data Structure:
     - Binary Tree -> Binary Search
-    - B-Tree
-    - B+-Tree
+    - B Tree
+    - B+ Tree
     - Hash Map
 
 
 
 
+----
 
-[The Course comes from Imooc](https://coding.imooc.com/class/303.html)
+- 21 Savage - a lot ft. J. Cole
+
+<iframe width="728" height="541" src="https://www.youtube.com/embed/DmWWqogr_r8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

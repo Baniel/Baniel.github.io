@@ -84,6 +84,11 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4001/notes/Java_Interview_Database/",
         "teaser":null},{
+        "title": "AlgoCast:0x001 回文字符串判断(Leetcode 125)",
+        "excerpt":"If you like it, you can subscribe the AlgoCasts 问题 这个题目说的是，给你一个字符串，你要判断它是否是回文字符串。字符串里只考虑字母和数字，其它的字符可以无视。另外，对于字母，可以忽略大小写。 比如说，给你的字符串是： ” race a E-car “ 只考虑字母数字并且忽略大小写，它是一个回文字符串，因此返回 true。再比如说，给你的字符串是 ” race a car “ 对比到最后，中间的 e 和 a 不相等，因此不是一个回文字符串，返回 false。 这道题的解题思想是,两端点对称游标向中间移动,查看对称点的字符是否相等 // 判断字符是不是英文或者是不是数字 private static boolean isAlphanumeric(char c){ return ( c &gt;= 'a' &amp;&amp; c &lt;= 'z') || (c &gt;=...","categories": ["algorithm"],
+        "tags": [],
+        "url": "http://localhost:4001/algorithm/AlgoCasts-0x001/",
+        "teaser":null},{
         "title": "Java Interview Redis:0x04",
         "excerpt":"Data Types Hash: String 元素组成的字典，适合用于储存对象 127.0.0.1:6379&gt; hmset lilei name \"LiLei\" age 26 title \"Senior\" OK 127.0.0.1:6379&gt; hget lilei age \"26\" 127.0.0.1:6379&gt; hget lilei title \"Senior\" 127.0.0.1:6379&gt; hset lilei title \"Pricipal\" (integer) 0 127.0.0.1:6379&gt; hget lilei title \"Pricipal\" List: 列表，按照String元素插入顺序排序 127.0.0.1:6379&gt; lpush mylist aaa (integer) 1 127.0.0.1:6379&gt; lpush mylist bbb (integer)...","categories": ["notes"],
         "tags": [],

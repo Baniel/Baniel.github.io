@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Scala Tutorial Imooc - Daniel Tech Blog</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>AlgoCast:0x001 回文字符串判断(Leetcode 125) - Daniel Tech Blog</title>
+<meta name="description" content="  If you like it, you can subscribe the AlgoCasts">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Daniel Tech Blog">
-<meta property="og:title" content="Scala Tutorial Imooc">
-<meta property="og:url" content="http://localhost:4001/notes/Scala_Imooc/">
+<meta property="og:title" content="AlgoCast:0x001 回文字符串判断(Leetcode 125)">
+<meta property="og:url" content="http://localhost:4001/algorithm/AlgoCasts-0x001/">
 
 
-  <meta property="og:description" content="">
+  <meta property="og:description" content="  If you like it, you can subscribe the AlgoCasts">
 
 
 
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4001/notes/Scala_Imooc/">
+<link rel="canonical" href="http://localhost:4001/algorithm/AlgoCasts-0x001/">
 
 
 
@@ -154,15 +154,15 @@
   
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Scala Tutorial Imooc">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="AlgoCast:0x001 回文字符串判断(Leetcode 125)">
+    <meta itemprop="description" content="  If you like it, you can subscribe the AlgoCasts">
     <meta itemprop="datePublished" content="February 24, 2019">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Scala Tutorial Imooc
+          <h1 id="page-title" class="page__title" itemprop="headline">AlgoCast:0x001 回文字符串判断(Leetcode 125)
 </h1>
           
         </header>
@@ -170,137 +170,58 @@
 
       <section class="page__content" itemprop="text">
         
-        <p><img src="../../assets/images/scala_tutorial.jpg" alt="" /></p>
-
-<h1 id="1list">1.List</h1>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val a = List(1,2,3,4)
-a: List[Int] = List(1, 2, 3, 4)
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val b = 0 :: a
-b: List[Int] = List(0, 1, 2, 3, 4)
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val c = "x" :: "y" :: "z" ::  Nil
-c: List[String] = List(x, y, z)
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; "z" :: Nil
-res0: List[String] = List(z)
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; "x" :: res0
-res2: List[String] = List(x, z)
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val d = a ::: c
-d: List[Any] = List(1, 2, 3, 4, x, y, z)
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.head
-res3: Int = 1
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; d.head
-res4: Any = 1
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; c.head
-res5: String = x
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.tail
-res6: List[Int] = List(2, 3, 4)
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; c.tail
-res7: List[String] = List(y, z)
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.isEmpty
-res8: Boolean = false
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; c.isEmpty
-res9: Boolean = false
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; Nil.isEmpty
-res10: Boolean = true
-</code></pre></div></div>
-
-<ul>
-  <li>用递归和取头元素来写一个 List 遍历函数</li>
-</ul>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; def walkthru(l: List[Int]): String = {
-     | if(l.isEmpty) ""
-     | else l.head.toString + " " + walkthru(l.tail)
-     | }
-walkthru: (l: List[Int])String
-
-scala&gt; walkthru(a)
-res11: String = "1 2 3 4 "
-</code></pre></div></div>
-
-<h1 id="2filter-函数">2.Filter 函数</h1>
-<hr />
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.filter(x =&gt; x % 2 ==1)
-res12: List[Int] = List(1, 3)
-</code></pre></div></div>
-
-<ul>
-  <li>把字符串变成char的List
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; "99 Red Ballons".toList
-res13: List[Char] = List(9, 9,  , R, e, d,  , B, a, l, l, o, n, s)
-</code></pre></div>    </div>
+        <ul>
+  <li>
+    <p>If you like it, you can subscribe the <a href="https://algocasts.io">AlgoCasts</a></p>
+  </li>
+  <li>
+    <p>问题</p>
   </li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; "99 Red Ballons".toList.filter(x =&gt; Character.isDigit(x))
-res15: List[Char] = List(9, 9)
+<p>这个题目说的是，给你一个字符串，你要判断它是否是回文字符串。字符串里只考虑字母和数字，其它的字符可以无视。另外，对于字母，可以忽略大小写。</p>
+
+<p>比如说，给你的字符串是：</p>
+
+<p>” race a E-car “</p>
+
+<p>只考虑字母数字并且忽略大小写，它是一个回文字符串，因此返回 true。再比如说，给你的字符串是</p>
+
+<p>” race a car “</p>
+
+<p>对比到最后，中间的 e 和 a 不相等，因此不是一个回文字符串，返回 false。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>这道题的解题思想是,两端点对称游标向中间移动,查看对称点的字符是否相等
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; "99 Red Ballons".toList.takeWhile(x =&gt; x != 'B')
-res16: List[Char] = List(9, 9,  , R, e, d,  )
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 判断字符是不是英文或者是不是数字
+private static boolean isAlphanumeric(char c){
+ return ( c &gt;= 'a' &amp;&amp; c &lt;= 'z') || (c &gt;= 'A' &amp;&amp; c &lt;= 'Z')
+          || (c &gt;= '0' &amp;&amp; c &lt;= '9');   
+}
 </code></pre></div></div>
-
-<h1 id="3map-函数">3.Map 函数</h1>
-<hr />
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; c.map(x =&gt; x.toUpperCase)
-res18: List[String] = List(X, Y, Z)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 查看两个字符是否相等，忽略大小写。 这里加32是因为大写字母与小写字母相差32
+ private static boolean isEqualIgnoreCase(char a, char b){
+        if ( a &gt;= 'A' &amp;&amp; a &lt;= 'Z') a +=32; //把大写字母变成小写字母
+        if ( b &gt;= 'A' &amp;&amp; b &lt;= 'Z') b +=32;
+        return a == b;
+}
 </code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 请注意，下面的时间复杂度是 O(n), 即使有while循环
+// Time: O(n), Space: O(1)
+  public boolean isPalindrome(String s) {
+    if (s == null || s.length() == 0) return true;
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; c.map( _.toUpperCase)
-res22: List[String] = List(X, Y, Z)
+    int i = 0, j = s.length() - 1;
+    //前后两个节点向中间对撞
+    for (; i &lt; j; ++i, --j) {
+      while (i &lt; j &amp;&amp; !isAlphanumeric(s.charAt(i))) ++i; //如果字符不是数字或英文则坐标像右移
+      while (i &lt; j &amp;&amp; !isAlphanumeric(s.charAt(j))) --j; //如果字符不是数字或英文则坐标像左移
+      if (i &lt; j &amp;&amp; !isEqualIgnoreCase(s.charAt(i), s.charAt(j))) return false; //查看对称位点的字符是否一样
+    }
+    return true;
+  }
 </code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.filter ( _ % 2 == 1)
-res23: List[Int] = List(1, 3)
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; a.filter ( _ % 2 == 1).map( _ + 10)
-res24: List[Int] = List(11, 13)
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val q = List( a, List(4, 5, 6))
-q: List[List[Int]] = List(List(1, 2, 3, 4), List(4, 5, 6))
-
-scala&gt; q.map(x =&gt; x.filter( _ % 2 == 0))
-res25: List[List[Int]] = List(List(2, 4), List(4, 6))
-
-scala&gt; q.map( _.filter( _ % 2 == 0))
-res26: List[List[Int]] = List(List(2, 4), List(4, 6))
-
-scala&gt; q.flatMap( _.filter( _ % 2 == 0))
-res27: List[Int] = List(2, 4, 4, 6)
-</code></pre></div></div>
-<ul>
-  <li>Higher Brothers - We Talkin Bout feat. KOHH (prod. Don Krez)</li>
-</ul>
-
-<iframe width="728" height="541" src="https://www.youtube.com/embed/DmWWqogr_r8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
         
       </section>
@@ -323,7 +244,7 @@ res27: List[Int] = List(2, 4, 4, 6)
     
       
       
-      <a href="/categories/#notes" class="page__taxonomy-item" rel="tag">notes</a>
+      <a href="/categories/#algorithm" class="page__taxonomy-item" rel="tag">algorithm</a>
     
     </span>
   </p>
@@ -339,11 +260,12 @@ res27: List[Int] = List(2, 4, 4, 6)
       
   <nav class="pagination">
     
-      <a href="/notes/Java_Interview_Redis/" class="pagination--pager" title="Java Interview Redis:0x04
+      <a href="/notes/Java_Interview_Database/" class="pagination--pager" title="Java Interview Database:0x03
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/notes/Java_Interview_Redis/" class="pagination--pager" title="Java Interview Redis:0x04
+">Next</a>
     
   </nav>
 
@@ -419,8 +341,8 @@ res27: List[Int] = List(2, 4, 4, 6)
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4001/notes/Scala_Imooc/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/notes/Scala_Imooc"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "http://localhost:4001/algorithm/AlgoCasts-0x001/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/algorithm/AlgoCasts-0x001"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

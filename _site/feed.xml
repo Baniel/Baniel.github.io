@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-24T16:44:35+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Tutorial Imooc</title><link href="http://localhost:4001/notes/Scala_Imooc/" rel="alternate" type="text/html" title="Scala Tutorial Imooc" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Imooc</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Imooc/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_tutorial.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-24T17:14:00+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Tutorial Imooc</title><link href="http://localhost:4001/notes/Scala_Imooc/" rel="alternate" type="text/html" title="Scala Tutorial Imooc" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Imooc</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Imooc/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_tutorial.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;1list&quot;&gt;1.List&lt;/h1&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val a = List(1,2,3,4)
@@ -123,7 +123,63 @@ res26: List[List[Int]] = List(List(2, 4), List(4, 6))
 
 scala&amp;gt; q.flatMap( _.filter( _ % 2 == 0))
 res27: List[Int] = List(2, 4, 4, 6)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Redis:0x04</title><link href="http://localhost:4001/notes/Java_Interview_Redis/" rel="alternate" type="text/html" title="Java Interview Redis:0x04" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Redis</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Redis/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Higher Brothers - We Talkin Bout feat. KOHH (prod. Don Krez)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;728&quot; height=&quot;541&quot; src=&quot;https://www.youtube.com/embed/DmWWqogr_r8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">AlgoCast:0x001 回文字符串判断(Leetcode 125)</title><link href="http://localhost:4001/algorithm/AlgoCasts-0x001/" rel="alternate" type="text/html" title="AlgoCast:0x001 回文字符串判断(Leetcode 125)" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/AlgoCasts-0x001</id><content type="html" xml:base="http://localhost:4001/algorithm/AlgoCasts-0x001/">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you like it, you can subscribe the &lt;a href=&quot;https://algocasts.io&quot;&gt;AlgoCasts&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;问题&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个题目说的是，给你一个字符串，你要判断它是否是回文字符串。字符串里只考虑字母和数字，其它的字符可以无视。另外，对于字母，可以忽略大小写。&lt;/p&gt;
+
+&lt;p&gt;比如说，给你的字符串是：&lt;/p&gt;
+
+&lt;p&gt;” race a E-car “&lt;/p&gt;
+
+&lt;p&gt;只考虑字母数字并且忽略大小写，它是一个回文字符串，因此返回 true。再比如说，给你的字符串是&lt;/p&gt;
+
+&lt;p&gt;” race a car “&lt;/p&gt;
+
+&lt;p&gt;对比到最后，中间的 e 和 a 不相等，因此不是一个回文字符串，返回 false。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;这道题的解题思想是,两端点对称游标向中间移动,查看对称点的字符是否相等
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 判断字符是不是英文或者是不是数字
+private static boolean isAlphanumeric(char c){
+ return ( c &amp;gt;= 'a' &amp;amp;&amp;amp; c &amp;lt;= 'z') || (c &amp;gt;= 'A' &amp;amp;&amp;amp; c &amp;lt;= 'Z')
+          || (c &amp;gt;= '0' &amp;amp;&amp;amp; c &amp;lt;= '9');   
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 查看两个字符是否相等，忽略大小写。 这里加32是因为大写字母与小写字母相差32
+ private static boolean isEqualIgnoreCase(char a, char b){
+        if ( a &amp;gt;= 'A' &amp;amp;&amp;amp; a &amp;lt;= 'Z') a +=32; //把大写字母变成小写字母
+        if ( b &amp;gt;= 'A' &amp;amp;&amp;amp; b &amp;lt;= 'Z') b +=32;
+        return a == b;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 请注意，下面的时间复杂度是 O(n), 即使有while循环
+// Time: O(n), Space: O(1)
+  public boolean isPalindrome(String s) {
+    if (s == null || s.length() == 0) return true;
+
+    int i = 0, j = s.length() - 1;
+    //前后两个节点向中间对撞
+    for (; i &amp;lt; j; ++i, --j) {
+      while (i &amp;lt; j &amp;amp;&amp;amp; !isAlphanumeric(s.charAt(i))) ++i; //如果字符不是数字或英文则坐标像右移
+      while (i &amp;lt; j &amp;amp;&amp;amp; !isAlphanumeric(s.charAt(j))) --j; //如果字符不是数字或英文则坐标像左移
+      if (i &amp;lt; j &amp;amp;&amp;amp; !isEqualIgnoreCase(s.charAt(i), s.charAt(j))) return false; //查看对称位点的字符是否一样
+    }
+    return true;
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html">If you like it, you can subscribe the AlgoCasts</summary></entry><entry><title type="html">Java Interview Redis:0x04</title><link href="http://localhost:4001/notes/Java_Interview_Redis/" rel="alternate" type="text/html" title="Java Interview Redis:0x04" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Redis</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Redis/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;data-types&quot;&gt;Data Types&lt;/h1&gt;
 &lt;ul&gt;
@@ -275,11 +331,30 @@ OK
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;用于计数的HyperLogLog, 用于支持存储地理位置信息的Geo (Learn by yourself, OK!
-Cause we are genius!!!)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;用于计数的HyperLogLog, 用于支持存储地理位置信息的Geo (Learn by yourself, OK!
+Cause we are genius!!!)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;底层数据类型基础&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;简单动态字符串&lt;/li&gt;
+      &lt;li&gt;链表&lt;/li&gt;
+      &lt;li&gt;字典&lt;/li&gt;
+      &lt;li&gt;跳跃表&lt;/li&gt;
+      &lt;li&gt;整数集合&lt;/li&gt;
+      &lt;li&gt;压缩列表&lt;/li&gt;
+      &lt;li&gt;对象&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://coding.imooc.com/class/303.html&quot;&gt;The Course comes from Imooc&lt;/a&gt;&lt;/p&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Database:0x03</title><link href="http://localhost:4001/notes/Java_Interview_Database/" rel="alternate" type="text/html" title="Java Interview Database:0x03" /><published>2019-02-23T00:00:00+11:00</published><updated>2019-02-23T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Database</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Database/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lil Pump - “Be Like Me” ft. Lil Wayne (Official Music Video)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe width=&quot;957&quot; height=&quot;538&quot; src=&quot;https://www.youtube.com/embed/gJRGkvNqrY4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Database:0x03</title><link href="http://localhost:4001/notes/Java_Interview_Database/" rel="alternate" type="text/html" title="Java Interview Database:0x03" /><published>2019-02-23T00:00:00+11:00</published><updated>2019-02-23T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Database</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Database/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;relational-database&quot;&gt;Relational database&lt;/h2&gt;
 
@@ -308,14 +383,20 @@ Cause we are genius!!!)&lt;/li&gt;
   &lt;li&gt;Index Data Structure:
     &lt;ul&gt;
       &lt;li&gt;Binary Tree -&amp;gt; Binary Search&lt;/li&gt;
-      &lt;li&gt;B-Tree&lt;/li&gt;
-      &lt;li&gt;B+-Tree&lt;/li&gt;
+      &lt;li&gt;B Tree&lt;/li&gt;
+      &lt;li&gt;B+ Tree&lt;/li&gt;
       &lt;li&gt;Hash Map&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://coding.imooc.com/class/303.html&quot;&gt;The Course comes from Imooc&lt;/a&gt;&lt;/p&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Website Self-Learning</title><link href="http://localhost:4001/security/Security-Website/" rel="alternate" type="text/html" title="Website Self-Learning" /><published>2016-12-30T00:00:00+11:00</published><updated>2016-12-30T00:00:00+11:00</updated><id>http://localhost:4001/security/Security%20Website</id><content type="html" xml:base="http://localhost:4001/security/Security-Website/">&lt;h3 id=&quot;1bwapp&quot;&gt;1.bWAPP&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;21 Savage - a lot ft. J. Cole&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;728&quot; height=&quot;541&quot; src=&quot;https://www.youtube.com/embed/DmWWqogr_r8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Website Self-Learning</title><link href="http://localhost:4001/security/Security-Website/" rel="alternate" type="text/html" title="Website Self-Learning" /><published>2016-12-30T00:00:00+11:00</published><updated>2016-12-30T00:00:00+11:00</updated><id>http://localhost:4001/security/Security%20Website</id><content type="html" xml:base="http://localhost:4001/security/Security-Website/">&lt;h3 id=&quot;1bwapp&quot;&gt;1.bWAPP&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Home bWAPP, or a buggy web application, is a free and open source deliberately insecure web application.It helps security enthusiasts, developers and students to discover and to prevent web vulnerabilities.bWAPP prepares one to conduct successful penetration testing and ethical hacking projects.
@@ -996,85 +1077,4 @@ height:0;&quot;&gt;
 &lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/hfnDTvbtDUI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">SNEAK Principle</title><link href="http://localhost:4001/systemdesign/SystemDesign01/" rel="alternate" type="text/html" title="SNEAK Principle" /><published>2016-11-27T00:00:00+11:00</published><updated>2016-11-27T00:00:00+11:00</updated><id>http://localhost:4001/systemdesign/SystemDesign01</id><content type="html" xml:base="http://localhost:4001/systemdesign/SystemDesign01/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
-&lt;/script&gt;
-
-&lt;h1 id=&quot;template-snake-01&quot;&gt;Template: SNAKE 01&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Scenario: case/interface&lt;/li&gt;
-  &lt;li&gt;Necessary: constrain/hypothesis&lt;/li&gt;
-  &lt;li&gt;Application: service/algorithm&lt;/li&gt;
-  &lt;li&gt;Kilobit: data&lt;/li&gt;
-  &lt;li&gt;Evolve&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Do you know what’s the different between “Node” and “Server”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://p1.bqimg.com/567571/acb4c4f2425aef8d.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;eg-monitor-system&quot;&gt;Eg: Monitor System?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;S: where?
-    &lt;ul&gt;
-      &lt;li&gt;WhatsApp or Wechat&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Do you know what’s the different between “Service” and “Server”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Service&lt;/th&gt;
-      &lt;th&gt;Server&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Software&lt;/td&gt;
-      &lt;td&gt;Machine&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Process, Thread&lt;/td&gt;
-      &lt;td&gt;CPU, Disk&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;N:
-    &lt;ul&gt;
-      &lt;li&gt;If you have 1000 Machine(Swarm)&lt;/li&gt;
-      &lt;li&gt;May be 1000 x 200(Process) = 200k Process&lt;/li&gt;
-      &lt;li&gt;We also need to send the logs to Center Machine per/Minute&lt;/li&gt;
-      &lt;li&gt;Query Per Second(&lt;a href=&quot;https://en.wikipedia.org/wiki/Queries_per_second&quot;&gt;QPS&lt;/a&gt;): &lt;script type=&quot;math/tex&quot;&gt;\frac{1000}{60} = 16&lt;/script&gt;  1000 means 1000 Machine&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;How many Processes can be run at the same time in Mac?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://farhakm.files.wordpress.com/2015/03/iljzp.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you have a Mac, you can open “Activity Monitor” to check threads.
-&lt;img src=&quot;http://p1.bqimg.com/567571/ae779f5e3673b9a6.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;mr-robot&quot;&gt;Mr Robot&lt;/h1&gt;
-&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
-&lt;div style=&quot;position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;&quot;&gt;
-
-&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/R5giPbQIdzo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="SystemDesign" /><summary type="html"></summary></entry></feed>
+&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html"></summary></entry></feed>

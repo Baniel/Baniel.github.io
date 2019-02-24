@@ -2,6 +2,7 @@
 layout : single
 title : 5.1 Learn Data Structure with Daniel --- Hash Tables
 category: algorithm
+comments: true
 ---
 
 <script type="text/javascript" async

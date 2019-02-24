@@ -2,6 +2,7 @@
 layout : single
 title : 7.1 Learn Data Structure with Daniel --- Graph Theory
 category: algorithm
+comments: true
 ---
 
 <script type="text/javascript" async
