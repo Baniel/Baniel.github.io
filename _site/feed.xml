@@ -1,4 +1,350 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-24T19:36:21+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Tutorial Imooc</title><link href="http://localhost:4001/notes/Scala_Imooc/" rel="alternate" type="text/html" title="Scala Tutorial Imooc" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Imooc</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Imooc/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_tutorial.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-25T12:06:30+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Big Data Tutorial 0x02</title><link href="http://localhost:4001/notes/Scala_Big_Data_0x02/" rel="alternate" type="text/html" title="Scala Big Data Tutorial 0x02" /><published>2019-02-25T00:00:00+11:00</published><updated>2019-02-25T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Big_Data_0x02</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Big_Data_0x02/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_bigdata.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def 方法名(参数名:参数类型): 返回值类型 = {
+  // 括号内的叫做方法体
+
+  // 方法体内的最后一行为返回值，不需要使用 return
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def add(x: Int, y:Int): Int = {
+  x + y //最后一行就是返回值，不需要return
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def three() = 1 + 2
+
+println(three())
+println(three) // 没有入参的函数，调用时括号是可以省略的
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Scala Big Data Tutorial 0x01</title><link href="http://localhost:4001/notes/Scala_Big_Data_0x01/" rel="alternate" type="text/html" title="Scala Big Data Tutorial 0x01" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Big_Data_0x01</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Big_Data_0x01/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_bigdata.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;java-vs-scala&quot;&gt;Java Vs Scala&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Java: (It should add “;”)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; public class HelloWorld {
+   public static void main(String[] args){
+     System.out.println(&quot;Hello World...&quot;);
+   }
+ }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Scala: (No Static)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;object HelloWorld {
+  def main(args: Array[String]){
+    println(&quot;Hello World...&quot;)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;val-vs-var-值改变的时候就用var&quot;&gt;val vs var (值改变的时候就用var)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;val: value
+    &lt;ul&gt;
+      &lt;li&gt;final (immutable)&lt;/li&gt;
+      &lt;li&gt;val (value name):(Type) = xxx&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;var: variable
+    &lt;ul&gt;
+      &lt;li&gt;mutable&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;data-types&quot;&gt;Data Types&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val d = 1.1
+d: Double = 1.1
+
+scala&amp;gt; val e:Float = 1.1
+&amp;lt;console&amp;gt;:11: error: type mismatch;
+ found   : Double(1.1)
+ required: Float
+       val e:Float = 1.1
+                     ^
+
+scala&amp;gt; val e:Float = 1.1f
+e: Float = 1.1
+
+scala&amp;gt; val d = 1.2f
+d: Float = 1.2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val f = 10
+f: Int = 10
+
+scala&amp;gt; val g = 10.asInstanceOf[Double]
+g: Double = 10.0
+
+scala&amp;gt; g
+res75: Double = 10.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val h = 10.isInstanceOf[Int]
+h: Boolean = true
+
+
+scala&amp;gt; val h = 10.isInstanceOf[Double]
+h: Boolean = false
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;lazy-network-computing&quot;&gt;Lazy (Network Computing)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val i = 1
+i: Int = 1
+
+scala&amp;gt; lazy val a =1
+a: Int = &amp;lt;lazy&amp;gt;
+
+When you are using the value,
+it just computes the value.
+
+scala&amp;gt; a
+res76: Int = 1
+
+When you are not using the lazy value,
+even it's such a wrong operation,
+but it will not report an error.
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rich The Kid - Plug Walk&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/Xq-DkTnBZrk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Redis:0x04</title><link href="http://localhost:4001/notes/Java_Interview_Redis/" rel="alternate" type="text/html" title="Java Interview Redis:0x04" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Redis</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Redis/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;data-types&quot;&gt;Data Types&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hash: String 元素组成的字典，适合用于储存对象
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hmset lilei name &quot;LiLei&quot; age 26 title &quot;Senior&quot;
+OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hget lilei age
+&quot;26&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hget lilei title
+&quot;Senior&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hset lilei title &quot;Pricipal&quot;
+(integer) 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hget lilei title
+&quot;Pricipal&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;List: 列表，按照String元素插入顺序排序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; lpush mylist aaa
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; lpush mylist bbb
+(integer) 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; lpush mylist ccc
+(integer) 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;取出的顺序是从后到前，类似栈
+
+127.0.0.1:6379&amp;gt; lrange mylist 0 10
+1) &quot;ccc&quot;
+2) &quot;bbb&quot;
+3) &quot;aaa&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set: String 元素组成的无序集合，通过哈希表实现，不允许重复&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;(integer) 1 : 表示添加成功&lt;/li&gt;
+      &lt;li&gt;(integer) 2 : 表示添加失败&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 111
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 222
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 333
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 222
+(integer) 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; smembers myset
+1) &quot;111&quot;
+2) &quot;222&quot;
+3) &quot;333&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abc
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abd
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abb
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abd
+(integer) 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; smembers myset
+1) &quot;222&quot;
+2) &quot;333&quot;
+3) &quot;111&quot;
+4) &quot;abb&quot;
+5) &quot;abc&quot;
+6) &quot;abd&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sorted Set : 通过分数来为集合中的成员进行从小到大的排序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 3 abc
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 1 abd
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 2 abb
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 2 abb
+(integer) 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 1 bgg
+(integer) 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zrangebyscore myzset 0 10
+1) &quot;abd&quot;
+2) &quot;bgg&quot;
+3) &quot;abb&quot;
+4) &quot;abc&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;String : 最基本的数据类型，二进制安全&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; set name &quot;redis&quot;
+OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get name
+&quot;redis&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; set name &quot;memcache&quot;
+OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get name
+&quot;memcache&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get &quot;memcache&quot;
+(nil)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; set count 1
+OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get count
+&quot;1&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; incr count
+(integer) 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get count
+&quot;2&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get count
+&quot;2&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;用于计数的HyperLogLog, 用于支持存储地理位置信息的Geo (Learn by yourself, OK!
+Cause we are genius!!!)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;底层数据类型基础&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;简单动态字符串&lt;/li&gt;
+      &lt;li&gt;链表&lt;/li&gt;
+      &lt;li&gt;字典&lt;/li&gt;
+      &lt;li&gt;跳跃表&lt;/li&gt;
+      &lt;li&gt;整数集合&lt;/li&gt;
+      &lt;li&gt;压缩列表&lt;/li&gt;
+      &lt;li&gt;对象&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lil Pump - “Be Like Me” ft. Lil Wayne (Official Music Video)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;957&quot; height=&quot;538&quot; src=&quot;https://www.youtube.com/embed/gJRGkvNqrY4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Database:0x03</title><link href="http://localhost:4001/notes/Java_Interview_Database/" rel="alternate" type="text/html" title="Java Interview Database:0x03" /><published>2019-02-23T00:00:00+11:00</published><updated>2019-02-23T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Database</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Database/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;relational-database&quot;&gt;Relational database&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;How to design a Relational Database?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RDBMS :
+    &lt;ul&gt;
+      &lt;li&gt;Application instance:
+        &lt;ol&gt;
+          &lt;li&gt;Storage Management&lt;/li&gt;
+          &lt;li&gt;Cache&lt;/li&gt;
+          &lt;li&gt;SQL Parsing&lt;/li&gt;
+          &lt;li&gt;Log Management&lt;/li&gt;
+          &lt;li&gt;Permission Plan&lt;/li&gt;
+          &lt;li&gt;Disaster-tolerant Mechanism&lt;/li&gt;
+          &lt;li&gt;Index Management&lt;/li&gt;
+          &lt;li&gt;Lock Management&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Storage (File System):&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Index : Why do we should use Index? (To avoid “Full Table Scan”)&lt;/li&gt;
+  &lt;li&gt;Index Data Structure:
+    &lt;ul&gt;
+      &lt;li&gt;Binary Tree -&amp;gt; Binary Search&lt;/li&gt;
+      &lt;li&gt;B Tree&lt;/li&gt;
+      &lt;li&gt;B+ Tree&lt;/li&gt;
+      &lt;li&gt;Hash Map&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;21 Savage - a lot ft. J. Cole&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;728&quot; height=&quot;541&quot; src=&quot;https://www.youtube.com/embed/DmWWqogr_r8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Scala Tutorial Imooc</title><link href="http://localhost:4001/notes/Scala_Imooc/" rel="alternate" type="text/html" title="Scala Tutorial Imooc" /><published>2019-02-02T00:00:00+11:00</published><updated>2019-02-02T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Imooc</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Imooc/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_tutorial.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;1list&quot;&gt;1.List&lt;/h1&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val a = List(1,2,3,4)
@@ -301,7 +647,7 @@ res73: scala.collection.immutable.Map[Int,String] = Map(2 -&amp;gt; Alice, 5 -&a
   &lt;li&gt;21 Savage - a lot ft. J. Cole&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;iframe width=&quot;728&quot; height=&quot;541&quot; src=&quot;https://www.youtube.com/embed/DmWWqogr_r8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">AlgoCast:0x001 回文字符串判断(Leetcode 125)</title><link href="http://localhost:4001/algorithm/AlgoCasts-0x001/" rel="alternate" type="text/html" title="AlgoCast:0x001 回文字符串判断(Leetcode 125)" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/AlgoCasts-0x001</id><content type="html" xml:base="http://localhost:4001/algorithm/AlgoCasts-0x001/">&lt;ul&gt;
+&lt;iframe width=&quot;728&quot; height=&quot;541&quot; src=&quot;https://www.youtube.com/embed/DmWWqogr_r8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">AlgoCast:0x001 回文字符串判断(Leetcode 125)</title><link href="http://localhost:4001/algorithm/AlgoCasts-0x001/" rel="alternate" type="text/html" title="AlgoCast:0x001 回文字符串判断(Leetcode 125)" /><published>2019-01-01T00:00:00+11:00</published><updated>2019-01-01T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/AlgoCasts-0x001</id><content type="html" xml:base="http://localhost:4001/algorithm/AlgoCasts-0x001/">&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;If you like it, you can subscribe the &lt;a href=&quot;https://algocasts.io&quot;&gt;AlgoCasts&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
@@ -352,225 +698,7 @@ private static boolean isAlphanumeric(char c){
     }
     return true;
   }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html">If you like it, you can subscribe the AlgoCasts</summary></entry><entry><title type="html">Java Interview Redis:0x04</title><link href="http://localhost:4001/notes/Java_Interview_Redis/" rel="alternate" type="text/html" title="Java Interview Redis:0x04" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Redis</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Redis/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;data-types&quot;&gt;Data Types&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Hash: String 元素组成的字典，适合用于储存对象
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hmset lilei name &quot;LiLei&quot; age 26 title &quot;Senior&quot;
-OK
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hget lilei age
-&quot;26&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hget lilei title
-&quot;Senior&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hset lilei title &quot;Pricipal&quot;
-(integer) 0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; hget lilei title
-&quot;Pricipal&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;List: 列表，按照String元素插入顺序排序&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; lpush mylist aaa
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; lpush mylist bbb
-(integer) 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; lpush mylist ccc
-(integer) 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;取出的顺序是从后到前，类似栈
-
-127.0.0.1:6379&amp;gt; lrange mylist 0 10
-1) &quot;ccc&quot;
-2) &quot;bbb&quot;
-3) &quot;aaa&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Set: String 元素组成的无序集合，通过哈希表实现，不允许重复&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;(integer) 1 : 表示添加成功&lt;/li&gt;
-      &lt;li&gt;(integer) 2 : 表示添加失败&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 111
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 222
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 333
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset 222
-(integer) 0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; smembers myset
-1) &quot;111&quot;
-2) &quot;222&quot;
-3) &quot;333&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abc
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abd
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abb
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; sadd myset abd
-(integer) 0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; smembers myset
-1) &quot;222&quot;
-2) &quot;333&quot;
-3) &quot;111&quot;
-4) &quot;abb&quot;
-5) &quot;abc&quot;
-6) &quot;abd&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sorted Set : 通过分数来为集合中的成员进行从小到大的排序&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 3 abc
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 1 abd
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 2 abb
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 2 abb
-(integer) 0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zadd myzset 1 bgg
-(integer) 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; zrangebyscore myzset 0 10
-1) &quot;abd&quot;
-2) &quot;bgg&quot;
-3) &quot;abb&quot;
-4) &quot;abc&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;String : 最基本的数据类型，二进制安全&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; set name &quot;redis&quot;
-OK
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get name
-&quot;redis&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; set name &quot;memcache&quot;
-OK
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get name
-&quot;memcache&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get &quot;memcache&quot;
-(nil)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; set count 1
-OK
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get count
-&quot;1&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; incr count
-(integer) 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get count
-&quot;2&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt; get count
-&quot;2&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;用于计数的HyperLogLog, 用于支持存储地理位置信息的Geo (Learn by yourself, OK!
-Cause we are genius!!!)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;底层数据类型基础&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;简单动态字符串&lt;/li&gt;
-      &lt;li&gt;链表&lt;/li&gt;
-      &lt;li&gt;字典&lt;/li&gt;
-      &lt;li&gt;跳跃表&lt;/li&gt;
-      &lt;li&gt;整数集合&lt;/li&gt;
-      &lt;li&gt;压缩列表&lt;/li&gt;
-      &lt;li&gt;对象&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Lil Pump - “Be Like Me” ft. Lil Wayne (Official Music Video)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe width=&quot;957&quot; height=&quot;538&quot; src=&quot;https://www.youtube.com/embed/gJRGkvNqrY4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Database:0x03</title><link href="http://localhost:4001/notes/Java_Interview_Database/" rel="alternate" type="text/html" title="Java Interview Database:0x03" /><published>2019-02-23T00:00:00+11:00</published><updated>2019-02-23T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Database</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Database/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;relational-database&quot;&gt;Relational database&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;How to design a Relational Database?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;RDBMS :
-    &lt;ul&gt;
-      &lt;li&gt;Application instance:
-        &lt;ol&gt;
-          &lt;li&gt;Storage Management&lt;/li&gt;
-          &lt;li&gt;Cache&lt;/li&gt;
-          &lt;li&gt;SQL Parsing&lt;/li&gt;
-          &lt;li&gt;Log Management&lt;/li&gt;
-          &lt;li&gt;Permission Plan&lt;/li&gt;
-          &lt;li&gt;Disaster-tolerant Mechanism&lt;/li&gt;
-          &lt;li&gt;Index Management&lt;/li&gt;
-          &lt;li&gt;Lock Management&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Storage (File System):&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Index : Why do we should use Index? (To avoid “Full Table Scan”)&lt;/li&gt;
-  &lt;li&gt;Index Data Structure:
-    &lt;ul&gt;
-      &lt;li&gt;Binary Tree -&amp;gt; Binary Search&lt;/li&gt;
-      &lt;li&gt;B Tree&lt;/li&gt;
-      &lt;li&gt;B+ Tree&lt;/li&gt;
-      &lt;li&gt;Hash Map&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;21 Savage - a lot ft. J. Cole&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe width=&quot;728&quot; height=&quot;541&quot; src=&quot;https://www.youtube.com/embed/DmWWqogr_r8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Website Self-Learning</title><link href="http://localhost:4001/security/Security-Website/" rel="alternate" type="text/html" title="Website Self-Learning" /><published>2016-12-30T00:00:00+11:00</published><updated>2016-12-30T00:00:00+11:00</updated><id>http://localhost:4001/security/Security%20Website</id><content type="html" xml:base="http://localhost:4001/security/Security-Website/">&lt;h3 id=&quot;1bwapp&quot;&gt;1.bWAPP&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html">If you like it, you can subscribe the AlgoCasts</summary></entry><entry><title type="html">Website Self-Learning</title><link href="http://localhost:4001/security/Security-Website/" rel="alternate" type="text/html" title="Website Self-Learning" /><published>2016-12-30T00:00:00+11:00</published><updated>2016-12-30T00:00:00+11:00</updated><id>http://localhost:4001/security/Security%20Website</id><content type="html" xml:base="http://localhost:4001/security/Security-Website/">&lt;h3 id=&quot;1bwapp&quot;&gt;1.bWAPP&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Home bWAPP, or a buggy web application, is a free and open source deliberately insecure web application.It helps security enthusiasts, developers and students to discover and to prevent web vulnerabilities.bWAPP prepares one to conduct successful penetration testing and ethical hacking projects.
@@ -951,304 +1079,6 @@ padding-bottom:56.25%;
 height:0;&quot;&gt;
 
 &lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/Sh8pveFv2DI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">5.1 Learn Data Structure with Daniel — Hash Tables</title><link href="http://localhost:4001/algorithm/DanielAlgorithm5.1/" rel="alternate" type="text/html" title="5.1 Learn Data Structure with Daniel --- Hash Tables" /><published>2016-11-28T00:00:00+11:00</published><updated>2016-11-28T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm5.1</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm5.1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
-&lt;/script&gt;
-
-&lt;h1 id=&quot;hash-tables&quot;&gt;Hash Tables&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Balanced BST -&amp;gt; we can achieve &lt;script type=&quot;math/tex&quot;&gt;O(Log{N})&lt;/script&gt; time complexity for several operations including search.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can we do better?
-  Yes, maybe we can reach &lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;
-  This is why hashtables came to be.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Array: If we know the index, the insertion and retrival operations are very fast &lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;. That is what we want it.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Here we want to search for a given item with a given key.We have key-value pairs&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;script type=&quot;math/tex; mode=display&quot;&gt;Key \Longrightarrow Slot\ in\ a\ set\ of\ buckets&lt;/script&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;hash-function&quot;&gt;Hash Function&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Distribute the keys uniformly into buckets&lt;/li&gt;
-  &lt;li&gt;n: number of keys&lt;/li&gt;
-  &lt;li&gt;m: number of buckets // size of array&lt;/li&gt;
-  &lt;li&gt;h(X) = n % m ( modulo operator)
-    &lt;ul&gt;
-      &lt;li&gt;We should use prime numbers both for the size of the array and in our hash function to make sure the distribution will be uniform !!!&lt;/li&gt;
-      &lt;li&gt;
-        &lt;script type=&quot;math/tex; mode=display&quot;&gt;String\ keys: we\ could\ calculate\ the\ ASCII\ value\ for\ each\ character,\ add\ them\ up\  \rightarrow  make\ \%\ modulo&lt;/script&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Hash table is a data structure used to implement an associative array, astructure that can map keys to values&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A hash table uses a hash function to compute an index into an array of buckets or slots, from which the correct value can be found&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The hash function will assign each key to a unique bucket, but this situation is rarely achievable in practice: collisions may occur !!!&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Collidion: different keys that are assigned by the hash function to the same bucket.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In many situations, hash tables turn out to be more efficient than search trees&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;So hash tables are used in caches, databases and sets.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;time-complex-table&quot;&gt;Time Complex Table&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt;Average case&lt;/th&gt;
-      &lt;th&gt;Worst Case&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Space&lt;/td&gt;
-      &lt;td&gt;  O(n)&lt;/td&gt;
-      &lt;td&gt;  O(n)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Insert&lt;/td&gt;
-      &lt;td&gt;  O(1)&lt;/td&gt;
-      &lt;td&gt;  O(n)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Delete&lt;/td&gt;
-      &lt;td&gt;  O(1)&lt;/td&gt;
-      &lt;td&gt;  O(n)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Search&lt;/td&gt;
-      &lt;td&gt;  O(1)&lt;/td&gt;
-      &lt;td&gt;  O(n)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;collisions&quot;&gt;Collisions&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Collision resolution with chaining: we put multiple entries into the same slot with the help of a linked list:
-    &lt;ul&gt;
-      &lt;li&gt;If there are many collisions: O(1) complexity gets worse !!!&lt;/li&gt;
-      &lt;li&gt;If has an additional memory cost due to the references&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Open addressing: better solution&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;If collision occurs, we find an empty slot instead:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Linear probing:&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;If a collision  occures, we try the next slot&lt;/li&gt;
-      &lt;li&gt;If there is a collision too, we keep trying the next slot unitl we find an empty slot&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Quadratic probing: we trying slots 1,2,3,4,8… units far away&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Rehashing: we hash the result again in order to find an empty slot&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Open addressing strategy requires, that hash function has additional properties. In addition to performing uniform distribution, it should also avoid clustering of hash values&lt;/li&gt;
-  &lt;li&gt;Use prime numbers to avoid clustering !!!&lt;/li&gt;
-  &lt;li&gt;Load factor: number of entries divided by the number of buckets&lt;/li&gt;
-  &lt;li&gt;With the growth of hash table’s load factor, nubmer of collisions increases, which leads to the decrease of overall table’s performance&lt;/li&gt;
-  &lt;li&gt;The solution is to resize table, when its load factor exceeds given threshold&lt;/li&gt;
-  &lt;li&gt;Remember, that hash values depend on table’s size. Hence, hashes of entries are changed when resizing and algorithm can’t just copy data from old storage to new one.&lt;/li&gt;
-  &lt;li&gt;But resizing is done at once and operation, which triggers resizing, take O(n) to complete, where n is a number of entries in the table. This fact may make dynamic-sized hash tables inappropriate for real0time applications.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;applications&quot;&gt;Applications&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Databases: sometimes search trees, sometimes hashing is better&lt;/li&gt;
-  &lt;li&gt;Counting given word occurece in a particular  document&lt;/li&gt;
-  &lt;li&gt;Storing data + lookup tables (password checks…)&lt;/li&gt;
-  &lt;li&gt;Lookup tables in huge networks ( lookup for IP addresses)&lt;/li&gt;
-  &lt;li&gt;The hashing technique can be used for substring search (Rabin-Karp algorithm)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;pwn2own-2016-day-1-recap&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Pwn2Own&quot;&gt;Pwn2Own&lt;/a&gt; 2016 Day 1 Recap&lt;/h1&gt;
-
-&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
-&lt;div style=&quot;position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;&quot;&gt;
-
-&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/DOmzWKW-mto&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">4.1 Learn Data Structure with Daniel — Heap</title><link href="http://localhost:4001/algorithm/DanielAlgorithm4.1/" rel="alternate" type="text/html" title="4.1 Learn Data Structure with Daniel --- Heap" /><published>2016-11-27T00:00:00+11:00</published><updated>2016-11-27T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm4.1</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm4.1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
-&lt;/script&gt;
-
-&lt;h1 id=&quot;heap-theory&quot;&gt;Heap Theory&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;It is a binary tree&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.stack.imgur.com/ld3It.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In a max heap, the keys of parent nodes are always greater than or equal to those of the children and the highest key is in the root node. In a min heap, the keys of parent nodes are less than or eaual to thouse of the children and the lowest key is in the root node&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://qph.ec.quoracdn.net/main-qimg-ddb92cea328a64098e3219bd021ff6cb?convert_to_webp=true&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;We can traverse heap by the level from the root and set the index from left to right. We can get the rule like below:&lt;/p&gt;
-
-    &lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;(1\leq i \leq= \left \lfloor \frac{n}{2} \right \rfloor)&lt;/script&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Max Heap: &lt;script type=&quot;math/tex&quot;&gt;K_i \geq K_{2i}&lt;/script&gt;
-          and &lt;script type=&quot;math/tex&quot;&gt;K_i \geq K_{2i+1}&lt;/script&gt;&lt;/li&gt;
-      &lt;li&gt;Min Heap: &lt;script type=&quot;math/tex&quot;&gt;K_i \leq K_{2i}&lt;/script&gt;
-          and &lt;script type=&quot;math/tex&quot;&gt;K_i \leq K_{2i+1}&lt;/script&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;It is complete: it cannot be unbalanced !!! We insert every new item to the next available place&lt;/li&gt;
-  &lt;li&gt;Applications: Dijkstra alorithm, Prims algorithm&lt;/li&gt;
-  &lt;li&gt;The heap is one maximally efficient implementation of an abstract data type called a priority queue&lt;/li&gt;
-  &lt;li&gt;It has nothing to do with the pool of memory from which dynamically allocated memory is allocated&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;heap-properies&quot;&gt;Heap properies&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Complete -&amp;gt; we construct if from left to right across each row / of course the last row may not be completely full&lt;/li&gt;
-  &lt;li&gt;The key of the parent must be larger/smaller than its childern’s keys&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.studytonight.com/data-structures/images/heap-property-example.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;heapsort&quot;&gt;Heapsort&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;comparison-based sorting algorithm&lt;/li&gt;
-  &lt;li&gt;use heap data structure rather than a linear-time search to find the maximum&lt;/li&gt;
-  &lt;li&gt;although somewhat slower in practice on most machines than a well-implemented quicksort, it has the advantage of a more favorable worst-case &lt;script type=&quot;math/tex&quot;&gt;O({n}\log{n})&lt;/script&gt; runtime.Heapsort is an in-place algorithm, but it is not a stable sort&lt;/li&gt;
-  &lt;li&gt;Does not need additional memory!!!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;keep-swapping-the-root-with-the-last-element--maintain-heap-properties-&quot;&gt;Keep swapping the root with the last element + maintain heap properties !!!&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;binomial-heap&quot;&gt;Binomial Heap&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Similar to a binary heap but also supports quick merging of two heaps&lt;/li&gt;
-  &lt;li&gt;It is important as an implementation of the mergeable heap abstract data type (meldable heap), which is a priority queue supporting merge operation&lt;/li&gt;
-  &lt;li&gt;A binomial heap is implemented as a collection of binary trees&lt;/li&gt;
-  &lt;li&gt;Insertion &lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt; time complexity can be reduced to O(1) constant time complexity with help of binomial heaps&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;fibonacci-heap&quot;&gt;Fibonacci heap&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Faster than the classic binary heap&lt;/li&gt;
-  &lt;li&gt;Dijkstra’s shortest path algorithm and Prim’s spanning tree algorithm run faster if they rely on Fibonacci heap instead of binary heaps&lt;/li&gt;
-  &lt;li&gt;But bery hard to implement efficiently so usually does not worth the effort&lt;/li&gt;
-  &lt;li&gt;Unlike binary heaps, it can have  several children: number of children are usually kept low&lt;/li&gt;
-  &lt;li&gt;We can achive O(1) insert operation instead of &lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt; !!!&lt;/li&gt;
-  &lt;li&gt;Every node has degree at most &lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt; and the size of a subtree rooted in a node of degree &lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; is at least &lt;script type=&quot;math/tex&quot;&gt;F_{K+2}&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;F_K&lt;/script&gt; is the &lt;script type=&quot;math/tex&quot;&gt;k_{th}&lt;/script&gt; Fibonacci number.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Time complexities&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt;Binary&lt;/th&gt;
-      &lt;th&gt;Binomial&lt;/th&gt;
-      &lt;th&gt;Fibonacci&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Find min&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Delete min&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Insert&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Decrease Key&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Merge&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;({m}\log({m+n}))&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(\log{n})&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;O(1)&lt;/script&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;it&quot;&gt;I.T.&lt;/h2&gt;
-
-&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
-&lt;div style=&quot;position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;&quot;&gt;
-
-&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/hfnDTvbtDUI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html"></summary></entry></feed>

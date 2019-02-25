@@ -79,23 +79,33 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4001/security/Security-Website/",
         "teaser":null},{
-        "title": "Java Interview Database:0x03",
-        "excerpt":"Relational database How to design a Relational Database? RDBMS : Application instance: Storage Management Cache SQL Parsing Log Management Permission Plan Disaster-tolerant Mechanism Index Management Lock Management Storage (File System): Index : Why do we should use Index? (To avoid “Full Table Scan”) Index Data Structure: Binary Tree -&gt; Binary...","categories": ["notes"],
-        "tags": [],
-        "url": "http://localhost:4001/notes/Java_Interview_Database/",
-        "teaser":null},{
         "title": "AlgoCast:0x001 回文字符串判断(Leetcode 125)",
         "excerpt":"If you like it, you can subscribe the AlgoCasts 问题 这个题目说的是，给你一个字符串，你要判断它是否是回文字符串。字符串里只考虑字母和数字，其它的字符可以无视。另外，对于字母，可以忽略大小写。 比如说，给你的字符串是： ” race a E-car “ 只考虑字母数字并且忽略大小写，它是一个回文字符串，因此返回 true。再比如说，给你的字符串是 ” race a car “ 对比到最后，中间的 e 和 a 不相等，因此不是一个回文字符串，返回 false。 这道题的解题思想是,两端点对称游标向中间移动,查看对称点的字符是否相等 // 判断字符是不是英文或者是不是数字 private static boolean isAlphanumeric(char c){ return ( c &gt;= 'a' &amp;&amp; c &lt;= 'z') || (c &gt;=...","categories": ["algorithm"],
         "tags": [],
         "url": "http://localhost:4001/algorithm/AlgoCasts-0x001/",
+        "teaser":null},{
+        "title": "Scala Tutorial Imooc",
+        "excerpt":"1.List scala&gt; val a = List(1,2,3,4) a: List[Int] = List(1, 2, 3, 4) scala&gt; val b = 0 :: a b: List[Int] = List(0, 1, 2, 3, 4) scala&gt; val c = \"x\" :: \"y\" :: \"z\" :: Nil c: List[String] = List(x, y, z) scala&gt; \"z\" :: Nil res0:...","categories": ["notes"],
+        "tags": [],
+        "url": "http://localhost:4001/notes/Scala_Imooc/",
+        "teaser":null},{
+        "title": "Java Interview Database:0x03",
+        "excerpt":"Relational database How to design a Relational Database? RDBMS : Application instance: Storage Management Cache SQL Parsing Log Management Permission Plan Disaster-tolerant Mechanism Index Management Lock Management Storage (File System): Index : Why do we should use Index? (To avoid “Full Table Scan”) Index Data Structure: Binary Tree -&gt; Binary...","categories": ["notes"],
+        "tags": [],
+        "url": "http://localhost:4001/notes/Java_Interview_Database/",
         "teaser":null},{
         "title": "Java Interview Redis:0x04",
         "excerpt":"Data Types Hash: String 元素组成的字典，适合用于储存对象 127.0.0.1:6379&gt; hmset lilei name \"LiLei\" age 26 title \"Senior\" OK 127.0.0.1:6379&gt; hget lilei age \"26\" 127.0.0.1:6379&gt; hget lilei title \"Senior\" 127.0.0.1:6379&gt; hset lilei title \"Pricipal\" (integer) 0 127.0.0.1:6379&gt; hget lilei title \"Pricipal\" List: 列表，按照String元素插入顺序排序 127.0.0.1:6379&gt; lpush mylist aaa (integer) 1 127.0.0.1:6379&gt; lpush mylist bbb (integer)...","categories": ["notes"],
         "tags": [],
         "url": "http://localhost:4001/notes/Java_Interview_Redis/",
         "teaser":null},{
-        "title": "Scala Tutorial Imooc",
-        "excerpt":"1.List scala&gt; val a = List(1,2,3,4) a: List[Int] = List(1, 2, 3, 4) scala&gt; val b = 0 :: a b: List[Int] = List(0, 1, 2, 3, 4) scala&gt; val c = \"x\" :: \"y\" :: \"z\" :: Nil c: List[String] = List(x, y, z) scala&gt; \"z\" :: Nil res0:...","categories": ["notes"],
+        "title": "Scala Big Data Tutorial 0x01",
+        "excerpt":"Java Vs Scala Java: (It should add “;”) public class HelloWorld { public static void main(String[] args){ System.out.println(\"Hello World...\"); } } Scala: (No Static) object HelloWorld { def main(args: Array[String]){ println(\"Hello World...\") } } val vs var (值改变的时候就用var) val: value final (immutable) val (value name):(Type) = xxx var: variable mutable...","categories": ["notes"],
         "tags": [],
-        "url": "http://localhost:4001/notes/Scala_Imooc/",
+        "url": "http://localhost:4001/notes/Scala_Big_Data_0x01/",
+        "teaser":null},{
+        "title": "Scala Big Data Tutorial 0x02",
+        "excerpt":"   def 方法名(参数名:参数类型): 返回值类型 = {   // 括号内的叫做方法体    // 方法体内的最后一行为返回值，不需要使用 return }    def add(x: Int, y:Int): Int = {   x + y //最后一行就是返回值，不需要return }    def three() = 1 + 2  println(three()) println(three) // 没有入参的函数，调用时括号是可以省略的  ","categories": ["notes"],
+        "tags": [],
+        "url": "http://localhost:4001/notes/Scala_Big_Data_0x02/",
         "teaser":null}]

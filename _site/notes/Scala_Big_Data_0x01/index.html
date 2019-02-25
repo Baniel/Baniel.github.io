@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Website Self-Learning - Daniel Tech Blog</title>
-<meta name="description" content="1.bWAPP">
+<!-- begin _includes/seo.html --><title>Scala Big Data Tutorial 0x01 - Daniel Tech Blog</title>
+<meta name="description" content="">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Daniel Tech Blog">
-<meta property="og:title" content="Website Self-Learning">
-<meta property="og:url" content="http://localhost:4001/security/Security-Website/">
+<meta property="og:title" content="Scala Big Data Tutorial 0x01">
+<meta property="og:url" content="http://localhost:4001/notes/Scala_Big_Data_0x01/">
 
 
-  <meta property="og:description" content="1.bWAPP">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2016-12-30T00:00:00+11:00">
+  <meta property="og:description" content="">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-02-24T00:00:00+11:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4001/security/Security-Website/">
+
+<link rel="canonical" href="http://localhost:4001/notes/Scala_Big_Data_0x01/">
 
 
 
@@ -154,15 +154,15 @@
   
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Website Self-Learning">
-    <meta itemprop="description" content="1.bWAPP">
-    <meta itemprop="datePublished" content="December 30, 2016">
+    <meta itemprop="headline" content="Scala Big Data Tutorial 0x01">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="February 24, 2019">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Website Self-Learning
+          <h1 id="page-title" class="page__title" itemprop="headline">Scala Big Data Tutorial 0x01
 </h1>
           
         </header>
@@ -170,148 +170,115 @@
 
       <section class="page__content" itemprop="text">
         
-        <h3 id="1bwapp">1.bWAPP</h3>
+        <p><img src="../../assets/images/scala_bigdata.jpg" alt="" /></p>
+
+<h3 id="java-vs-scala">Java Vs Scala</h3>
 
 <ul>
-  <li>Home bWAPP, or a buggy web application, is a free and open source deliberately insecure web application.It helps security enthusiasts, developers and students to discover and to prevent web vulnerabilities.bWAPP prepares one to conduct successful penetration testing and ethical hacking projects.
+  <li>Java: (It should add “;”)</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> public class HelloWorld {
+   public static void main(String[] args){
+     System.out.println("Hello World...");
+   }
+ }
+
+</code></pre></div></div>
+<ul>
+  <li>Scala: (No Static)</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>object HelloWorld {
+  def main(args: Array[String]){
+    println("Hello World...")
+  }
+}
+</code></pre></div></div>
+<hr />
+
+<h3 id="val-vs-var-值改变的时候就用var">val vs var (值改变的时候就用var)</h3>
+
+<ul>
+  <li>val: value
     <ul>
-      <li>Link: <a href="http://www.itsecgames.com/">http://www.itsecgames.com/</a></li>
+      <li>final (immutable)</li>
+      <li>val (value name):(Type) = xxx</li>
+    </ul>
+  </li>
+  <li>var: variable
+    <ul>
+      <li>mutable</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="2damn-bulnerable-ios-app-dvia">2.Damn Bulnerable IOS App (DVIA)</h3>
+<hr />
+
+<h3 id="data-types">Data Types</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val d = 1.1
+d: Double = 1.1
+
+scala&gt; val e:Float = 1.1
+&lt;console&gt;:11: error: type mismatch;
+ found   : Double(1.1)
+ required: Float
+       val e:Float = 1.1
+                     ^
+
+scala&gt; val e:Float = 1.1f
+e: Float = 1.1
+
+scala&gt; val d = 1.2f
+d: Float = 1.2
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val f = 10
+f: Int = 10
+
+scala&gt; val g = 10.asInstanceOf[Double]
+g: Double = 10.0
+
+scala&gt; g
+res75: Double = 10.0
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val h = 10.isInstanceOf[Int]
+h: Boolean = true
+
+
+scala&gt; val h = 10.isInstanceOf[Double]
+h: Boolean = false
+
+</code></pre></div></div>
+
+<h3 id="lazy-network-computing">Lazy (Network Computing)</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt; val i = 1
+i: Int = 1
+
+scala&gt; lazy val a =1
+a: Int = &lt;lazy&gt;
+
+When you are using the value,
+it just computes the value.
+
+scala&gt; a
+res76: Int = 1
+
+When you are not using the lazy value,
+even it's such a wrong operation,
+but it will not report an error.
+
+
+</code></pre></div></div>
 
 <ul>
-  <li>Link: <a href="http://damnvulnerableiosapp.com/">http://damnvulnerableiosapp.com/</a></li>
+  <li>Rich The Kid - Plug Walk</li>
 </ul>
 
-<h3 id="3damn-vulnerable-web-application-dvwa">3.Damn Vulnerable Web Application (DVWA)</h3>
-
-<ul>
-  <li>Link: <a href="http://www.dvwa.co.uk/">http://www.dvwa.co.uk/</a></li>
-</ul>
-
-<h3 id="4game-of-hacks">4.Game of Hacks</h3>
-
-<ul>
-  <li>Link: <a href="http://www.gameofhacks.com/">http://www.gameofhacks.com/</a></li>
-</ul>
-
-<h3 id="5google-gruyere">5.Google Gruyere</h3>
-
-<ul>
-  <li>Link: <a href="http://google-gruyere.appspot.com/">http://google-gruyere.appspot.com/</a></li>
-</ul>
-
-<h3 id="6hackthis">6.HackThis!!</h3>
-
-<ul>
-  <li>Link: <a href="https://www.hackthis.co.uk/">https://www.hackthis.co.uk/</a></li>
-</ul>
-
-<h3 id="7-hack-this-sites">7. Hack This Sites</h3>
-
-<ul>
-  <li>Link: <a href="https://www.hackthissite.org/">https://www.hackthissite.org</a></li>
-</ul>
-
-<h3 id="8hellbound-hackers">8.Hellbound Hackers</h3>
-
-<ul>
-  <li>Link: <a href="http://www.hellboundhackers.org/">https://www.helloundhackers.org</a></li>
-</ul>
-
-<h3 id="9mcafee-hacme-sites">9.McAfee HacMe Sites</h3>
-
-<ul>
-  <li>Link: <a href="http://www.mcafee.com/us/downloads/free-tools/index.aspx">http://www.mcafee.com/us/downloads/free-tools/index.aspx</a></li>
-</ul>
-
-<h3 id="10mutillidae">10.Mutillidae</h3>
-
-<ul>
-  <li>Link: <a href="https://sourceforge.net/projects/mutillidae">https://sourceforge.net/projects/mutillidae/</a></li>
-</ul>
-
-<h3 id="11overthewire">11.OverTheWire</h3>
-
-<ul>
-  <li>Link: <a href="https://overthewire.org/wargames/">http://overthewire.org/wargames</a></li>
-</ul>
-
-<h3 id="12peruggia">12.Peruggia</h3>
-
-<ul>
-  <li>Link: <a href="https://sourceforge.net/projects/peruggia/">https://sourceforge.net/projects/peruggia/</a></li>
-</ul>
-
-<h3 id="13root-me">13.Root Me</h3>
-
-<ul>
-  <li>Link: <a href="https://www.root-me.org/">https://www.root-me.org/</a></li>
-</ul>
-
-<h3 id="14-try2hack">14. Try2Hack</h3>
-
-<ul>
-  <li>Link: <a href="http://www.try2hack.nl/">http://www.try2hack.nl/</a></li>
-</ul>
-
-<h3 id="15-vicnum">15. Vicnum</h3>
-
-<ul>
-  <li>Link: <a href="http://vicnum.ciphertechs.com/">http://vicnum.ciphertechs.com/</a></li>
-</ul>
-
-<h3 id="16-webgoat">16. WebGoat</h3>
-
-<ul>
-  <li>Link: <a href="http://webappsecmovies.sourceforge.net/webgoat/">http://webappsecmovies.sourceforge.net/webgoat/</a></li>
-</ul>
-
-<h3 id="17-i-chun-qiu-china">17. I Chun Qiu (China)</h3>
-
-<ul>
-  <li>Link: <a href="http://www.ichunqiu.com/main/">http://www.ichunqiu.com/main</a></li>
-</ul>
-
-<h3 id="18-xctf_oj-china">18. XCTF_OJ (China)</h3>
-
-<ul>
-  <li>Link: <a href="http://oj.xctf.org.cn/">http://oj.xctf.org.cn/</a></li>
-</ul>
-
-<h3 id="19-security-attacking-and-defense-platform-china">19. Security Attacking and Defense Platform (China)</h3>
-
-<ul>
-  <li>Link: <a href="http://hackinglab.cn/index.php">http://hackinglab.cn/index.php</a></li>
-</ul>
-
-<h3 id="20-vulnerable-by-design--vulnhub-thanks-for-苍冥">20. Vulnerable By Design ~ VulnHub (Thanks for 苍冥)</h3>
-
-<ul>
-  <li>Link: <a href="https://www.vulnhub.com/">https://www.vulnhub.com/</a></li>
-</ul>
-
-<h3 id="21-live-overfloe">21. Live Overfloe</h3>
-
-<ul>
-  <li>Link: <a href="http://liveoverflow.com/">http://liveoverflow.com/</a></li>
-</ul>
-
-<h1 id="watch-dog-2---marcus">Watch Dog 2 - Marcus</h1>
-
-<div style="max-width:640px; margin:0 auto 10px;">
-<div style="position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;">
-
-<iframe width="854" height="480" src="https://www.youtube.com/embed/hh9x4NqW0Dw" frameborder="0" allowfullscreen=""></iframe>
-
-</div>
-</div>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/Xq-DkTnBZrk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
         
       </section>
@@ -334,14 +301,14 @@ height:0;">
     
       
       
-      <a href="/categories/#security" class="page__taxonomy-item" rel="tag">security</a>
+      <a href="/categories/#notes" class="page__taxonomy-item" rel="tag">notes</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-12-30T00:00:00+11:00">December 30, 2016</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-24T00:00:00+11:00">February 24, 2019</time></p>
         
       </footer>
 
@@ -350,11 +317,11 @@ height:0;">
       
   <nav class="pagination">
     
-      <a href="/algorithm/DanielAlgorithm8.1/" class="pagination--pager" title="8.1 Learn Data Structure with Daniel — BFS Theory
+      <a href="/notes/Java_Interview_Redis/" class="pagination--pager" title="Java Interview Redis:0x04
 ">Previous</a>
     
     
-      <a href="/algorithm/AlgoCasts-0x001/" class="pagination--pager" title="AlgoCast:0x001 回文字符串判断(Leetcode 125)
+      <a href="/notes/Scala_Big_Data_0x02/" class="pagination--pager" title="Scala Big Data Tutorial 0x02
 ">Next</a>
     
   </nav>
@@ -431,8 +398,8 @@ height:0;">
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4001/security/Security-Website/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/security/Security Website"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "http://localhost:4001/notes/Scala_Big_Data_0x01/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/notes/Scala_Big_Data_0x01"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
