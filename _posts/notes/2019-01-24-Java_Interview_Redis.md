@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Java Interview Redis:0x04
+title: Java Interview Redis
 category: notes
 comments: true
 ---

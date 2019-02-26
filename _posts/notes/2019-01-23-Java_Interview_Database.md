@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Java Interview Database:0x03
+title: Java Interview Database
 category: notes
 comments: true
 ---
