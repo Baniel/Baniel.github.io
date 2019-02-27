@@ -2,8 +2,8 @@
 title: Notes
 layout: collection
 permalink: /notes/
-collection: notes
-entries_layout: list
+paginate: 5
+paginate_path: /page:num/
 ---
 
 <div class="grid__wrapper">

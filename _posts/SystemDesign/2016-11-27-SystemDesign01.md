@@ -18,7 +18,6 @@ comments: true
 
 > Do you know what's the different between "Node" and "Server"
 
-![image](http://p1.bqimg.com/567571/acb4c4f2425aef8d.png)
 
 ## Eg: Monitor System?
 
@@ -43,12 +42,6 @@ Process, Thread | CPU, Disk
 > How many Processes can be run at the same time in Mac?
 
 ![image](https://farhakm.files.wordpress.com/2015/03/iljzp.png)
-
-If you have a Mac, you can open "Activity Monitor" to check threads.
-![image](http://p1.bqimg.com/567571/ae779f5e3673b9a6.png)
-
-
-
 
 
 

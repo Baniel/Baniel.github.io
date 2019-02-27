@@ -17,12 +17,12 @@ comments: true
   - 进程是抢占处理机的调度单位；线程属于某个进程，共享其资源
   - 线程只由堆栈寄存器、程序计数器和TCB组成
 
-- Summary
 
- - 线程不能开做独立的应用，而进程可看做独立的应用
- - 进程有独立的地址空间，互相不影响，线程只是进程的不同执行路径
- - 线程没有独立的地址空间，多进程的程序比多线程程序健壮
- - 进程的切换比线程的切换开销大
+- Summary
+  - 线程不能开做独立的应用，而进程可看做独立的应用
+  - 进程有独立的地址空间，互相不影响，线程只是进程的不同执行路径
+  - 线程没有独立的地址空间，多进程的程序比多线程程序健壮
+  - 进程的切换比线程的切换开销大
 
 - Java进程和线程的关系
 
@@ -41,3 +41,8 @@ comments: true
 
   - Thread是实现了Runnable接口的类，使得run支持多线程
   - 因此类的单一继承原则，推荐多使用Runnable接口
+
+
+
+Lil Pump - Be Like Me
+<iframe width="760" height="428" src="https://www.youtube.com/embed/X1VAIGkKfvg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

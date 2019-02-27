@@ -6,7 +6,7 @@ main:
   #   url: /about/
   - title: "Algorithm"
     url: /algorithm/
-  - title: "Design Pattern"
+  - title: "System Design"
     url: /design-pattern/
   - title: "Mathematics"
     url: /mathematics/

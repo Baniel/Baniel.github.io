@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-26T18:22:36+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Big Data Tutorial 0x02</title><link href="http://localhost:4001/notes/Scala_Big_Data_0x02/" rel="alternate" type="text/html" title="Scala Big Data Tutorial 0x02" /><published>2019-02-25T00:00:00+11:00</published><updated>2019-02-25T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Big_Data_0x02</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Big_Data_0x02/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_bigdata.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-02-27T17:50:25+11:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">Scala Big Data Tutorial 0x03 Object</title><link href="http://localhost:4001/notes/Scala_Big_Data_0x03/" rel="alternate" type="text/html" title="Scala Big Data Tutorial 0x03 Object" /><published>2019-02-22T00:00:00+11:00</published><updated>2019-02-22T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Big_Data_0x03</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Big_Data_0x03/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_bigdata.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;scala-面向对象&quot;&gt;Scala 面向对象&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;构造器&lt;/li&gt;
+  &lt;li&gt;继承与重写&lt;/li&gt;
+  &lt;li&gt;抽象类&lt;/li&gt;
+  &lt;li&gt;伴生类和伴生对象&lt;/li&gt;
+  &lt;li&gt;apply&lt;/li&gt;
+  &lt;li&gt;case class&lt;/li&gt;
+  &lt;li&gt;trait&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;javascala-oop&quot;&gt;Java/Scala OOP&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;封装：属性、方法封装到类中
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Person:
+  private int id, String name, Date birthday...
+
+  getter/setter
+  eat、sleeping...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;继承：匪类和子类之间的关系&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;User extends Person
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;多态：⭐️⭐️⭐️⭐️⭐️  父类引用指向子类对象 ··· 精髓所在 ··· 开发框架的基石&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Person person = new Person();
+User user = new User();
+Person person = new User();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Scala Big Data Tutorial 0x02 Function</title><link href="http://localhost:4001/notes/Scala_Big_Data_0x02/" rel="alternate" type="text/html" title="Scala Big Data Tutorial 0x02 Function" /><published>2019-02-21T00:00:00+11:00</published><updated>2019-02-21T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Big_Data_0x02</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Big_Data_0x02/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_bigdata.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def 方法名(参数名:参数类型): 返回值类型 = {
   // 括号内的叫做方法体
@@ -18,7 +57,54 @@
 
 println(three())
 println(three) // 没有入参的函数，调用时括号是可以省略的
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Scala Big Data Tutorial 0x01</title><link href="http://localhost:4001/notes/Scala_Big_Data_0x01/" rel="alternate" type="text/html" title="Scala Big Data Tutorial 0x01" /><published>2019-02-24T00:00:00+11:00</published><updated>2019-02-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Big_Data_0x01</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Big_Data_0x01/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_bigdata.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;默认参数在函数定义时允许指定参数的默认值&quot;&gt;默认参数：在函数定义时，允许指定参数的默认值&lt;/h3&gt;
+
+&lt;h3 id=&quot;命名参数&quot;&gt;命名参数&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;   def speed(distance:Float, time:Float):Float = {
+     |     distance/time
+     |   }
+speed: (distance: Float, time: Float)Float
+
+scala&amp;gt; println(speed(100,10))
+10.0
+
+scala&amp;gt; println(speed(distance = 100, time = 10))
+10.0
+
+scala&amp;gt; println(speed(time = 10, distance = 100))
+10.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;可变参数&quot;&gt;可变参数&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  def sum(a:Int, b:Int) = {
+    a + b
+  }
+
+  def sum(a:Int, b:Int, c:Int) = {
+    a + b + c
+  }
+
+  def sum2(numbers:Int*) = {
+
+    var result = 0
+    for(number &amp;lt;- numbers ){
+      result += number
+    }
+
+    result
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;logic---1-800-273-8255-live-at-the-mtv-vmas--2017-ft-alessia-cara-khalid&quot;&gt;Logic - 1-800-273-8255 (Live At The MTV VMAs / 2017) ft. Alessia Cara, Khalid&lt;/h3&gt;
+
+&lt;iframe width=&quot;760&quot; height=&quot;428&quot; src=&quot;https://www.youtube.com/embed/_Ju6Q8Azcmg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Scala Big Data Tutorial 0x01</title><link href="http://localhost:4001/notes/Scala_Big_Data_0x01/" rel="alternate" type="text/html" title="Scala Big Data Tutorial 0x01" /><published>2019-02-20T00:00:00+11:00</published><updated>2019-02-20T00:00:00+11:00</updated><id>http://localhost:4001/notes/Scala_Big_Data_0x01</id><content type="html" xml:base="http://localhost:4001/notes/Scala_Big_Data_0x01/">&lt;p&gt;&lt;img src=&quot;../../assets/images/scala_bigdata.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;java-vs-scala&quot;&gt;Java Vs Scala&lt;/h3&gt;
 
@@ -425,61 +511,9 @@ res73: scala.collection.immutable.Map[Int,String] = Map(2 -&amp;gt; Alice, 5 -&a
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;21 Savage - a lot ft. J. Cole&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Jay-Z &amp;amp; Kanye West - Ni**as In Paris (Explicit)&lt;/p&gt;
 
-&lt;iframe width=&quot;728&quot; height=&quot;541&quot; src=&quot;https://www.youtube.com/embed/DmWWqogr_r8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Multi-thread</title><link href="http://localhost:4001/notes/Java_Interview_Multi-thread/" rel="alternate" type="text/html" title="Java Interview Multi-thread" /><published>2019-01-26T00:00:00+11:00</published><updated>2019-01-26T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Multi-thread</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Multi-thread/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;进程和线程的区别&quot;&gt;进程和线程的区别&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/images/Java_Interview_Multi-thread.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;进程是资源分配的最小单位，线程是CPU调度的最小单位&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;所有与进程相关的资源，都被记录在PCB中&lt;/li&gt;
-      &lt;li&gt;进程是抢占处理机的调度单位；线程属于某个进程，共享其资源&lt;/li&gt;
-      &lt;li&gt;线程只由堆栈寄存器、程序计数器和TCB组成&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Summary&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;线程不能开做独立的应用，而进程可看做独立的应用&lt;/li&gt;
-  &lt;li&gt;进程有独立的地址空间，互相不影响，线程只是进程的不同执行路径&lt;/li&gt;
-  &lt;li&gt;线程没有独立的地址空间，多进程的程序比多线程程序健壮&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;进程的切换比线程的切换开销大&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Java进程和线程的关系&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Java对操作系统提供的功能进行封装，包括进程和线程&lt;/li&gt;
-      &lt;li&gt;运行一个程序会产生一个进程， 进程包含至少一个线程&lt;/li&gt;
-      &lt;li&gt;每个进程对应一个JVM实例，多个线程共享JVM里的堆&lt;/li&gt;
-      &lt;li&gt;Java采用单线程编程模型，程序会自动创建主线程&lt;/li&gt;
-      &lt;li&gt;主线程可以创建子线程，原则上要后于子线程完成执行&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;thread中start和run的区别&quot;&gt;Thread中start和run的区别&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;调用star()方法会创建一个新的子线程并启动&lt;/li&gt;
-  &lt;li&gt;run()方法只是Thread的一个普通方法的调用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;thread和runnable的关系&quot;&gt;Thread和Runnable的关系&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Thread是实现了Runnable接口的类，使得run支持多线程&lt;/li&gt;
-  &lt;li&gt;因此类的单一继承原则，推荐多使用Runnable接口&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Spring</title><link href="http://localhost:4001/notes/Java_Interview_Spring/" rel="alternate" type="text/html" title="Java Interview Spring" /><published>2019-01-26T00:00:00+11:00</published><updated>2019-01-26T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Spring</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Spring/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;iframe width=&quot;760&quot; height=&quot;428&quot; src=&quot;https://www.youtube.com/embed/gG_dA32oH44&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Spring</title><link href="http://localhost:4001/notes/Java_Interview_Spring/" rel="alternate" type="text/html" title="Java Interview Spring" /><published>2019-01-26T00:00:00+11:00</published><updated>2019-01-26T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Spring</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Spring/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;do-you-understand-the-spring-ioc-&quot;&gt;Do you understand the Spring IOC ?&lt;/h3&gt;
 
@@ -623,7 +657,65 @@ res73: scala.collection.immutable.Map[Int,String] = Map(2 -&amp;gt; Alice, 5 -&a
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/images/Java_Interview_Spring.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Redis</title><link href="http://localhost:4001/notes/Java_Interview_Redis/" rel="alternate" type="text/html" title="Java Interview Redis" /><published>2019-01-24T00:00:00+11:00</published><updated>2019-01-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Redis</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Redis/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/Java_Interview_Spring.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;XXXTENTACION - Moon Rock (Prod. NextLane) Anime Music Video&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;760&quot; height=&quot;428&quot; src=&quot;https://www.youtube.com/embed/XAP00Bn2TZA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Multi-thread</title><link href="http://localhost:4001/notes/Java_Interview_Multi-thread/" rel="alternate" type="text/html" title="Java Interview Multi-thread" /><published>2019-01-26T00:00:00+11:00</published><updated>2019-01-26T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Multi-thread</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Multi-thread/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;进程和线程的区别&quot;&gt;进程和线程的区别&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/images/Java_Interview_Multi-thread.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;进程是资源分配的最小单位，线程是CPU调度的最小单位&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;所有与进程相关的资源，都被记录在PCB中&lt;/li&gt;
+      &lt;li&gt;进程是抢占处理机的调度单位；线程属于某个进程，共享其资源&lt;/li&gt;
+      &lt;li&gt;线程只由堆栈寄存器、程序计数器和TCB组成&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Summary
+    &lt;ul&gt;
+      &lt;li&gt;线程不能开做独立的应用，而进程可看做独立的应用&lt;/li&gt;
+      &lt;li&gt;进程有独立的地址空间，互相不影响，线程只是进程的不同执行路径&lt;/li&gt;
+      &lt;li&gt;线程没有独立的地址空间，多进程的程序比多线程程序健壮&lt;/li&gt;
+      &lt;li&gt;进程的切换比线程的切换开销大&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Java进程和线程的关系&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Java对操作系统提供的功能进行封装，包括进程和线程&lt;/li&gt;
+      &lt;li&gt;运行一个程序会产生一个进程， 进程包含至少一个线程&lt;/li&gt;
+      &lt;li&gt;每个进程对应一个JVM实例，多个线程共享JVM里的堆&lt;/li&gt;
+      &lt;li&gt;Java采用单线程编程模型，程序会自动创建主线程&lt;/li&gt;
+      &lt;li&gt;主线程可以创建子线程，原则上要后于子线程完成执行&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;thread中start和run的区别&quot;&gt;Thread中start和run的区别&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;调用star()方法会创建一个新的子线程并启动&lt;/li&gt;
+  &lt;li&gt;run()方法只是Thread的一个普通方法的调用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;thread和runnable的关系&quot;&gt;Thread和Runnable的关系&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Thread是实现了Runnable接口的类，使得run支持多线程&lt;/li&gt;
+  &lt;li&gt;因此类的单一继承原则，推荐多使用Runnable接口&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lil Pump - Be Like Me&lt;/p&gt;
+&lt;iframe width=&quot;760&quot; height=&quot;428&quot; src=&quot;https://www.youtube.com/embed/X1VAIGkKfvg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry><entry><title type="html">Java Interview Redis</title><link href="http://localhost:4001/notes/Java_Interview_Redis/" rel="alternate" type="text/html" title="Java Interview Redis" /><published>2019-01-24T00:00:00+11:00</published><updated>2019-01-24T00:00:00+11:00</updated><id>http://localhost:4001/notes/Java_Interview_Redis</id><content type="html" xml:base="http://localhost:4001/notes/Java_Interview_Redis/">&lt;p&gt;&lt;img src=&quot;../../assets/images/JavaInterview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;data-types&quot;&gt;Data Types&lt;/h1&gt;
 &lt;ul&gt;
@@ -835,8 +927,10 @@ Cause we are genius!!!)&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
-
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+—-&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;21 Savage - a lot ft. J. Cole&lt;/li&gt;
 &lt;/ul&gt;
@@ -892,193 +986,10 @@ private static boolean isAlphanumeric(char c){
     }
     return true;
   }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html">If you like it, you can subscribe the AlgoCasts</summary></entry><entry><title type="html">Website Self-Learning</title><link href="http://localhost:4001/security/Security-Website/" rel="alternate" type="text/html" title="Website Self-Learning" /><published>2016-12-30T00:00:00+11:00</published><updated>2016-12-30T00:00:00+11:00</updated><id>http://localhost:4001/security/Security%20Website</id><content type="html" xml:base="http://localhost:4001/security/Security-Website/">&lt;h3 id=&quot;1bwapp&quot;&gt;1.bWAPP&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html">If you like it, you can subscribe the AlgoCasts</summary></entry><entry><title type="html">Big Data Hadoop MapReduce</title><link href="http://localhost:4001/notes/10Hours-Big-Data-Hadoop-MapReduce/" rel="alternate" type="text/html" title="Big Data Hadoop MapReduce" /><published>2018-11-04T00:00:00+11:00</published><updated>2018-11-04T00:00:00+11:00</updated><id>http://localhost:4001/notes/10Hours-Big-Data-Hadoop-MapReduce</id><content type="html" xml:base="http://localhost:4001/notes/10Hours-Big-Data-Hadoop-MapReduce/">&lt;p&gt;&lt;img src=&quot;../../assets/images/10hours-hadoop/007.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Home bWAPP, or a buggy web application, is a free and open source deliberately insecure web application.It helps security enthusiasts, developers and students to discover and to prevent web vulnerabilities.bWAPP prepares one to conduct successful penetration testing and ethical hacking projects.
-    &lt;ul&gt;
-      &lt;li&gt;Link: &lt;a href=&quot;http://www.itsecgames.com/&quot;&gt;http://www.itsecgames.com/&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;2damn-bulnerable-ios-app-dvia&quot;&gt;2.Damn Bulnerable IOS App (DVIA)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://damnvulnerableiosapp.com/&quot;&gt;http://damnvulnerableiosapp.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;3damn-vulnerable-web-application-dvwa&quot;&gt;3.Damn Vulnerable Web Application (DVWA)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://www.dvwa.co.uk/&quot;&gt;http://www.dvwa.co.uk/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;4game-of-hacks&quot;&gt;4.Game of Hacks&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://www.gameofhacks.com/&quot;&gt;http://www.gameofhacks.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;5google-gruyere&quot;&gt;5.Google Gruyere&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://google-gruyere.appspot.com/&quot;&gt;http://google-gruyere.appspot.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;6hackthis&quot;&gt;6.HackThis!!&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;https://www.hackthis.co.uk/&quot;&gt;https://www.hackthis.co.uk/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;7-hack-this-sites&quot;&gt;7. Hack This Sites&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;https://www.hackthissite.org/&quot;&gt;https://www.hackthissite.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;8hellbound-hackers&quot;&gt;8.Hellbound Hackers&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://www.hellboundhackers.org/&quot;&gt;https://www.helloundhackers.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;9mcafee-hacme-sites&quot;&gt;9.McAfee HacMe Sites&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://www.mcafee.com/us/downloads/free-tools/index.aspx&quot;&gt;http://www.mcafee.com/us/downloads/free-tools/index.aspx&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;10mutillidae&quot;&gt;10.Mutillidae&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;https://sourceforge.net/projects/mutillidae&quot;&gt;https://sourceforge.net/projects/mutillidae/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;11overthewire&quot;&gt;11.OverTheWire&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;https://overthewire.org/wargames/&quot;&gt;http://overthewire.org/wargames&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;12peruggia&quot;&gt;12.Peruggia&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;https://sourceforge.net/projects/peruggia/&quot;&gt;https://sourceforge.net/projects/peruggia/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;13root-me&quot;&gt;13.Root Me&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;https://www.root-me.org/&quot;&gt;https://www.root-me.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;14-try2hack&quot;&gt;14. Try2Hack&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://www.try2hack.nl/&quot;&gt;http://www.try2hack.nl/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;15-vicnum&quot;&gt;15. Vicnum&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://vicnum.ciphertechs.com/&quot;&gt;http://vicnum.ciphertechs.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;16-webgoat&quot;&gt;16. WebGoat&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://webappsecmovies.sourceforge.net/webgoat/&quot;&gt;http://webappsecmovies.sourceforge.net/webgoat/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;17-i-chun-qiu-china&quot;&gt;17. I Chun Qiu (China)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://www.ichunqiu.com/main/&quot;&gt;http://www.ichunqiu.com/main&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;18-xctf_oj-china&quot;&gt;18. XCTF_OJ (China)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://oj.xctf.org.cn/&quot;&gt;http://oj.xctf.org.cn/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;19-security-attacking-and-defense-platform-china&quot;&gt;19. Security Attacking and Defense Platform (China)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://hackinglab.cn/index.php&quot;&gt;http://hackinglab.cn/index.php&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;20-vulnerable-by-design--vulnhub-thanks-for-苍冥&quot;&gt;20. Vulnerable By Design ~ VulnHub (Thanks for 苍冥)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;https://www.vulnhub.com/&quot;&gt;https://www.vulnhub.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;21-live-overfloe&quot;&gt;21. Live Overfloe&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Link: &lt;a href=&quot;http://liveoverflow.com/&quot;&gt;http://liveoverflow.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;watch-dog-2---marcus&quot;&gt;Watch Dog 2 - Marcus&lt;/h1&gt;
-
-&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
-&lt;div style=&quot;position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;&quot;&gt;
-
-&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/hh9x4NqW0Dw&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="security" /><summary type="html">1.bWAPP</summary></entry><entry><title type="html">8.1 Learn Data Structure with Daniel — BFS Theory</title><link href="http://localhost:4001/algorithm/DanielAlgorithm8.1/" rel="alternate" type="text/html" title="8.1 Learn Data Structure with Daniel --- BFS Theory" /><published>2016-12-03T00:00:00+11:00</published><updated>2016-12-03T00:00:00+11:00</updated><id>http://localhost:4001/algorithm/DanielAlgorithm8.1</id><content type="html" xml:base="http://localhost:4001/algorithm/DanielAlgorithm8.1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
-&lt;/script&gt;
-
-&lt;h1 id=&quot;bfs-theory&quot;&gt;BFS Theory&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;We visit every vertex exactly once&lt;/li&gt;
-  &lt;li&gt;We visit each neighbour vertex then the neighbours of these new vertices&lt;/li&gt;
-  &lt;li&gt;Running time of the algorithm: &lt;script type=&quot;math/tex&quot;&gt;O(V+E)&lt;/script&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://blog.hackerearth.com/wp-content/uploads/2015/05/dfsbfs_animation_final.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;It has to store a lot of pointers so it is not as efficient as depth first search&lt;/li&gt;
-  &lt;li&gt;It construct shortest path tree: Dijkstra shortest path algorithm does a BFS if all the edge weight are equal to 1&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Dijkstra
-&lt;img src=&quot;http://hastuts.com/wp-content/uploads/2014/07/Dijkstras-algorithm.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;In AI / machine learning it can prove to be very important: robots can discover the surrounding more easily with BFS than DFS&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;It is also very important in maximum flow: the &lt;a href=&quot;https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm&quot;&gt;Edmonds-Karp&lt;/a&gt; maximum flow algorithm uses BFS for finding augmenting paths&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Cheyen’s algorithm in garbage collecion: simliar to mark and sweep gc procedure, it helps to maintain the active references -&amp;gt; it uses BFS to detect all the references on the heap memmory.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;TensorFlow&lt;/a&gt;&lt;/p&gt;
-
-&lt;div style=&quot;max-width:640px; margin:0 auto 10px;&quot;&gt;
-&lt;div style=&quot;position: relative;
-width:100%;
-padding-bottom:56.25%;
-height:0;&quot;&gt;
-
-
-
-&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/mWl45NkFBOc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Daniel Zhang</name></author><category term="algorithm" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;kanye-west---power&quot;&gt;Kanye West - POWER&lt;/h3&gt;
+&lt;iframe width=&quot;760&quot; height=&quot;428&quot; src=&quot;https://www.youtube.com/embed/L53gjP-TtGE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Daniel Zhang</name></author><category term="notes" /><summary type="html"></summary></entry></feed>

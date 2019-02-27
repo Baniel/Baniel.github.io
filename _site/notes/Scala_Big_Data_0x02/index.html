@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Scala Big Data Tutorial 0x02 - Daniel Tech Blog</title>
+<!-- begin _includes/seo.html --><title>Scala Big Data Tutorial 0x02 Function - Daniel Tech Blog</title>
 <meta name="description" content="">
 
 
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Daniel Tech Blog">
-<meta property="og:title" content="Scala Big Data Tutorial 0x02">
+<meta property="og:title" content="Scala Big Data Tutorial 0x02 Function">
 <meta property="og:url" content="http://localhost:4001/notes/Scala_Big_Data_0x02/">
 
 
@@ -29,7 +29,7 @@
 
 
 
-  <meta property="article:published_time" content="2019-02-25T00:00:00+11:00">
+  <meta property="article:published_time" content="2019-02-21T00:00:00+11:00">
 
 
 
@@ -118,7 +118,7 @@
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/algorithm/" >Algorithm</a>
             </li><li class="masthead__menu-item">
-              <a href="/design-pattern/" >Design Pattern</a>
+              <a href="/design-pattern/" >System Design</a>
             </li><li class="masthead__menu-item">
               <a href="/mathematics/" >Mathematics</a>
             </li><li class="masthead__menu-item">
@@ -154,15 +154,15 @@
   
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Scala Big Data Tutorial 0x02">
+    <meta itemprop="headline" content="Scala Big Data Tutorial 0x02 Function">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="February 25, 2019">
+    <meta itemprop="datePublished" content="February 21, 2019">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Scala Big Data Tutorial 0x02
+          <h1 id="page-title" class="page__title" itemprop="headline">Scala Big Data Tutorial 0x02 Function
 </h1>
           
         </header>
@@ -192,6 +192,53 @@ println(three())
 println(three) // 没有入参的函数，调用时括号是可以省略的
 </code></pre></div></div>
 
+<h3 id="默认参数在函数定义时允许指定参数的默认值">默认参数：在函数定义时，允许指定参数的默认值</h3>
+
+<h3 id="命名参数">命名参数</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scala&gt;   def speed(distance:Float, time:Float):Float = {
+     |     distance/time
+     |   }
+speed: (distance: Float, time: Float)Float
+
+scala&gt; println(speed(100,10))
+10.0
+
+scala&gt; println(speed(distance = 100, time = 10))
+10.0
+
+scala&gt; println(speed(time = 10, distance = 100))
+10.0
+</code></pre></div></div>
+
+<h3 id="可变参数">可变参数</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  def sum(a:Int, b:Int) = {
+    a + b
+  }
+
+  def sum(a:Int, b:Int, c:Int) = {
+    a + b + c
+  }
+
+  def sum2(numbers:Int*) = {
+
+    var result = 0
+    for(number &lt;- numbers ){
+      result += number
+    }
+
+    result
+  }
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+<h3 id="logic---1-800-273-8255-live-at-the-mtv-vmas--2017-ft-alessia-cara-khalid">Logic - 1-800-273-8255 (Live At The MTV VMAs / 2017) ft. Alessia Cara, Khalid</h3>
+
+<iframe width="760" height="428" src="https://www.youtube.com/embed/_Ju6Q8Azcmg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
         
       </section>
 
@@ -220,7 +267,7 @@ println(three) // 没有入参的函数，调用时括号是可以省略的
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-25T00:00:00+11:00">February 25, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-21T00:00:00+11:00">February 21, 2019</time></p>
         
       </footer>
 
@@ -233,7 +280,8 @@ println(three) // 没有入参的函数，调用时括号是可以省略的
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/notes/Scala_Big_Data_0x03/" class="pagination--pager" title="Scala Big Data Tutorial 0x03 Object
+">Next</a>
     
   </nav>
 
