@@ -150,7 +150,7 @@ var store = [{
         "url": "http://localhost:4001/notes/Golang/",
         "teaser":null},{
         "title": "2019年4月书单 持续更新中 ...",
-        "excerpt":" [r2]:                  亚马逊图书简介       出版时间       文件格式       文件大小       Picture                       图书链接       2019       PDF       12 Mb                        [图书链接][r2]       2019       PDF       10 MB                        图书链接       2019       PDF       10 MB                        图书链接       2019       PDF       10 MB                        图书链接       2019       PDF       10 MB                 ","categories": ["booklist"],
+        "excerpt":"                亚马逊图书简介       出版时间       文件格式       文件大小       Picture                       图书链接       2019       PDF       12 Mb                        图书链接       2019       PDF       10 MB                        图书链接       2019       PDF       10 MB                        图书链接       2019       PDF       10 MB                        图书链接       2019       PDF       10 MB                 ","categories": ["booklist"],
         "tags": [],
         "url": "http://localhost:4001/booklist/Booklist/",
         "teaser":null}]
