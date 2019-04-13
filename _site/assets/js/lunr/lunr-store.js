@@ -143,4 +143,14 @@ var store = [{
         "excerpt":"   Scala 面向对象      构造器   继承与重写   抽象类   伴生类和伴生对象   apply   case class   trait   Java/Scala OOP      封装：属性、方法封装到类中     Person:   private int id, String name, Date birthday...    getter/setter   eat、sleeping...                继承：匪类和子类之间的关系       User extends Person                多态：⭐️⭐️⭐️⭐️⭐️  父类引用指向子类对象 ··· 精髓所在 ··· 开发框架的基石       Person person = new Person(); User user = new User(); Person person = new User();          ","categories": ["notes"],
         "tags": [],
         "url": "http://localhost:4001/notes/Scala_Big_Data_0x03/",
+        "teaser":null},{
+        "title": "Golang",
+        "excerpt":"Golang协程      进程：太重   线程：上下文切换开销太大   协程：轻量级的线程，简介的并发模式   Golang协程：goroutine  ","categories": ["notes"],
+        "tags": [],
+        "url": "http://localhost:4001/notes/Golang/",
+        "teaser":null},{
+        "title": "2019年4月书单",
+        "excerpt":"                亚马逊图书简介       出版时间       文件格式       文件大小       Picture                       图书链接       2019       PDF       12 Mb                        图书链接       2019       PDF       10 MB                 ","categories": ["booklist"],
+        "tags": [],
+        "url": "http://localhost:4001/booklist/Booklist/",
         "teaser":null}]
