@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-04-13T20:01:08+10:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">2019年4月书单 持续更新中 …</title><link href="http://localhost:4001/booklist/Booklist/" rel="alternate" type="text/html" title="2019年4月书单 持续更新中 ..." /><published>2019-04-01T00:00:00+11:00</published><updated>2019-04-01T00:00:00+11:00</updated><id>http://localhost:4001/booklist/Booklist</id><content type="html" xml:base="http://localhost:4001/booklist/Booklist/">&lt;table&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2019-04-13T20:27:39+10:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">Daniel Tech Blog</title><subtitle>Daniel Tech Blog</subtitle><author><name>Daniel Zhang</name></author><entry><title type="html">2019年4月书单 持续更新中 …</title><link href="http://localhost:4001/booklist/Booklist/" rel="alternate" type="text/html" title="2019年4月书单 持续更新中 ..." /><published>2019-04-01T00:00:00+11:00</published><updated>2019-04-01T00:00:00+11:00</updated><id>http://localhost:4001/booklist/Booklist</id><content type="html" xml:base="http://localhost:4001/booklist/Booklist/">&lt;p&gt;[r2]:&lt;/p&gt;
+
+&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;亚马逊图书简介&lt;/th&gt;
@@ -17,7 +19,7 @@
       &lt;td&gt;&lt;img src=&quot;../../Images/2019-04/artificial-neural-networks-java-applications.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://scanlibs.com/object-oriented-thought-process-5th/yz5cw79mbn3a/ECNHOkMYYhUPIB0rFFY3DRZ5UCUUGCkSV2cCeUwGdVNBYQtlWlQ4EQw4Xi8LZSgUETJEOQ==&quot;&gt;图书链接&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;[图书链接][r2]&lt;/td&gt;
       &lt;td&gt;2019&lt;/td&gt;
       &lt;td&gt;PDF&lt;/td&gt;
       &lt;td&gt;10 MB&lt;/td&gt;
@@ -45,7 +47,7 @@
       &lt;td&gt;&lt;img src=&quot;../../Images/2019-04/advanced-game-narrative-toolbox.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Daniel Zhang</name></author><category term="booklist" /><summary type="html"></summary></entry><entry><title type="html">Golang</title><link href="http://localhost:4001/notes/Golang/" rel="alternate" type="text/html" title="Golang" /><published>2019-03-01T00:00:00+11:00</published><updated>2019-03-01T00:00:00+11:00</updated><id>http://localhost:4001/notes/Golang</id><content type="html" xml:base="http://localhost:4001/notes/Golang/">&lt;h3 id=&quot;golang协程&quot;&gt;Golang协程&lt;/h3&gt;
+&lt;/table&gt;</content><author><name>Daniel Zhang</name></author><category term="booklist" /><summary type="html">[r2]: [b3]: ../../Images/2019-04/machine-learning-big-data-analyis.jpg [r3]: https://www.amazon.com/dp/3110550326/#customerReviews [b4]: ../../Images/2019-04/cybersecurity-current-writings-threats-protection.jpg [r4]: https://www.amazon.com/dp/147667440X/#customerReviews [b5]: ../../Images/2019-04/advanced-game-narrative-toolbox.jpg [r5]: https://www.amazon.com/dp/1138499633/#customerReviews [b6]: ../../Images/2019-04 [b7]: ../../Images/2019-04 [b8]: ../../Images/2019-04 [b9]: ../../Images/2019-04 [b10]: ../../Images/2019-04</summary></entry><entry><title type="html">Golang</title><link href="http://localhost:4001/notes/Golang/" rel="alternate" type="text/html" title="Golang" /><published>2019-03-01T00:00:00+11:00</published><updated>2019-03-01T00:00:00+11:00</updated><id>http://localhost:4001/notes/Golang</id><content type="html" xml:base="http://localhost:4001/notes/Golang/">&lt;h3 id=&quot;golang协程&quot;&gt;Golang协程&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;进程：太重&lt;/li&gt;
