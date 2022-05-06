@@ -9,11 +9,9 @@ main:
     url: /blockchain/
   - title: "Algorithm"
     url: /algorithm/
-  - title: "System Design"
-    url: /design-pattern/
   - title: "Mathematics"
     url: /mathematics/
   - title: "Security"
     url: /security/
-  - title: "Notes"
-    url: /notes/
+  - title: "About Me"
+    url: /aboutme/
