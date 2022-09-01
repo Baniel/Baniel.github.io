@@ -7,3 +7,6 @@ comments: true
 ---
 
 ### Hi, I am Daniel.
+
+
+### To be a Artificial Intelligence Ethusiasm.
