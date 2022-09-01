@@ -137,8 +137,9 @@ author:
     - label: "WeChat ID: MITDANIEL"
       icon: "fab fa-fw fa-weixin"
       url: "https://github.com/Baniel/PictureDatabase/blob/master/DanielQR.jpeg?raw=true"
-    - label: "Wallet"
+    - label: "WhatsApp"
       icon: "fab fa-fw fa-solid fa-wallet
+      
 
 
 
