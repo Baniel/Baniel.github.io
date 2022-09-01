@@ -106,8 +106,8 @@ analytics:
 author:
   name             : "Daniel Zhang"
   avatar           : "/assets/images/headicon.png"
-  bio              : "I am an Software Engineer."
-  location         : "Live in Melbourne"
+  bio              : "I am an Engineer."
+  location         : "Live in China (HaiNan)"
   # email            : "danielzhangdeveloper@gmail.com"
   links:
     - label: "Email"
