@@ -1,8 +1,8 @@
 ---
 title: About me
 layout: collection
-permalink: /about/
-collection: about
+permalink: /aboutme/
+collection: aboutme
 comments: true
 ---
 

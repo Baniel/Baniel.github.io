@@ -5,13 +5,13 @@ main:
   # - title: "About Me"
   #   url: /about/
 
-  - title: "Machine Learning"
-    url: /machinelearning/
-  - title: "Deep Learng"
-    url: /deeplearning/
+  - title: "AI"
+    url: /ai/
+  - title: "Web3"
+    url: /web3/
   - title: "Algorithm"
     url: /algorithm/
   - title: "Mathematics"
     url: /mathematics/
   - title: "About me"
-    url: /about/
+    url: /aboutme/
